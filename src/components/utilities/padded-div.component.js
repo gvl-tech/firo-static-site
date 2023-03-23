@@ -1,11 +1,11 @@
 import styled from "styled-components"
 
-const PaddedContainer = (x, y, bg, br) => `  
-  padding: ${y}px ${x}px;
+const PaddedContainer = (theme, x, y, bg, br) => `  
+  padding: ${theme.space[y]}px ${theme.space[x]}px;
   background-color: ${bg};
-  border-radius: ${br}px;
+  border-radius: ${theme.borderSizes[br]}px;
 `
 
 export const PaddedDiv = styled.div`
-  ${({ x, y, bg, br }) => PaddedContainer(x, y, bg, br)}
+  ${({ theme, x, y, bg, br }) => PaddedContainer(theme, x, y, bg, br)}
 `
