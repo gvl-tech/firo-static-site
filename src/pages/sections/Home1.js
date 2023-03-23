@@ -148,7 +148,7 @@ const Home1 = () => {
                 </Text>
               </div>
               <Spacer />
-              <FlexCenterDiv dir="row" x={"0"} y={"0"}>
+              <FlexCenterDiv dir="row">
                 <FlexCenterDiv
                   width={isTablet ? "60" : "50"}
                   style={{ textAlign: "justify", lineHeight: "1.5" }}
