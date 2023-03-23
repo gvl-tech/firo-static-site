@@ -42,7 +42,7 @@ const Home1 = () => {
   }
 
   return (
-    <PaddedDiv y={!isDesktop ? "6" : "3"} x={"3"}>
+    <PaddedDiv y={!isDesktop ? "128" : "16"} x={"16"}>
       <FlexCenterDiv bg="#9b1c2e" br={16}>
         {isDesktop && (
           <Lottie
@@ -75,7 +75,7 @@ const Home1 = () => {
             }}
           />
         )}
-        <PaddedDiv x="0" y="7">
+        <PaddedDiv x="0" y="256">
           {!isDesktop && (
             <FlexCenterDiv
               style={{
@@ -176,7 +176,7 @@ const Home1 = () => {
           width="100"
           style={{ postion: "relative", zIndex: 1 }}
         >
-          <PaddedDiv x="0" y="5">
+          <PaddedDiv x="0" y="32">
             <Text variant="label" color={"#FFF"} fontFamily={"Source Sans Pro"}>
               As seen on
             </Text>
