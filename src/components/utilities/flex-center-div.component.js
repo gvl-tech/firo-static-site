@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
-const FlexContainer = (theme, dir, height, width, br, bg, x, y) => `
+const FlexContainer = (dir, height, width, br, bg, x, y) => `
   display: flex;
   flex-direction: ${dir};
   justify-content: center;
@@ -10,13 +10,13 @@ const FlexContainer = (theme, dir, height, width, br, bg, x, y) => `
   width: ${width}%;
   border-radius: ${br}px;
   background-color: ${bg};
-  padding: ${theme.space[y ? y : 0]}px ${theme.space[x ? x : 0]}px;
-`;
+  padding: ${y}px ${x}px;
+`
 
 export const FlexCenterDiv = styled.div`
-  ${({ theme, dir, height, width, bg, br, x, y }) =>
-    FlexContainer(theme, dir, height, width, br, bg, x, y)}
-`;
+  ${({ dir, height, width, bg, br, x, y }) =>
+    FlexContainer(dir, height, width, br, bg, x, y)}
+`
 
 FlexCenterDiv.defaultProps = {
   dir: "column",
@@ -24,4 +24,4 @@ FlexCenterDiv.defaultProps = {
   width: undefined,
   bg: undefined,
   br: undefined,
-};
+}
