@@ -8,7 +8,9 @@ function index() {
     <>
       <ThemeProvider theme={theme}>
         <div>
-          <p style={{ color: theme.colors.brand.primary }}>Hello world!</p>
+          <p style={{ color: theme.colors.brand.primary }}>
+            Hello world with assets!
+          </p>
         </div>
       </ThemeProvider>
     </>

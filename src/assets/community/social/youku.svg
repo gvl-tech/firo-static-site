@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="59" height="59" viewBox="0 0 59 59">
+  <g id="com_youku" transform="translate(-6 -5.803)">
+    <circle id="Ellipse_72" data-name="Ellipse 72" cx="29.5" cy="29.5" r="29.5" transform="translate(6 5.803)" fill="#f4f4f4"/>
+    <g id="Group_8906" data-name="Group 8906" transform="translate(18.031 17.941)">
+      <g id="Group_8905" data-name="Group 8905">
+        <path id="Path_8116" data-name="Path 8116" d="M125.551,108.3A17.4,17.4,0,1,1,108.1,125.7,17.415,17.415,0,0,1,125.551,108.3Zm12.019,17.4A12.1,12.1,0,1,0,125.5,137.828,12.117,12.117,0,0,0,137.57,125.7Z" transform="translate(-108.1 -108.3)" fill="#9b1c2e"/>
+      </g>
+      <path id="Path_8117" data-name="Path 8117" d="M224.539,200.134h0a.594.594,0,0,0-.271-.495s-3.535-2.451-6.363-4.018-5.821-2.828-5.821-2.828a.569.569,0,0,0-.813.495s-.271,2.5-.271,6.846h0c0,4.348.271,6.846.271,6.846a.577.577,0,0,0,.813.495,52.848,52.848,0,0,0,5.821-2.828c2.828-1.579,6.363-4.018,6.363-4.018a.483.483,0,0,0,.271-.495Z" transform="translate(-198.875 -182.79)" fill="#9b1c2e"/>
+    </g>
+  </g>
+</svg>

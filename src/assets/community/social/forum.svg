@@ -1,0 +1,19 @@
+<svg id="com_forum" xmlns="http://www.w3.org/2000/svg" width="59" height="59" viewBox="0 0 59 59">
+  <circle id="Ellipse_63" data-name="Ellipse 63" cx="29.5" cy="29.5" r="29.5" fill="#f4f4f4"/>
+  <g id="Group_8901" data-name="Group 8901" transform="translate(14.566 30.562)">
+    <path id="Path_8104" data-name="Path 8104" d="M159.556,273.211V268H130.4v13.278h29.156v-5.2h0a2.873,2.873,0,0,0,2.869-2.869Z" transform="translate(-130.4 -268)" fill="none" stroke="#9b1c2e" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+    <g id="Group_8900" data-name="Group 8900" transform="translate(9.883 5.702)">
+      <rect id="Rectangle_3635" data-name="Rectangle 3635" width="1.897" height="1.897" fill="none" stroke="#9b1c2e" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="0.5"/>
+      <rect id="Rectangle_3636" data-name="Rectangle 3636" width="1.897" height="1.897" transform="translate(3.747)" fill="none" stroke="#9b1c2e" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="0.5"/>
+      <rect id="Rectangle_3637" data-name="Rectangle 3637" width="1.897" height="1.897" transform="translate(7.494)" fill="none" stroke="#9b1c2e" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="0.5"/>
+    </g>
+  </g>
+  <g id="Group_8903" data-name="Group 8903" transform="translate(11.697 14.93)">
+    <path id="Path_8105" data-name="Path 8105" d="M108.769,134.5v5.211H105.9a2.873,2.873,0,0,0,2.869,2.869v5.211h29.156V134.5Z" transform="translate(-105.9 -134.5)" fill="#9b1c2e"/>
+    <g id="Group_8902" data-name="Group 8902" transform="translate(12.754 5.694)">
+      <rect id="Rectangle_3638" data-name="Rectangle 3638" width="1.897" height="1.897" transform="translate(9.379 1.897) rotate(180)" fill="#fff"/>
+      <rect id="Rectangle_3639" data-name="Rectangle 3639" width="1.897" height="1.897" transform="translate(5.638 1.897) rotate(180)" fill="#fff"/>
+      <rect id="Rectangle_3640" data-name="Rectangle 3640" width="1.897" height="1.897" transform="translate(1.897 1.897) rotate(180)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
