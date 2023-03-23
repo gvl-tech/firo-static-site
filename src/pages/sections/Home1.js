@@ -42,7 +42,7 @@ const Home1 = () => {
   }
 
   return (
-    <PaddedDiv y={!isDesktop && "6"}>
+    <PaddedDiv y={!isDesktop ? "6" : "3"} x={"3"}>
       <FlexCenterDiv bg="#9b1c2e" br={16}>
         {isDesktop && (
           <Lottie
