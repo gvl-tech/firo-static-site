@@ -1,7 +1,7 @@
 import React from "react"
 import divider from "../../../assets/getfiro/divider.svg"
 import firoMobile from "../../../assets/getfiro/firoMobile.svg"
-import firoCoin from "../../../assets/animation/Firo coin.svg"
+import firoCoin from "../../../assets/animation/firo-coin.svg"
 import { useMediaQuery } from "react-responsive"
 import { useTheme } from "styled-components"
 import { FlexCenterDiv } from "../../../components/utilities/flex-center-div.component"
@@ -28,7 +28,7 @@ const FiroToken = () => {
       <FlexStartDiv
         style={{
           position: "relative",
-          zIndex: 10,
+          zIndex: 1,
           alignItems: isDesktop ? "start" : "center",
           marginLeft: "10%",
         }}
@@ -56,14 +56,20 @@ const FiroToken = () => {
           prying eyes.
         </Text>
         {isDesktop && (
-          <FlexDiv style={{ position: "relative", top: "-400px", left: "80%" }}>
+          <FlexDiv
+            style={{
+              position: "relative",
+              top: "-400px",
+              left: "80%",
+            }}
+          >
             <FlexDiv
               style={{
                 position: "absolute",
                 zIndex: -1,
               }}
             >
-              <img src={firoCoin} alt={firoCoin} width={700} />
+              <img src={firoCoin} alt={firoCoin} width={650} />
             </FlexDiv>
           </FlexDiv>
         )}

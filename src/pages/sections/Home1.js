@@ -1,5 +1,5 @@
 import { navigate } from "gatsby"
-import React from "react"
+import React, { useState } from "react"
 import { useMediaQuery } from "react-responsive"
 import { useTheme } from "styled-components"
 import amazon from "../../assets/brands/amazon.svg"
@@ -13,7 +13,9 @@ import { FlexDiv } from "../../components/utilities/flex-div.component"
 import { PaddedDiv } from "../../components/utilities/padded-div.component"
 import { Spacer } from "../../components/utilities/spacer.component"
 import { Text } from "../../components/utilities/text.component"
-import firoLogo from "../../assets/animation/Firo logo 1.svg"
+import firoLogo from "../../assets/animation/firo-logo.svg"
+import firoBox1 from "../../assets/animation/firo-box-1.svg"
+import { motion, AnimatePresence } from "framer-motion"
 
 const Home1 = () => {
   const theme = useTheme()
@@ -22,6 +24,7 @@ const Home1 = () => {
   const isTablet = useMediaQuery({
     query: "(min-width: 768px) and (max-width: 1023px)",
   })
+  const [showInitial, setShowInitial] = useState(true)
 
   return (
     <PaddedDiv y={!isDesktop && "6"}>
@@ -148,6 +151,44 @@ const Home1 = () => {
                   <img src={firoLogo} alt={firoLogo} width={700} />
                 </FlexDiv>
               </FlexDiv>
+
+              {showInitial && (
+                <motion.FlexDiv
+                  style={{ position: "relative", top: "-420px", left: "45%" }}
+                  initial={{ x: 1000 }}
+                  onAnimationComplete={() => setShowInitial(false)}
+                  animate={{
+                    x: 0,
+                  }}
+                  transition={{ duration: 0.3, type: "tween" }}
+                >
+                  <FlexDiv
+                    style={{
+                      position: "absolute",
+                      zIndex: -1,
+                    }}
+                  >
+                    <img src={firoBox1} alt={firoBox1} width={300} />
+                  </FlexDiv>
+                </motion.FlexDiv>
+              )}
+
+              {!showInitial && (
+                <motion.FlexDiv
+                  style={{ position: "relative", top: "-420px", left: "45%" }}
+                  animate={{ x: [0, -250, -250, 0], opacity: 1 }}
+                  transition={{ repeat: Infinity, duration: 10, delay: 0.1 }}
+                >
+                  <FlexDiv
+                    style={{
+                      position: "absolute",
+                      zIndex: -1,
+                    }}
+                  >
+                    <img src={firoBox1} alt={firoBox1} width={300} />
+                  </FlexDiv>
+                </motion.FlexDiv>
+              )}
             </FlexDiv>
           )}
         </PaddedDiv>
