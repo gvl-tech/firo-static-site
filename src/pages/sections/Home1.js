@@ -1,21 +1,19 @@
-import React from "react"
-import { useTheme } from "styled-components"
-import { useMediaQuery } from "react-responsive"
 import { navigate } from "gatsby"
-import nasdaq from "../../assets/brands/nasdaq.svg"
-import yahoo from "../../assets/brands/yahoo.svg"
+import React from "react"
+import { useMediaQuery } from "react-responsive"
+import { useTheme } from "styled-components"
+import amazon from "../../assets/brands/amazon.svg"
 import coindesk from "../../assets/brands/coin-desk.svg"
 import cointelegraph from "../../assets/brands/coin-telegraph.svg"
-import amazon from "../../assets/brands/amazon.svg"
+import nasdaq from "../../assets/brands/nasdaq.svg"
+import yahoo from "../../assets/brands/yahoo.svg"
 import { Button } from "../../components/buttons/cta-button.component"
+import { FlexCenterDiv } from "../../components/utilities/flex-center-div.component"
+import { FlexDiv } from "../../components/utilities/flex-div.component"
+import { PaddedDiv } from "../../components/utilities/padded-div.component"
 import { Spacer } from "../../components/utilities/spacer.component"
 import { Text } from "../../components/utilities/text.component"
-import { FlexCenterDiv } from "../../components/utilities/flex-center-div.component"
-import { PaddedDiv } from "../../components/utilities/padded-div.component"
-import { FlexDiv } from "../../components/utilities/flex-div.component"
-import Lottie from "react-lottie"
-import animationData from "../../assets/animation/Banner1.mp4.lottie.json"
-import animationMobileData from "../../assets/animation/Banner1Mobile.mp4.lottie.json"
+import firoLogo from "../../assets/animation/Firo logo 1.svg"
 
 const Home1 = () => {
   const theme = useTheme()
@@ -25,58 +23,15 @@ const Home1 = () => {
     query: "(min-width: 768px) and (max-width: 1023px)",
   })
 
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  }
-
-  const defaultMobileOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationMobileData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  }
-
   return (
     <PaddedDiv y={!isDesktop && "6"}>
-      <FlexCenterDiv bg={theme.colors.brand.primary} br={theme.borderSizes[1]}>
-        {isDesktop && (
-          <Lottie
-            options={defaultOptions}
-            height={1000}
-            width="96%"
-            isStopped={false}
-            isPaused={false}
-            style={{
-              borderRadius: theme.borderSizes[1],
-              position: "absolute",
-              zIndex: 0,
-              top: theme.space[3],
-              right: theme.space[3],
-            }}
-          />
-        )}
-
-        {!isDesktop && (
-          <Lottie
-            options={defaultMobileOptions}
-            width="92%"
-            isStopped={false}
-            isPaused={false}
-            style={{
-              borderRadius: theme.borderSizes[1],
-              position: "absolute",
-              zIndex: 0,
-              top: theme.space[6],
-            }}
-          />
-        )}
+      <FlexCenterDiv
+        bg={theme.colors.brand.primary}
+        br={theme.borderSizes[1]}
+        style={{
+          overflow: "hidden",
+        }}
+      >
         <PaddedDiv x="0" y="7">
           {!isDesktop && (
             <FlexCenterDiv
@@ -103,6 +58,19 @@ const Home1 = () => {
               </FlexCenterDiv>
               <Spacer position="top" size="xxLarge" />
               <Button onClick={() => navigate("/about")}>Learn More</Button>
+
+              <FlexDiv
+                style={{ position: "relative", top: "-700px", right: "25%" }}
+              >
+                <FlexDiv
+                  style={{
+                    position: "absolute",
+                    zIndex: -1,
+                  }}
+                >
+                  <img src={firoLogo} alt={firoLogo} width={400} />
+                </FlexDiv>
+              </FlexDiv>
             </FlexCenterDiv>
           )}
 
@@ -168,6 +136,18 @@ const Home1 = () => {
                 <Spacer position="left" size="xLarge" />
                 <Button onClick={() => navigate("/about")}>Learn More</Button>
               </FlexCenterDiv>
+              <FlexDiv
+                style={{ position: "relative", top: "-500px", left: "70%" }}
+              >
+                <FlexDiv
+                  style={{
+                    position: "absolute",
+                    zIndex: -1,
+                  }}
+                >
+                  <img src={firoLogo} alt={firoLogo} width={700} />
+                </FlexDiv>
+              </FlexDiv>
             </FlexDiv>
           )}
         </PaddedDiv>

@@ -1,17 +1,17 @@
-import React from "react";
-import shadow from "../../../assets/home3/shadow.svg";
-import { Text } from "../../../components/utilities/text.component";
-import { useTheme } from "styled-components";
-import { BoxDiv } from "../../../components/utilities/box-container.component";
-import { useMediaQuery } from "react-responsive";
-import { FlexDiv } from "../../../components/utilities/flex-div.component";
-import { Button } from "../../../components/buttons/cta-button.component";
-import { Spacer } from "../../../components/utilities/spacer.component";
+import React from "react"
+import shadow from "../../../assets/home3/shadow.svg"
+import { Text } from "../../../components/utilities/text.component"
+import { useTheme } from "styled-components"
+import { BoxDiv } from "../../../components/utilities/box-container.component"
+import { useMediaQuery } from "react-responsive"
+import { FlexDiv } from "../../../components/utilities/flex-div.component"
+import { Button } from "../../../components/buttons/cta-button.component"
+import { Spacer } from "../../../components/utilities/spacer.component"
 
 const BoxHome3 = ({ title, highlight, image, subtitle }) => {
-  const theme = useTheme();
-  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
-  const isTablet = useMediaQuery({ query: "(width: 768px)" });
+  const theme = useTheme()
+  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" })
+  const isTablet = useMediaQuery({ query: "(width: 768px)" })
 
   return (
     <BoxDiv
@@ -57,16 +57,16 @@ const BoxHome3 = ({ title, highlight, image, subtitle }) => {
       </FlexDiv>
 
       <div style={{ textAlign: "center" }}>
-        <Text variant="label" bold="true">
+        <Text variant="h5" bold="true">
           {title}{" "}
         </Text>
-        <Text variant="label" bold="true" color={theme.colors.brand.primary}>
+        <Text variant="h5" bold="true" color={theme.colors.brand.primary}>
           {highlight}
         </Text>
 
         {isDesktop && (
           <Text
-            variant="tab"
+            variant="body"
             color={theme.colors.text.secondary}
             style={{ width: "70%", textAlign: "center", lineHeight: "1.5" }}
           >
@@ -76,7 +76,7 @@ const BoxHome3 = ({ title, highlight, image, subtitle }) => {
         )}
       </div>
     </BoxDiv>
-  );
-};
+  )
+}
 
-export default BoxHome3;
+export default BoxHome3
