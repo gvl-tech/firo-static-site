@@ -1,13 +1,13 @@
-import React from "react";
-import arrow from "../../../assets/home2/arrow-button.svg";
-import { useTheme } from "styled-components";
-import { Spacer } from "../../../components/utilities/spacer.component";
-import { Text } from "../../../components/utilities/text.component";
-import { FlexDiv } from "../../../components/utilities/flex-div.component";
-import { BoxDiv } from "../../../components/utilities/box-container.component";
+import React from "react"
+import arrow from "../../../assets/home2/arrow-button.svg"
+import { useTheme } from "styled-components"
+import { Spacer } from "../../../components/utilities/spacer.component"
+import { Text } from "../../../components/utilities/text.component"
+import { FlexDiv } from "../../../components/utilities/flex-div.component"
+import { BoxDiv } from "../../../components/utilities/box-container.component"
 
 const BoxHome2 = ({ image, title, subtitle }) => {
-  const theme = useTheme();
+  const theme = useTheme()
   return (
     <BoxDiv x="4">
       <FlexDiv dir="row">
@@ -21,7 +21,7 @@ const BoxHome2 = ({ image, title, subtitle }) => {
       <Spacer position="top" />
 
       <Text
-        variant="caption"
+        variant="body"
         color={theme.colors.text.secondary}
         style={{ lineHeight: "1.5" }}
       >
@@ -35,7 +35,7 @@ const BoxHome2 = ({ image, title, subtitle }) => {
         style={{ cursor: "pointer" }}
       />
     </BoxDiv>
-  );
-};
+  )
+}
 
-export default BoxHome2;
+export default BoxHome2
