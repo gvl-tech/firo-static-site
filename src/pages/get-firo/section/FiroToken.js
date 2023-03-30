@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
 import divider from "../../../assets/getfiro/divider.svg"
 import firoMobile from "../../../assets/getfiro/firoMobile.svg"
-import firoCoin from "../../../assets/animation/firo-coin.svg"
+import firoCoin1 from "../../../assets/animation/firo-coin-1.svg"
+import firoLogo from "../../../assets/animation/firo-logo-2.svg"
 import { useMediaQuery } from "react-responsive"
 import { useTheme } from "styled-components"
 import { FlexCenterDiv } from "../../../components/utilities/flex-center-div.component"
@@ -11,6 +12,7 @@ import { PaddedDiv } from "../../../components/utilities/padded-div.component"
 import { Spacer } from "../../../components/utilities/spacer.component"
 import { Text } from "../../../components/utilities/text.component"
 import { FlexDiv } from "../../../components/utilities/flex-div.component"
+import AnimationFiroToken from "../components/animation/AnimationFiroToken"
 
 const FiroToken = () => {
   const theme = useTheme()
@@ -18,6 +20,7 @@ const FiroToken = () => {
   const isDesktop = useMediaQuery({ query: "(min-width: 768px)" })
   const isTablet = useMediaQuery({ query: "(width: 768px)" })
   const isSmallMobile = useMediaQuery({ query: "(max-width: 375px)" })
+  const [showInitial, setShowInitial] = useState(true)
 
   return (
     <PaddedDiv
@@ -56,22 +59,44 @@ const FiroToken = () => {
           prying eyes.
         </Text>
         {isDesktop && (
-          <FlexDiv
-            style={{
-              position: "relative",
-              top: "-400px",
-              left: "80%",
-            }}
-          >
+          <>
             <FlexDiv
               style={{
-                position: "absolute",
+                position: "relative",
+                top: "-400px",
+                left: "80%",
                 zIndex: -1,
               }}
             >
-              <img src={firoCoin} alt={firoCoin} width={650} />
+              <FlexDiv
+                style={{
+                  position: "absolute",
+                }}
+              >
+                <img src={firoCoin1} alt={firoCoin1} width={650} />
+              </FlexDiv>
             </FlexDiv>
-          </FlexDiv>
+            <FlexDiv
+              style={{
+                position: "relative",
+                top: "-350px",
+                left: "74%",
+                zIndex: -1,
+              }}
+            >
+              <FlexDiv
+                style={{
+                  position: "absolute",
+                }}
+              >
+                <img src={firoLogo} alt={firoLogo} width={500} />
+              </FlexDiv>
+            </FlexDiv>
+            <AnimationFiroToken
+              showInitial={showInitial}
+              setShowInitial={setShowInitial}
+            />
+          </>
         )}
         <Spacer size="xLarge" />
         {!isDesktop && <img src={firoMobile} alt={firoMobile} width="100%" />}
