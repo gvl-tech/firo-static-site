@@ -13,9 +13,9 @@ import { FlexDiv } from "../../components/utilities/flex-div.component"
 import { PaddedDiv } from "../../components/utilities/padded-div.component"
 import { Spacer } from "../../components/utilities/spacer.component"
 import { Text } from "../../components/utilities/text.component"
-import firoLogo from "../../assets/animation/firo-logo.svg"
-import firoBox1 from "../../assets/animation/firo-box-1.svg"
-import { motion, AnimatePresence } from "framer-motion"
+import firoLogo from "../../assets/animation/firo-logo-1.svg"
+import AnimationHome1Desktop from "../components/animation/AnimationHome1Desktop"
+import AnimationHome1Mobile from "../components/animation/AnimationHome1Mobile"
 
 const Home1 = () => {
   const theme = useTheme()
@@ -63,17 +63,25 @@ const Home1 = () => {
               <Button onClick={() => navigate("/about")}>Learn More</Button>
 
               <FlexDiv
-                style={{ position: "relative", top: "-700px", right: "25%" }}
+                style={{
+                  position: "relative",
+                  top: "-750px",
+                  right: "20%",
+                  zIndex: -1,
+                }}
               >
                 <FlexDiv
                   style={{
                     position: "absolute",
-                    zIndex: -1,
                   }}
                 >
                   <img src={firoLogo} alt={firoLogo} width={400} />
                 </FlexDiv>
               </FlexDiv>
+              <AnimationHome1Mobile
+                showInitial={showInitial}
+                setShowInitial={setShowInitial}
+              />
             </FlexCenterDiv>
           )}
 
@@ -140,55 +148,26 @@ const Home1 = () => {
                 <Button onClick={() => navigate("/about")}>Learn More</Button>
               </FlexCenterDiv>
               <FlexDiv
-                style={{ position: "relative", top: "-500px", left: "70%" }}
+                style={{
+                  position: "relative",
+                  top: "-500px",
+                  left: "70%",
+                  zIndex: -1,
+                }}
               >
                 <FlexDiv
                   style={{
                     position: "absolute",
-                    zIndex: -1,
                   }}
                 >
                   <img src={firoLogo} alt={firoLogo} width={700} />
                 </FlexDiv>
               </FlexDiv>
 
-              {showInitial && (
-                <motion.FlexDiv
-                  style={{ position: "relative", top: "-420px", left: "45%" }}
-                  initial={{ x: 1000 }}
-                  onAnimationComplete={() => setShowInitial(false)}
-                  animate={{
-                    x: 0,
-                  }}
-                  transition={{ duration: 0.3, type: "tween" }}
-                >
-                  <FlexDiv
-                    style={{
-                      position: "absolute",
-                      zIndex: -1,
-                    }}
-                  >
-                    <img src={firoBox1} alt={firoBox1} width={300} />
-                  </FlexDiv>
-                </motion.FlexDiv>
-              )}
-
-              {!showInitial && (
-                <motion.FlexDiv
-                  style={{ position: "relative", top: "-420px", left: "45%" }}
-                  animate={{ x: [0, -250, -250, 0], opacity: 1 }}
-                  transition={{ repeat: Infinity, duration: 10, delay: 0.1 }}
-                >
-                  <FlexDiv
-                    style={{
-                      position: "absolute",
-                      zIndex: -1,
-                    }}
-                  >
-                    <img src={firoBox1} alt={firoBox1} width={300} />
-                  </FlexDiv>
-                </motion.FlexDiv>
-              )}
+              <AnimationHome1Desktop
+                showInitial={showInitial}
+                setShowInitial={setShowInitial}
+              />
             </FlexDiv>
           )}
         </PaddedDiv>
