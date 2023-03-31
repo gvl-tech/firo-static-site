@@ -1,26 +1,19 @@
-import React from "react";
-import completed from "../../../assets/roadmap/completed.svg";
-import incomplete from "../../../assets/roadmap/incomplete.svg";
+import React from "react"
+import completed from "../../../assets/roadmap/completed.svg"
+import incomplete from "../../../assets/roadmap/incomplete.svg"
 
-import { VerticalTimelineElement } from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
-import { useTheme } from "styled-components";
-import { useMediaQuery } from "react-responsive";
-import { Spacer } from "../../../components/utilities/spacer.component";
-import { Text } from "../../../components/utilities/text.component";
+import { VerticalTimelineElement } from "react-vertical-timeline-component"
+import "react-vertical-timeline-component/style.min.css"
+import { useTheme } from "styled-components"
+import { useMediaQuery } from "react-responsive"
+import { Spacer } from "../../../components/utilities/spacer.component"
+import { Text } from "../../../components/utilities/text.component"
 
-const BoxTimeline = ({
-  isComplete,
-  status,
-  logo,
-  title,
-  description,
-  fill,
-}) => {
-  const theme = useTheme();
-  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
-  const isBigDesktop = useMediaQuery({ query: "(min-width: 1824px)" });
-  const isTablet = useMediaQuery({ query: "(width: 768px)" });
+const BoxTimeline = ({ isComplete, status, title, description }) => {
+  const theme = useTheme()
+  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" })
+  const isBigDesktop = useMediaQuery({ query: "(min-width: 1824px)" })
+  const isTablet = useMediaQuery({ query: "(width: 768px)" })
 
   return (
     <VerticalTimelineElement
@@ -32,12 +25,14 @@ const BoxTimeline = ({
         //tablet:4 mobile:0 bigDesktop:6 else:5
       }}
       iconStyle={{
-        background: fill ? theme.colors.brand.primary : theme.colors.bg.white,
+        background: isComplete
+          ? theme.colors.brand.primary
+          : theme.colors.text.secondary,
         scale: "0.6",
-        boxShadow: "none",
         border: `10px solid ${
           isComplete ? theme.colors.brand.primary : theme.colors.text.secondary
         }`,
+        boxShadow: isComplete ? "0px 0px 30px 10px #ed5f73" : "none",
       }}
     >
       <img
@@ -89,7 +84,7 @@ const BoxTimeline = ({
         />
       </svg>
     </VerticalTimelineElement>
-  );
-};
+  )
+}
 
-export default BoxTimeline;
+export default BoxTimeline

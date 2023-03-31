@@ -1,17 +1,17 @@
-import React from "react";
-import { useTheme } from "styled-components";
-import { useMediaQuery } from "react-responsive";
-import { Text } from "../../../components/utilities/text.component";
-import { PaddedDiv } from "../../../components/utilities/padded-div.component";
-import { Spacer } from "../../../components/utilities/spacer.component";
-import { FlexCenterDiv } from "../../../components/utilities/flex-center-div.component";
-import { VerticalTimeline } from "react-vertical-timeline-component";
-import "./VerticalTimeline.css";
-import BoxTimeline from "../components/BoxTimeline";
+import React from "react"
+import { useTheme } from "styled-components"
+import { useMediaQuery } from "react-responsive"
+import { Text } from "../../../components/utilities/text.component"
+import { PaddedDiv } from "../../../components/utilities/padded-div.component"
+import { Spacer } from "../../../components/utilities/spacer.component"
+import { FlexCenterDiv } from "../../../components/utilities/flex-center-div.component"
+import { VerticalTimeline } from "react-vertical-timeline-component"
+import "./VerticalTimeline.css"
+import BoxTimeline from "../components/BoxTimeline"
 
 const Timeline = () => {
-  const theme = useTheme();
-  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
+  const theme = useTheme()
+  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" })
 
   return (
     <div>
@@ -37,14 +37,12 @@ const Timeline = () => {
         <Spacer size="xxLarge" />
         <PaddedDiv y="5" bg={theme.colors.bg.white} br="2">
           <VerticalTimeline
-            animate={false}
             lineColor={theme.colors.text.secondary}
             className="vertical-timeline-custom-line"
           >
             {/* COMPLETE */}
             <BoxTimeline
               isComplete={true}
-              fill={true}
               status="COMPLETED"
               title="Deterministic Masternodes"
             />
@@ -160,7 +158,7 @@ const Timeline = () => {
         </PaddedDiv>
       </PaddedDiv>
     </div>
-  );
-};
+  )
+}
 
-export default Timeline;
+export default Timeline
