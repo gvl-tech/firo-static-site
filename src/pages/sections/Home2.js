@@ -1,6 +1,7 @@
 import React from "react"
+import Lottie from "react-lottie"
+import animationData from "../../assets/animation/blocks.json"
 import BoxHome2 from "../components/Box/BoxHome2"
-import cube from "../../assets/home2/cube.svg"
 import build from "../../assets/home2/build.svg"
 import poll from "../../assets/home2/poll.svg"
 import spend from "../../assets/home2/spend.svg"
@@ -20,6 +21,14 @@ const Home2 = () => {
   const theme = useTheme()
   const isDesktop = useMediaQuery({ query: "(min-width: 768px)" })
   const isTablet = useMediaQuery({ query: "(width: 768px)" })
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  }
 
   return (
     <>
@@ -32,10 +41,9 @@ const Home2 = () => {
           >
             <FlexCenterDiv>
               <PaddedDiv y="5" x="0">
-                <img
+                <Lottie
+                  options={defaultOptions}
                   width={isTablet ? "350px" : isDesktop ? "500px" : "300px"}
-                  src={cube}
-                  alt="cube"
                 />
               </PaddedDiv>
             </FlexCenterDiv>
