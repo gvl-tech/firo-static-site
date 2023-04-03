@@ -1,28 +1,28 @@
-import React from "react";
-import arrow from "../../assets/footer/arrow-button.svg";
-import twitter from "../../assets/footer/twitter.svg";
-import facebook from "../../assets/footer/facebook.svg";
-import instagram from "../../assets/footer/instagram.svg";
-import youtube from "../../assets/footer/youtube.svg";
-import weibo from "../../assets/footer/weibo.svg";
-import language from "../../assets/footer/language.svg";
+import React from "react"
+import arrow from "../../assets/footer/arrow-button.svg"
+import twitter from "../../assets/footer/twitter.svg"
+import facebook from "../../assets/footer/facebook.svg"
+import instagram from "../../assets/footer/instagram.svg"
+import youtube from "../../assets/footer/youtube.svg"
+import weibo from "../../assets/footer/weibo.svg"
+import language from "../../assets/footer/language.svg"
 
-import { useTheme } from "styled-components";
-import { useMediaQuery } from "react-responsive";
-import { AiOutlineDown } from "react-icons/ai";
-import { Text } from "../../components/utilities/text.component";
-import { PaddedDiv } from "../../components/utilities/padded-div.component";
-import { FlexStartDiv } from "../../components/utilities/flex-start-div.component";
-import { FlexSpaceBetweenDiv } from "../../components/utilities/flex-space-between-div.component";
-import { Spacer } from "../../components/utilities/spacer.component";
-import { BubbleDiv } from "../../components/buttons/bubble-text.component";
-import { GridDiv } from "../../components/utilities/grid-div.component";
-import { FlexCenterDiv } from "../../components/utilities/flex-center-div.component";
-import { Button } from "../../components/buttons/cta-button.component";
+import { useTheme } from "styled-components"
+import { useMediaQuery } from "react-responsive"
+import { AiOutlineDown } from "react-icons/ai"
+import { Text } from "../../components/utilities/text.component"
+import { PaddedDiv } from "../../components/utilities/padded-div.component"
+import { FlexStartDiv } from "../../components/utilities/flex-start-div.component"
+import { FlexSpaceBetweenDiv } from "../../components/utilities/flex-space-between-div.component"
+import { Spacer } from "../../components/utilities/spacer.component"
+import { BubbleDiv } from "../../components/buttons/bubble-text.component"
+import { GridDiv } from "../../components/utilities/grid-div.component"
+import { FlexCenterDiv } from "../../components/utilities/flex-center-div.component"
+import { Button } from "../../components/buttons/cta-button.component"
 
 const Footer = () => {
-  const theme = useTheme();
-  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
+  const theme = useTheme()
+  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" })
 
   return (
     <FlexStartDiv bg={theme.colors.brand.primary}>
@@ -200,33 +200,6 @@ const Footer = () => {
               </FlexCenterDiv>
             </GridDiv>
           </div>
-
-          <Spacer size="xxLarge" />
-
-          {/* Button Section (Mobile) */}
-          <FlexCenterDiv>
-            <button
-              style={{
-                border: "none",
-                backgroundColor: "#BA2A45",
-                color: `${theme.colors.text.white}`,
-                fontWeight: `${theme.fontWeights.regular}`,
-                fontSize: `${theme.fontSizes.button}px`,
-                padding: `${theme.space[3]}px ${theme.space[4]}px`,
-                borderRadius: `${theme.borderSizes[3]}px`,
-              }}
-            >
-              <FlexCenterDiv dir="row">
-                <img src={language} alt={language} width="25px" />
-                <Spacer position="right" />
-                <Text variant="label" color={theme.colors.text.white}>
-                  ENGLISH
-                </Text>
-
-                <AiOutlineDown />
-              </FlexCenterDiv>
-            </button>
-          </FlexCenterDiv>
         </PaddedDiv>
       )}
 
@@ -453,38 +426,10 @@ const Footer = () => {
               </div>
             </FlexSpaceBetweenDiv>
           </GridDiv>
-
-          <Spacer size="xxxLarge" />
-
-          {/* Button Section (Desktop) */}
-          <FlexCenterDiv>
-            <button
-              style={{
-                border: "none",
-                backgroundColor: "#BA2A45",
-                color: `${theme.colors.text.white}`,
-                fontWeight: `${theme.fontWeights.regular}`,
-                fontSize: `${theme.fontSizes.button}px`,
-                padding: `${theme.space[3]}px ${theme.space[4]}px`,
-                borderRadius: `${theme.borderSizes[3]}px`,
-                cursor: "pointer",
-              }}
-            >
-              <FlexCenterDiv dir="row">
-                <img src={language} alt={language} width="25px" />
-                <Spacer position="right" />
-                <Text variant="label" color={theme.colors.text.white}>
-                  ENGLISH
-                </Text>
-
-                <AiOutlineDown />
-              </FlexCenterDiv>
-            </button>
-          </FlexCenterDiv>
         </PaddedDiv>
       )}
     </FlexStartDiv>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
