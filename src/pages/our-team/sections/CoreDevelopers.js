@@ -1,29 +1,29 @@
-import React from "react";
-import peter from "../../../assets/team/peter.png";
-import levon from "../../../assets/team/levon.png";
-import gevorg from "../../../assets/team/gevorg.png";
-import lc from "../../../assets/team/lc.png";
-import levon2 from "../../../assets/team/levon2.png";
+import React from "react"
+import peter from "../../../assets/team/peter.png"
+import levon from "../../../assets/team/levon.png"
+import gevorg from "../../../assets/team/gevorg.png"
+import lc from "../../../assets/team/lc.png"
+import levon2 from "../../../assets/team/levon2.png"
 
-import { useMediaQuery } from "react-responsive";
-import { Text } from "../../../components/utilities/text.component";
-import { PaddedDiv } from "../../../components/utilities/padded-div.component";
-import { Spacer } from "../../../components/utilities/spacer.component";
-import { FlexStartDiv } from "../../../components/utilities/flex-start-div.component";
-import BoxTeam from "../components/BoxTeam";
-import { GridDiv } from "../../../components/utilities/grid-div.component";
+import { useMediaQuery } from "react-responsive"
+import { Text } from "../../../components/utilities/text.component"
+import { PaddedDiv } from "../../../components/utilities/padded-div.component"
+import { Spacer } from "../../../components/utilities/spacer.component"
+import { FlexStartDiv } from "../../../components/utilities/flex-start-div.component"
+import BoxTeam from "../components/BoxTeam"
+import { GridDiv } from "../../../components/utilities/grid-div.component"
 
 const CoreDevelopers = () => {
-  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
+  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" })
   const isTablet = useMediaQuery({
     query: "(min-width: 768px) and (max-width: 1023px)",
-  });
+  })
   return (
     <div>
       <PaddedDiv style={{ padding: "5%" }}>
         <FlexStartDiv style={{ alignItems: isDesktop ? "start" : "center" }}>
           <Text bold="true" variant={isDesktop ? "h2" : "h4"}>
-            Core Develepors
+            Core Developers
           </Text>
         </FlexStartDiv>
         <Spacer size="xxxLarge" />
@@ -70,7 +70,7 @@ const CoreDevelopers = () => {
         </GridDiv>
       </PaddedDiv>
     </div>
-  );
-};
+  )
+}
 
-export default CoreDevelopers;
+export default CoreDevelopers
