@@ -13,6 +13,25 @@ module.exports = {
     description: "The future of Privacy is here",
   },
   plugins: [
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-less`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `/Users/darrenteoh/Desktop/apps/firo/firo-static-site/src/content`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `/Users/darrenteoh/Desktop/apps/firo/firo-static-site/src/pages/blog/assets`,
+      },
+    },
     {
       resolve: `gatsby-plugin-styled-components`,
     },

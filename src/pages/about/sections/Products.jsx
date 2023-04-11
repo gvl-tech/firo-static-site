@@ -1,34 +1,34 @@
-import React from "react";
-import elysium from "../../../assets/about/elysium.svg";
-import dotOracle from "../../../assets/about/dotOracle.svg";
-import dandelion from "../../../assets/about/dandelion.svg";
-import lelantusSpark from "../../../assets/about/lelantusSpark.svg";
-import aura from "../../../assets/about/aura.svg";
-import faster from "../../../assets/about/faster.svg";
-import errorFree from "../../../assets/about/errorFree.svg";
-import mobile from "../../../assets/about/mobile.svg";
-import anonymous from "../../../assets/about/anonymous.svg";
-import lowCost from "../../../assets/about/lowCost.svg";
-import tamperFree from "../../../assets/about/tamperFree.svg";
-import nasdaq from "../../../assets/about/nasdaq.svg";
-import yahoo from "../../../assets/about/yahoo.svg";
-import altCoinBuzz from "../../../assets/about/altCoinBuzz.svg";
+import React from "react"
+import elysium from "../../../assets/about/elysium.svg"
+import dotOracle from "../../../assets/about/dotOracle.svg"
+import dandelion from "../../../assets/about/dandelion.svg"
+import lelantusSpark from "../../../assets/about/lelantusSpark.svg"
+import aura from "../../../assets/about/aura.svg"
+import faster from "../../../assets/about/faster.svg"
+import errorFree from "../../../assets/about/errorFree.svg"
+import mobile from "../../../assets/about/mobile.svg"
+import anonymous from "../../../assets/about/anonymous.svg"
+import lowCost from "../../../assets/about/lowCost.svg"
+import tamperFree from "../../../assets/about/tamperFree.svg"
+import nasdaq from "../../../assets/about/nasdaq.svg"
+import yahoo from "../../../assets/about/yahoo.svg"
+import altCoinBuzz from "../../../assets/about/altCoinBuzz.svg"
 
-import { useTheme } from "styled-components";
-import { useMediaQuery } from "react-responsive";
-import { FlexCenterDiv } from "../../../components/utilities/flex-center-div.component";
-import { Text } from "../../../components/utilities/text.component";
-import { FlexStartDiv } from "../../../components/utilities/flex-start-div.component";
-import { PaddedDiv } from "../../../components/utilities/padded-div.component";
-import { Spacer } from "../../../components/utilities/spacer.component";
-import { Button } from "../../../components/buttons/cta-button.component";
-import { GridDiv } from "../../../components/utilities/grid-div.component";
-import { FlexSpaceBetweenDiv } from "../../../components/utilities/flex-space-between-div.component";
+import { useTheme } from "styled-components"
+import { useMediaQuery } from "react-responsive"
+import { FlexCenterDiv } from "../../../components/utilities/flex-center-div.component"
+import { Text } from "../../../components/utilities/text.component"
+import { FlexStartDiv } from "../../../components/utilities/flex-start-div.component"
+import { PaddedDiv } from "../../../components/utilities/padded-div.component"
+import { Spacer } from "../../../components/utilities/spacer.component"
+import { Button } from "../../../components/buttons/cta-button.component"
+import { GridDiv } from "../../../components/utilities/grid-div.component"
+import { FlexSpaceBetweenDiv } from "../../../components/utilities/flex-space-between-div.component"
 
 const Products = () => {
-  const theme = useTheme();
-  const isDesktop = useMediaQuery({ query: "(min-width: 769px)" });
-  const isTablet = useMediaQuery({ query: "(width: 768px)" });
+  const theme = useTheme()
+  const isDesktop = useMediaQuery({ query: "(min-width: 769px)" })
+  const isTablet = useMediaQuery({ query: "(width: 768px)" })
 
   return (
     <div>
@@ -205,7 +205,7 @@ const Products = () => {
                     bold="true"
                     color={theme.colors.text.primary}
                   >
-                    Spark Assets
+                    Aura
                   </Text>
                 </FlexStartDiv>
                 <Spacer />
@@ -223,7 +223,7 @@ const Products = () => {
                     bold="true"
                     color={theme.colors.text.primary}
                   >
-                    Spark Assets
+                    Aura
                   </Text>
                   <Text variant="caption" color={theme.colors.text.primary}>
                     Blockchain-based polling system
@@ -359,7 +359,7 @@ const Products = () => {
       </GridDiv>
       {isDesktop && <Spacer size="xxxLarge" />}
     </div>
-  );
-};
+  )
+}
 
-export default Products;
+export default Products
