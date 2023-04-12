@@ -2,12 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import BlogCard from "../pages/blog/components/BlogCard"
 import "../styles/blogIndex.less"
-import { FlexCenterDiv } from "../components/utilities/flex-center-div.component"
-import { Text } from "../components/utilities/text.component"
-import { useTheme } from "styled-components"
-import { PaddedDiv } from "../components/utilities/padded-div.component"
 const BlogIndexTemplate = ({ pageContext }) => {
-  const theme = useTheme()
   const { pageCount, group, index } = pageContext
   const previousIndex = index - 1
   const nextIndex = index + 1
@@ -94,7 +89,7 @@ const BlogIndexTemplate = ({ pageContext }) => {
 export default BlogIndexTemplate
 
 export const blogListQuery = graphql`
-  query blogListQuery($skip: Int!, $limit: Int!) {
+  query blogListQuery($skip: Int, $limit: Int) {
     allMarkdownRemark(
       sort: { frontmatter: { date: DESC } }
       limit: $limit

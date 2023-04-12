@@ -5,11 +5,7 @@ import "../styles/blogIndex.less"
 
 const TagsIndexTemplate = ({ pageContext, data }) => {
   const { tag } = pageContext
-  const { totalCount, edges } = data.allMarkdownRemark
-
-  const tagHeader = `${totalCount} post${
-    totalCount === 1 ? "" : "s"
-  } tagged with "${tag}"`
+  const { edges } = data.allMarkdownRemark
 
   return (
     <div id="blogIndex">
