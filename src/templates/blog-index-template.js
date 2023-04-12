@@ -61,7 +61,7 @@ const BlogIndexTemplate = ({ pageContext }) => {
         </div>
       </section>
 
-      {group.map(post => (
+      {group?.map(post => (
         <BlogCard key={post.id} post={post} />
       ))}
 
