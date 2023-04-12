@@ -22,14 +22,14 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `content`,
-        path: `/Users/darrenteoh/Desktop/apps/firo/firo-static-site/src/content`,
+        path: `./src/content`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `content`,
-        path: `/Users/darrenteoh/Desktop/apps/firo/firo-static-site/src/pages/blog/assets`,
+        path: `./src/pages/blog/assets`,
       },
     },
     {
