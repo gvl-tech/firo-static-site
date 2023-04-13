@@ -5,7 +5,6 @@ title: "Common Wallet Problems and Solutions"
 summary: ""
 tags: [news, dev, community]
 author: "Anwar P."
-img: ""
 alt: ""
 ---
 

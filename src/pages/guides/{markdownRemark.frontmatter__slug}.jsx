@@ -1,8 +1,6 @@
 import { graphql } from "gatsby"
-import { getImage } from "gatsby-plugin-image"
 import * as React from "react"
 import { useMediaQuery } from "react-responsive"
-import { useTheme } from "styled-components"
 import { FlexStartDiv } from "../../components/utilities/flex-start-div.component"
 import { PaddedDiv } from "../../components/utilities/padded-div.component"
 import { Spacer } from "../../components/utilities/spacer.component"
