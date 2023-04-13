@@ -49,22 +49,22 @@ const Guides = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/guides/backing-up-firo-wallet-with-recovery-seed-phrase.html">
+                    <Link to="/guides/backing-up-firo-wallet-with-recovery-seed-phrase">
                       How to backup your Firo wallet with a recovery seed phrase
                     </Link>
                   </li>
                   <li>
-                    <Link to="/guides/reindex-wallet.html">
+                    <Link to="/guides/reindex-wallet">
                       Reindexing your Firo wallet
                     </Link>
                   </li>
                   <li>
-                    <Link to="/guides/using-ledger-with-firo.html">
+                    <Link to="/guides/using-ledger-with-firo">
                       How to Use Ledger With Firo
                     </Link>
                   </li>
                   <li>
-                    <Link to="/guides/using-trezor-with-firo.html">
+                    <Link to="/guides/using-trezor-with-firo">
                       How to Use Trezor With Firo
                     </Link>
                   </li>
@@ -81,7 +81,7 @@ const Guides = () => {
                 <h2>Mining</h2>
                 <ul class="guides-list">
                   <li>
-                    <Link to="/guides/how-to-mine-firo.html">
+                    <Link to="/guides/how-to-mine-firo">
                       How to Mine Firo (FIRO) with FiroPoW
                     </Link>
                   </li>
@@ -98,17 +98,17 @@ const Guides = () => {
                 <h2>Masternode</h2>
                 <ul class="guides-list">
                   <li>
-                    <Link to="/guides/masternode-setup.html">
+                    <Link to="/guides/masternode-setup">
                       Firo masternode setup guide
                     </Link>
                   </li>
                   <li>
-                    <Link to="/guides/masternode-upgrade.html">
+                    <Link to="/guides/masternode-upgrade">
                       Upgrading your Firo masternode
                     </Link>
                   </li>
                   <li>
-                    <Link to="/guides/reindex-wallet.html">
+                    <Link to="/guides/reindex-wallet">
                       Reindexing your Firo wallet
                     </Link>
                   </li>
@@ -125,7 +125,7 @@ const Guides = () => {
                 <h2>Privacy Tech</h2>
                 <ul class="guides-list">
                   <li>
-                    <Link to="/guides/privacy-coin-comparison.html">
+                    <Link to="/guides/privacy-coin-comparison">
                       How Firo's Privacy Technology Compares to the Competition
                     </Link>
                   </li>
@@ -142,7 +142,7 @@ const Guides = () => {
                 <h2>DeFi</h2>
                 <ul class="guides-list">
                   <li>
-                    <Link to="/guides/liquidity-firo-pancakeswap.html">
+                    <Link to="/guides/liquidity-firo-pancakeswap">
                       How to Provide Liquidity for Firo on Pancakeswap
                     </Link>
                   </li>
