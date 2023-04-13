@@ -1,5 +1,6 @@
 import { graphql } from "gatsby"
 import * as React from "react"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useMediaQuery } from "react-responsive"
 import { FlexStartDiv } from "../../components/utilities/flex-start-div.component"
 import { PaddedDiv } from "../../components/utilities/padded-div.component"
@@ -14,6 +15,7 @@ export default function GuidePostTemplate({
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
   const isDesktop = useMediaQuery({ query: "(min-width: 768px)" })
+  let featuredImg = getImage(frontmatter.img?.childImageSharp?.gatsbyImageData)
 
   return (
     <Layout>
@@ -27,6 +29,7 @@ export default function GuidePostTemplate({
               {frontmatter.title}
             </Text>
             <Spacer />
+            <GatsbyImage image={featuredImg} />
             <div dangerouslySetInnerHTML={{ __html: html }} />
           </FlexStartDiv>
         </PaddedDiv>
@@ -42,6 +45,11 @@ export const pageQuery = graphql`
       frontmatter {
         slug
         title
+        img {
+          childImageSharp {
+            gatsbyImageData(width: 800)
+          }
+        }
       }
     }
   }
