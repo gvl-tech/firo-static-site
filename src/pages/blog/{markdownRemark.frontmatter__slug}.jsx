@@ -52,7 +52,7 @@ export default function BlogPostTemplate({
 
 export const pageQuery = graphql`
   query ($id: String!) {
-    markdownRemark(id: { eq: $id }, frontmatter: { layout: { eq: "post" } }) {
+    markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")

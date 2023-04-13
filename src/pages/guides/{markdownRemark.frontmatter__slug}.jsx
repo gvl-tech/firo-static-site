@@ -41,7 +41,7 @@ export default function GuidePostTemplate({
 
 export const pageQuery = graphql`
   query ($id: String!) {
-    markdownRemark(id: { eq: $id }, frontmatter: { layout: { eq: "guide" } }) {
+    markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
         slug

@@ -5,7 +5,7 @@ layout: post
 title: ""
 tags: [news, community]
 author: Reuben Yap
-img: "../pages/blog/assets/binance-ticker-change.png"
+img: "../../pages/blog/assets/binance-ticker-change.png"
 alt: ""
 ---
 

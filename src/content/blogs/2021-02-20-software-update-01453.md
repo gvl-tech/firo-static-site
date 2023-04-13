@@ -5,7 +5,7 @@ layout: post
 title: "New software update Firo v0.14.5.3"
 tags: [news, dev, community]
 author: Augustus Jong
-img: "../pages/blog/assets/firo-new-software-release.png"
+img: "../../pages/blog/assets/firo-new-software-release.png"
 alt: ""
 ---
 

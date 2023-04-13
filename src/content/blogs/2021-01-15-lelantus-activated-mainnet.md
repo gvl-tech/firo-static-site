@@ -5,7 +5,7 @@ layout: post
 title: "Lelantus Activated on Mainnet"
 tags: [news, community]
 author: Michael "Muggles" Bernhardt
-img: "../pages/blog/assets/Lelantus-activated-mainnet.jpeg"
+img: "../../pages/blog/assets/Lelantus-activated-mainnet.jpeg"
 alt: ""
 ---
 

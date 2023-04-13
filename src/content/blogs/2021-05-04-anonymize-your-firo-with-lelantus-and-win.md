@@ -6,7 +6,7 @@ title: "Anonymize your Firo with Lelantus and Win!"
 summary: "To celebrate the reactivation of Lelantus and to encourage use of Lelantus anonymization transactions, we are holding a month long community event where anybody who anonymizes with Lelantus stands a chance to win Firo!"
 tags: [news, community]
 author: "Reuben Yap"
-img: "../pages/blog/assets/anonymize-and-win.png"
+img: "../../pages/blog/assets/anonymize-and-win.png"
 ---
 
 There is a huge random element to win but the more often you anonymize your funds with Lelantus and the bigger the amount, the higher the chance you stand to win. We will credit the prizes directly to the address that anonymized the funds so your privacy is retained!

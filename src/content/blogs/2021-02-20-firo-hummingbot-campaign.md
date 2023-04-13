@@ -5,7 +5,7 @@ layout: post
 title: "Firo Liquidity Mining Campaign"
 tags: [news, community]
 author: Reuben Yap
-img: "../pages/blog/assets/firo-liquidity-hummingbot.jpeg"
+img: "../../pages/blog/assets/firo-liquidity-hummingbot.jpeg"
 alt: ""
 ---
 

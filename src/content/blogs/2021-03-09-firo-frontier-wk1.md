@@ -5,7 +5,7 @@ layout: post
 title: "Introducing The Firo Frontier"
 tags: [news, community]
 author: Splineapple
-img: "../pages/blog/assets/firo-frontier-youtube.png"
+img: "../../pages/blog/assets/firo-frontier-youtube.png"
 alt: ""
 ---
 

@@ -5,7 +5,7 @@ layout: post
 title: "ChainLocks activated on Firo, protects against 51% attacks"
 tags: [news, dev, community]
 author: Reuben Yap
-img: "../pages/blog/assets/chainlocks-activated.png"
+img: "../../pages/blog/assets/chainlocks-activated.png"
 alt: ""
 ---
 

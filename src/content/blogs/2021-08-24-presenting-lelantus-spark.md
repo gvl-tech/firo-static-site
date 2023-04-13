@@ -6,7 +6,7 @@ title: "Presenting Lelantus Spark, Firo’s Flexible New Privacy Protocol"
 summary: "Firo unveils a protocol that introduces several new privacy-preserving features."
 tags: [news, dev]
 author: "Reuben Yap"
-img: "../pages/blog/assets/unveiling-lelantus-spark.png"
+img: "../../pages/blog/assets/unveiling-lelantus-spark.png"
 ---
 
 **Update:** Lelantus paper is now available on IACR eprint with full security proofs.

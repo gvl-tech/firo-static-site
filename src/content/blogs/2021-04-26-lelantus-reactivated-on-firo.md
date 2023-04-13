@@ -6,7 +6,7 @@ title: "Lelantus reactivated on Firo"
 summary: "Lelantus reactivated on Firo with additional hardening measures after completion of the hard fork"
 tags: [news, dev, community]
 author: "Reuben Yap"
-img: "../pages/blog/assets/lelantus-reactivation.png"
+img: "../../pages/blog/assets/lelantus-reactivation.png"
 ---
 
 With the [release of Firo v14.6.0](https://github.com/firoorg/firo/releases) and the hard fork completed, [Lelantus](https://firo.org/2021/01/06/lelantus-activating-on-firo.html) private transactions have now been re-enabled.

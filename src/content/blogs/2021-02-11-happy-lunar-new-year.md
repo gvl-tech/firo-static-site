@@ -5,7 +5,7 @@ layout: post
 title: "Happy Lunar New Year"
 tags: [community]
 author: Reuben Yap
-img: "../pages/blog/assets/happy-lunar-new-year.png"
+img: "../../pages/blog/assets/happy-lunar-new-year.png"
 alt: ""
 ---
 
