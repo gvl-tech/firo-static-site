@@ -10,7 +10,7 @@ import { Spacer } from "../../components/utilities/spacer.component"
 import { Layout } from "../../infrastructure/layouts/Layout"
 import "../../styles/blogTemplate.less"
 
-export default function BlogPostTemplate({
+export default function GuidePostTemplate({
   data, // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
@@ -30,18 +30,7 @@ export default function BlogPostTemplate({
             <Text bold="true" style={{ lineHeight: 1.3, fontSize: "2.5rem" }}>
               {frontmatter.title}
             </Text>
-            <Text
-              color={theme.colors.text.secondary}
-              style={{ fontSize: "1.2rem" }}
-            >
-              {frontmatter.summary}
-            </Text>
             <Spacer />
-            <Text color={theme.colors.text.secondary}>
-              {frontmatter.date} | {frontmatter.author}
-            </Text>
-            <Spacer size="xLarge" />
-            <GatsbyImage image={featuredImg} />
             <div dangerouslySetInnerHTML={{ __html: html }} />
           </FlexStartDiv>
         </PaddedDiv>
@@ -52,10 +41,9 @@ export default function BlogPostTemplate({
 
 export const pageQuery = graphql`
   query ($id: String!) {
-    markdownRemark(id: { eq: $id }, frontmatter: { layout: { eq: "post" } }) {
+    markdownRemark(id: { eq: $id }, frontmatter: { layout: { eq: "guide" } }) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
         slug
         title
         summary

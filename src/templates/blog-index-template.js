@@ -93,18 +93,15 @@ const BlogIndexTemplate = ({ pageContext }) => {
 export default BlogIndexTemplate
 
 export const blogListQuery = graphql`
-  query blogListQuery($skip: Int, $limit: Int) {
-    allMarkdownRemark(
-      sort: { frontmatter: { date: DESC } }
-      limit: $limit
-      skip: $skip
-    ) {
+  query blogListQuery {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       edges {
         node {
           id
           excerpt(pruneLength: 250)
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
+            layout
             slug
             title
             summary
