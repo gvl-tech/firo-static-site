@@ -1,12 +1,12 @@
+import { graphql } from "gatsby"
+import { getImage } from "gatsby-plugin-image"
 import * as React from "react"
 import { useMediaQuery } from "react-responsive"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { graphql } from "gatsby"
-import { PaddedDiv } from "../../components/utilities/padded-div.component"
-import { Text } from "../../components/utilities/text.component"
-import { FlexStartDiv } from "../../components/utilities/flex-start-div.component"
 import { useTheme } from "styled-components"
+import { FlexStartDiv } from "../../components/utilities/flex-start-div.component"
+import { PaddedDiv } from "../../components/utilities/padded-div.component"
 import { Spacer } from "../../components/utilities/spacer.component"
+import { Text } from "../../components/utilities/text.component"
 import { Layout } from "../../infrastructure/layouts/Layout"
 import "../../styles/blogTemplate.less"
 
@@ -15,9 +15,7 @@ export default function GuidePostTemplate({
 }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
-  const theme = useTheme()
   const isDesktop = useMediaQuery({ query: "(min-width: 768px)" })
-  let featuredImg = getImage(frontmatter.img?.childImageSharp?.gatsbyImageData)
 
   return (
     <Layout>

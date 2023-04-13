@@ -52,6 +52,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `./src/pages/guides/assets`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-styled-components`,
     },
     {

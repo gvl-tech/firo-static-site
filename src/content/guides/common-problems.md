@@ -68,7 +68,7 @@ The 1000 FIRO should now be available for you to send.
 
 When using a hardware wallet as the receiving address for mining pools' payout, the amount of input transactions can overwhelm the hardware limitations of the hardware wallet.
 
-![](/guide/assets/common-problems/electrum-firo-ledger-select.png)
+![](../../pages/guides/assets/common-problems/electrum-firo-ledger-select.png)
 
 1. In Electrum-Firo, select **View -> Show coins**.
 
