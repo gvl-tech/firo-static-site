@@ -7,6 +7,7 @@ import { Text } from "../../components/utilities/text.component"
 import { FlexStartDiv } from "../../components/utilities/flex-start-div.component"
 import { useTheme } from "styled-components"
 import { Spacer } from "../../components/utilities/spacer.component"
+import { Layout } from "../../infrastructure/layouts/Layout"
 import "../../styles/blogTemplate.less"
 
 export default function BlogPostTemplate({
@@ -19,31 +20,33 @@ export default function BlogPostTemplate({
   let featuredImg = getImage(frontmatter.img?.childImageSharp?.gatsbyImageData)
 
   return (
-    <div id="blogTemplate">
-      <PaddedDiv y="6">
-        <FlexStartDiv
-          width={isDesktop ? "40" : "90"}
-          style={{ margin: "0 auto" }}
-        >
-          <Text bold="true" style={{ lineHeight: 1.3, fontSize: "2.5rem" }}>
-            {frontmatter.title}
-          </Text>
-          <Text
-            color={theme.colors.text.secondary}
-            style={{ fontSize: "1.2rem" }}
+    <Layout>
+      <div id="blogTemplate">
+        <PaddedDiv y="6">
+          <FlexStartDiv
+            width={isDesktop ? "40" : "90"}
+            style={{ margin: "0 auto" }}
           >
-            {frontmatter.summary}
-          </Text>
-          <Spacer />
-          <Text color={theme.colors.text.secondary}>
-            {frontmatter.date} | {frontmatter.author}
-          </Text>
-          <Spacer size="xLarge" />
-          <GatsbyImage image={featuredImg} />
-          <div dangerouslySetInnerHTML={{ __html: html }} />
-        </FlexStartDiv>
-      </PaddedDiv>
-    </div>
+            <Text bold="true" style={{ lineHeight: 1.3, fontSize: "2.5rem" }}>
+              {frontmatter.title}
+            </Text>
+            <Text
+              color={theme.colors.text.secondary}
+              style={{ fontSize: "1.2rem" }}
+            >
+              {frontmatter.summary}
+            </Text>
+            <Spacer />
+            <Text color={theme.colors.text.secondary}>
+              {frontmatter.date} | {frontmatter.author}
+            </Text>
+            <Spacer size="xLarge" />
+            <GatsbyImage image={featuredImg} />
+            <div dangerouslySetInnerHTML={{ __html: html }} />
+          </FlexStartDiv>
+        </PaddedDiv>
+      </div>
+    </Layout>
   )
 }
 

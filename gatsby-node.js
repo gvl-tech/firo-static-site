@@ -62,7 +62,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     edges: posts,
     createPage,
     pageTemplate: "src/templates/blog-index-template.js",
-    pageLength: 1,
+    pageLength: 5,
     pathPrefix: "latest-updates",
   })
   // Create blog posts pages

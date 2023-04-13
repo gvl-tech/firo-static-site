@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
-import "../../styles/faq.less"
 import { Layout } from "../../infrastructure/layouts/Layout"
+import "../../styles/faq.less"
 
 const FAQ = () => {
   return (

@@ -28,7 +28,7 @@ const BlogCard = ({ post }) => {
                 <p>{post?.frontmatter?.summary}</p>
               </Link>
               <p class="post-tag">
-                {post?.frontmatter?.tags.map(tag => (
+                {post?.frontmatter?.tags?.map(tag => (
                   <Link to={`/tag/${tag}`}>#{tag}</Link>
                 ))}
               </p>
