@@ -46,14 +46,6 @@ export const pageQuery = graphql`
       frontmatter {
         slug
         title
-        summary
-        author
-        layout
-        img {
-          childImageSharp {
-            gatsbyImageData(width: 800)
-          }
-        }
       }
     }
   }
