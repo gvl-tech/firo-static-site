@@ -1,5 +1,5 @@
 ---
-slug: "/lelantus-reactivated-on-firo"
+slug: "/2021-04-26-lelantus-reactivated-on-firo"
 date: "2021-04-26"
 layout: post
 title: "Lelantus reactivated on Firo"

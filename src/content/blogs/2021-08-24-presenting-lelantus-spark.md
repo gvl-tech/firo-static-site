@@ -1,5 +1,5 @@
 ---
-slug: "/presenting-lelantus-spark"
+slug: "/2021-08-24-presenting-lelantus-spark"
 date: "2021-08-24"
 layout: post
 title: "Presenting Lelantus Spark, Firo’s Flexible New Privacy Protocol"

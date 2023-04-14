@@ -1,5 +1,5 @@
 ---
-slug: "/anonymize-your-firo-with-lelantus-and-win"
+slug: "/2021-05-04-anonymize-your-firo-with-lelantus-and-win"
 date: "2021-05-04"
 layout: post
 title: "Anonymize your Firo with Lelantus and Win!"

@@ -39,7 +39,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             }
           }
         }
-        tags: allMarkdownRemark(limit: 2000) {
+        tags: allMarkdownRemark(
+          filter: { fileAbsolutePath: { regex: "/blogs/" } }
+          limit: 2000
+        ) {
           group(field: { frontmatter: { tags: SELECT } }) {
             fieldValue
           }

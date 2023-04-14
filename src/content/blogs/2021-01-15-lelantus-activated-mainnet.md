@@ -1,5 +1,5 @@
 ---
-slug: "/lelantus-activated-mainnet"
+slug: "/2021-01-15-lelantus-activated-mainnet"
 date: "2021-01-15"
 layout: post
 title: "Lelantus Activated on Mainnet"

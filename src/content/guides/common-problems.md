@@ -3,9 +3,8 @@ slug: "/common-problems"
 layout: guide
 title: "Common Wallet Problems and Solutions"
 summary: ""
-tags: [news, dev, community]
+tags: [guide]
 author: "Anwar P."
-alt: ""
 ---
 
 This guide lists the common problems you might face while using the Firo wallets. If your problem is not listed here, please visit the #support channel on [Discord](https://discord.com/invite/TGZPRbRT3Y) or [Telegram.](https://t.me/firoorg)
