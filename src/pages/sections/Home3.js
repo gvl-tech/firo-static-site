@@ -1,32 +1,31 @@
-import React from "react";
-import BoxHome3 from "../components/Box/BoxHome3";
-import getfiro from "../../assets/home3/get-firo.svg";
-import merchant from "../../assets/home3/merchant.svg";
-import bountyhunter from "../../assets/home3/bounty-hunter.svg";
-import stake from "../../assets/home3/stake.svg";
-import discord from "../../assets/home3/social-discord.svg";
-import youtube from "../../assets/home3/social-youtube.svg";
-import telegram from "../../assets/home3/social-telegram.svg";
-import forum from "../../assets/home3/social-forum.svg";
-import community from "../../assets/home3/community.svg";
-import { useTheme } from "styled-components";
-import { useMediaQuery } from "react-responsive";
-import { Text } from "../../components/utilities/text.component";
-import { Spacer } from "../../components/utilities/spacer.component";
-import { FlexDiv } from "../../components/utilities/flex-div.component";
-import { GridDiv } from "../../components/utilities/grid-div.component";
-import { BoxDiv } from "../../components/utilities/box-container.component";
-import { FlexCenterDiv } from "../../components/utilities/flex-center-div.component";
-import { FlexEvenlyDiv } from "../../components/utilities/flex-space-evenly.component";
+import React from "react"
+import { useMediaQuery } from "react-responsive"
+import { useTheme } from "styled-components"
+import community from "../../assets/home3/community.svg"
+import getfiro from "../../assets/home3/get-firo.svg"
+import merchant from "../../assets/home3/merchant.svg"
+import discord from "../../assets/home3/social-discord.svg"
+import forum from "../../assets/home3/social-forum.svg"
+import telegram from "../../assets/home3/social-telegram.svg"
+import youtube from "../../assets/home3/social-youtube.svg"
+import stake from "../../assets/home3/stake.svg"
+import { BoxDiv } from "../../components/utilities/box-container.component"
+import { FlexCenterDiv } from "../../components/utilities/flex-center-div.component"
+import { FlexDiv } from "../../components/utilities/flex-div.component"
+import { FlexEvenlyDiv } from "../../components/utilities/flex-space-evenly.component"
+import { GridDiv } from "../../components/utilities/grid-div.component"
+import { Spacer } from "../../components/utilities/spacer.component"
+import { Text } from "../../components/utilities/text.component"
+import BoxHome3 from "../components/Box/BoxHome3"
 
 const Home3 = () => {
-  const theme = useTheme();
-  const isSmallMobile = useMediaQuery({ query: "(max-width: 400px)" });
-  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
+  const theme = useTheme()
+  const isSmallMobile = useMediaQuery({ query: "(max-width: 400px)" })
+  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" })
   const isTablet = useMediaQuery({
     query: "(min-width: 768px) and (max-width: 1024px)",
-  });
-  const isBigDesktop = useMediaQuery({ query: "(min-width: 1100px)" });
+  })
+  const isBigDesktop = useMediaQuery({ query: "(min-width: 1100px)" })
 
   return (
     <FlexDiv bg={theme.colors.bg.grey} style={{ padding: "5%" }}>
@@ -48,41 +47,6 @@ const Home3 = () => {
       </FlexDiv>
 
       <Spacer />
-
-      <GridDiv
-        y={`repeat(${isBigDesktop ? 4 : 2}, 1fr)`}
-        style={{ gap: theme.space[3], width: "100%" }}
-      >
-        <BoxHome3
-          image={getfiro}
-          title="Get"
-          highlight="Firo"
-          subtitle="Make your first purchase of Firo and embark on your journey towards anonymous transactions today."
-        />
-
-        <BoxHome3
-          image={merchant}
-          title="Become a "
-          highlight="Merchant"
-          subtitle="Keep your business ledgers private and anonymous by allowing payments with Firo."
-        />
-
-        <BoxHome3
-          image={bountyhunter}
-          title="Be a "
-          highlight="Bounty Hunter"
-          subtitle="Hunt for bugs and receive rewards."
-        />
-        <BoxHome3
-          image={stake}
-          title="Earn, Mine &"
-          highlight="Stake"
-          subtitle="Earn, stake, or contribute to the overall security of the Firo network today."
-        />
-      </GridDiv>
-      <Spacer position="top" size="xLarge" />
-
-      {/* <GridDiv y="1fr"> */}
       <BoxDiv x="0" style={{ width: "100%" }}>
         {!isDesktop && (
           <FlexCenterDiv>
@@ -191,9 +155,35 @@ const Home3 = () => {
           </FlexEvenlyDiv>
         )}
       </BoxDiv>
-      {/* </GridDiv> */}
-    </FlexDiv>
-  );
-};
 
-export default Home3;
+      <Spacer position="top" size="xLarge" />
+
+      <GridDiv
+        y={`repeat(${isBigDesktop ? 3 : 2}, 1fr)`}
+        style={{ gap: theme.space[3], width: "100%" }}
+      >
+        <BoxHome3
+          image={getfiro}
+          title="Get"
+          highlight="Firo"
+          subtitle="Make your first purchase of Firo and embark on your journey towards anonymous transactions today."
+        />
+
+        <BoxHome3
+          image={merchant}
+          title="Become a "
+          highlight="Merchant"
+          subtitle="Keep your business ledgers private and anonymous by allowing payments with Firo."
+        />
+        <BoxHome3
+          image={stake}
+          title="Earn, Mine &"
+          highlight="Stake"
+          subtitle="Earn, stake, or contribute to the overall security of the Firo network today."
+        />
+      </GridDiv>
+    </FlexDiv>
+  )
+}
+
+export default Home3

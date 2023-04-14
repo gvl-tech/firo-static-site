@@ -1,45 +1,49 @@
-import React from "react";
+import React from "react"
 
-import redBG from "../../assets/home4/red-bg.svg";
-import redBGDesktop from "../../assets/home4/red-bg-desktop.svg";
-import firoLogo from "../../assets/home4/firo-logo.svg";
-import phones from "../../assets/home4/phones.svg";
-import appStore from "../../assets/home4/app-store.svg";
-import playStore from "../../assets/home4/play-store.svg";
-import appStoreWhite from "../../assets/home4/app-store-white.svg";
-import playStoreWhite from "../../assets/home4/play-store-white.svg";
-import election from "../../assets/home4/election.svg";
-import joins from "../../assets/home4/joins.svg";
-import nasdaq from "../../assets/home4/nasdaq.svg";
-import amazonMusic from "../../assets/home4/amazon-music.svg";
-import bscNews from "../../assets/home4/bsc-news.svg";
-import media1 from "../../assets/home4/featured-media-1.svg";
-import media2 from "../../assets/home4/featured-media-2.svg";
-import media3 from "../../assets/home4/featured-media-3.svg";
+import redBG from "../../assets/home4/red-bg.svg"
+import redBGDesktop from "../../assets/home4/red-bg-desktop.svg"
+import firoLogo from "../../assets/home4/firo-logo.svg"
+import phones from "../../assets/home4/phones.svg"
+import appStoreWhite from "../../assets/home4/app-store-white.svg"
+import appStore from "../../assets/home4/app-store-red.svg"
+import apple from "../../assets/home4/apple.svg"
+import appleWhite from "../../assets/home4/appleWhite.svg"
+import playStore from "../../assets/home4/play-store.svg"
+import playStoreWhite from "../../assets/home4/play-store-white.svg"
+import windowsWhite from "../../assets/download/windowsWhite.svg"
+import windowsRed from "../../assets/download/windowsRed.svg"
+import election from "../../assets/home4/election.svg"
+import joins from "../../assets/home4/joins.svg"
+import nasdaq from "../../assets/home4/nasdaq.svg"
+import amazonMusic from "../../assets/home4/amazon-music.svg"
+import bscNews from "../../assets/home4/bsc-news.svg"
+import media1 from "../../assets/home4/featured-media-1.svg"
+import media2 from "../../assets/home4/featured-media-2.svg"
+import media3 from "../../assets/home4/featured-media-3.svg"
 
-import BoxHome4 from "../components/Box/BoxHome4";
-import { useMediaQuery } from "react-responsive";
-import { useTheme } from "styled-components";
-import { Text } from "../../components/utilities/text.component";
-import { FlexCenterDiv } from "../../components/utilities/flex-center-div.component";
-import { FlexDiv } from "../../components/utilities/flex-div.component";
-import { Spacer } from "../../components/utilities/spacer.component";
-import { Button } from "../../components/buttons/cta-button.component";
-import { FlexEvenlyDiv } from "../../components/utilities/flex-space-evenly.component";
-import { PaddedDiv } from "../../components/utilities/padded-div.component.js";
-import { GridDiv } from "../../components/utilities/grid-div.component";
-import { FlexStartDiv } from "../../components/utilities/flex-start-div.component";
-import { FlexSpaceBetweenDiv } from "../../components/utilities/flex-space-between-div.component";
+import BoxHome4 from "../components/Box/BoxHome4"
+import { useMediaQuery } from "react-responsive"
+import { useTheme } from "styled-components"
+import { Text } from "../../components/utilities/text.component"
+import { FlexCenterDiv } from "../../components/utilities/flex-center-div.component"
+import { FlexDiv } from "../../components/utilities/flex-div.component"
+import { Spacer } from "../../components/utilities/spacer.component"
+import { Button } from "../../components/buttons/cta-button.component"
+import { FlexEvenlyDiv } from "../../components/utilities/flex-space-evenly.component"
+import { PaddedDiv } from "../../components/utilities/padded-div.component.js"
+import { GridDiv } from "../../components/utilities/grid-div.component"
+import { FlexStartDiv } from "../../components/utilities/flex-start-div.component"
+import { FlexSpaceBetweenDiv } from "../../components/utilities/flex-space-between-div.component"
 
 const Home4 = () => {
-  const theme = useTheme();
-  const isSmallMobile = useMediaQuery({ query: "(max-width: 400px)" });
-  const isMediumDesktop = useMediaQuery({ query: "(min-width: 1440px)" });
-  const isBigDesktop = useMediaQuery({ query: "(min-width: 1824px)" });
-  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
+  const theme = useTheme()
+  const isSmallMobile = useMediaQuery({ query: "(max-width: 400px)" })
+  const isMediumDesktop = useMediaQuery({ query: "(min-width: 1440px)" })
+  const isBigDesktop = useMediaQuery({ query: "(min-width: 1824px)" })
+  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" })
   const isTablet = useMediaQuery({
     query: "(min-width: 768px) and (max-width: 1023px)",
-  });
+  })
   return (
     <div>
       <img
@@ -77,7 +81,7 @@ const Home4 = () => {
             }}
           >
             <FlexDiv dir="row">
-              <img src={appStore} alt={appStore} />
+              <img src={appStore} alt={appStore} width={30} />
               <Spacer position="right" />
               <Text variant="h5" bold="true" color={theme.colors.brand.primary}>
                 Download
@@ -96,6 +100,42 @@ const Home4 = () => {
           >
             <FlexDiv dir="row">
               <img src={playStore} alt={playStore} />
+              <Spacer position="right" />
+              <Text variant="h5" bold="true" color={theme.colors.brand.primary}>
+                Download
+              </Text>
+            </FlexDiv>
+          </Button>
+          <Spacer size="xLarge" />
+
+          {/* Third Download Button */}
+          <Button
+            style={{
+              border: `4px solid ${theme.colors.brand.primary}`,
+              padding: `${theme.space[0]}`,
+              borderRadius: `${theme.borderSizes[3]}px`,
+            }}
+          >
+            <FlexDiv dir="row">
+              <img src={windowsRed} alt={windowsRed} width={25} />
+              <Spacer position="right" />
+              <Text variant="h5" bold="true" color={theme.colors.brand.primary}>
+                Download
+              </Text>
+            </FlexDiv>
+          </Button>
+          <Spacer size="xLarge" />
+
+          {/* Fourth Download Button */}
+          <Button
+            style={{
+              border: `4px solid ${theme.colors.brand.primary}`,
+              padding: `${theme.space[0]}`,
+              borderRadius: `${theme.borderSizes[3]}px`,
+            }}
+          >
+            <FlexDiv dir="row">
+              <img src={apple} alt={apple} />
               <Spacer position="right" />
               <Text variant="h5" bold="true" color={theme.colors.brand.primary}>
                 Download
@@ -149,9 +189,10 @@ const Home4 = () => {
             </div>
             <Spacer />
 
+            {/* First Row */}
             <FlexDiv dir="row" x="0" y="0">
               <Button
-                inverse="true"
+                inverse={true}
                 style={{
                   border: `4px solid ${theme.colors.text.white}`,
                   padding: `${theme.space[0]} ${
@@ -178,7 +219,7 @@ const Home4 = () => {
               </Button>
               <Spacer position="right" size={isTablet ? "medium" : "xLarge"} />
               <Button
-                inverse="true"
+                inverse={true}
                 style={{
                   border: `4px solid ${theme.colors.text.white}`,
                   padding: `${theme.space[0]} ${
@@ -191,6 +232,64 @@ const Home4 = () => {
                   <img
                     src={playStoreWhite}
                     alt={playStoreWhite}
+                    width={isTablet ? "18px" : isBigDesktop ? "30px" : "25px"}
+                  />
+                  <Spacer position="right" />
+                  <Text
+                    variant={isTablet ? "caption" : "h5"}
+                    bold="true"
+                    color={theme.colors.text.white}
+                  >
+                    Download
+                  </Text>
+                </FlexDiv>
+              </Button>
+            </FlexDiv>
+
+            <Spacer />
+            {/* Second row */}
+            <FlexDiv dir="row" x="0" y="0">
+              <Button
+                inverse={true}
+                style={{
+                  border: `4px solid ${theme.colors.text.white}`,
+                  padding: `${theme.space[0]} ${
+                    theme.space[isTablet ? 1 : 4]
+                  }px`,
+                  borderRadius: `${theme.borderSizes[3]}px`,
+                }}
+              >
+                <FlexDiv dir="row">
+                  <img
+                    src={windowsWhite}
+                    alt={windowsWhite}
+                    width={isTablet ? "18px" : isBigDesktop ? "30px" : "25px"}
+                  />
+                  <Spacer position="right" />
+                  <Text
+                    variant={isTablet ? "caption" : "h5"}
+                    bold="true"
+                    color={theme.colors.text.white}
+                  >
+                    Download
+                  </Text>
+                </FlexDiv>
+              </Button>
+              <Spacer position="right" size={isTablet ? "medium" : "xLarge"} />
+              <Button
+                inverse={true}
+                style={{
+                  border: `4px solid ${theme.colors.text.white}`,
+                  padding: `${theme.space[0]} ${
+                    theme.space[isTablet ? 1 : 4]
+                  }px`,
+                  borderRadius: `${theme.borderSizes[3]}px`,
+                }}
+              >
+                <FlexDiv dir="row">
+                  <img
+                    src={appleWhite}
+                    alt={appleWhite}
                     width={isTablet ? "18px" : isBigDesktop ? "30px" : "25px"}
                   />
                   <Spacer position="right" />
@@ -315,7 +414,7 @@ const Home4 = () => {
         </GridDiv>
       </PaddedDiv>
     </div>
-  );
-};
+  )
+}
 
-export default Home4;
+export default Home4

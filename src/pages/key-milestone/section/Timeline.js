@@ -23,14 +23,14 @@ const Timeline = () => {
         <FlexCenterDiv>
           <div>
             <Text variant={isDesktop ? "h1" : "h3"} bold="true">
-              Road
+              Key{" "}
             </Text>
             <Text
               variant={isDesktop ? "h1" : "h3"}
               color={theme.colors.brand.primary}
               bold="true"
             >
-              map
+              Milestone
             </Text>
           </div>
         </FlexCenterDiv>
@@ -40,7 +40,6 @@ const Timeline = () => {
             lineColor={theme.colors.text.secondary}
             className="vertical-timeline-custom-line"
           >
-            {/* COMPLETE */}
             <BoxTimeline
               isComplete={true}
               status="COMPLETED"
@@ -101,20 +100,6 @@ const Timeline = () => {
               description="A native, private by default mobile wallet that will have full Lelantus transaction support"
             />
             <BoxTimeline
-              isComplete={true}
-              status="COMPLETED"
-              title="Lelantus Spark sub-addressing and payment proofs"
-              description="Lelantus Spark will support sub-addresses that allow more efficient scanning and payment proofs that allow users to prove they made a payment"
-            />
-            <BoxTimeline
-              isComplete={true}
-              status="COMPLETED"
-              title="Spark Assets"
-              description="Spark Assets extends the functionality of Spark to hide the asset type being transferred. Spats is planned to be implemented in Elysium v2"
-            />
-
-            {/* INCOMPLETE */}
-            <BoxTimeline
               status="TESTNET"
               title="Elysium"
               description="Elysium allows token (for e.g. stablecoins, asset backed coins) to be issued on Firo’s network that will benefit from Firo’s privacy technology"
@@ -124,37 +109,62 @@ const Timeline = () => {
               title="Lelantus Spark"
               description="Lelantus Spark allows direct anonymous payments allowing users to transact with each other without revealing amounts, source and recipient. Spark introduces a Spark addresses that will allow users to keep their funds totally hidden along with full view key and threshold multisig support"
             />
-            <BoxTimeline
-              status="FINALIZING"
-              title="Aura Private Voting"
-              description="Aura is our private voting mechanism for DAOs inspired by our Lelantus technology that allows anonymous but verifiable voting that also hides ballot progress. We intend to use this as the foundation of moving towards formalized decentralized governance."
-            />
-            <BoxTimeline
-              status="PENDING"
-              title="Fast sync clients"
-              description="Fast sync clients allow users to sync their wallets rapidly without needing to download the entire blockchain while supporting Lelantus transactions"
-            />
-            <BoxTimeline
-              status="PENDING"
-              title="Mixnets"
-              description="Tunnelling transactions and node communications into mixnets offer increased metadata protection even against state level adversaries. We are investigating the Meson mixnet that is built on Katzenpost software libraries"
-            />
-            <BoxTimeline
-              status="PENDING"
-              title="Cross-chain bridges"
-              description="Cross chain bridges will allow tokens from other ecosystems to bridge in and out of Firo’s Elysium token layer to utilize our privacy infrastructure"
-            />
-            <BoxTimeline
-              status="PENDING"
-              title="Avalanche"
-              description="Avalanche is a consensus algorithm that enables instant transactions, enhanced security and fork-free upgrades. We are exploring Avalanche consensus as a potential replacement our masternodes"
-            />
-            <BoxTimeline
-              status="PENDING"
-              title="Elysium v2"
-              description="Elysium v2 expands the capabilities of Elysium with easier bridging and DeFi capabilities. Elysium v2 will also implement Spats that will hide the asset type being transferred"
-            />
           </VerticalTimeline>
+
+          <PaddedDiv y="2" bg={theme.colors.bg.white} br="2">
+            <FlexCenterDiv y="5">
+              <Text variant="h3" bold="true">
+                Research & Development
+              </Text>
+            </FlexCenterDiv>
+            <VerticalTimeline
+              lineColor={theme.colors.text.secondary}
+              className="vertical-timeline-custom-line"
+            >
+              <BoxTimeline
+                isComplete={true}
+                status="COMPLETED"
+                title="Lelantus Spark sub-addressing and payment proofs"
+                description="Lelantus Spark will support sub-addresses that allow more efficient scanning and payment proofs that allow users to prove they made a payment"
+              />
+              <BoxTimeline
+                isComplete={true}
+                status="COMPLETED"
+                title="Spark Assets"
+                description="Spark Assets extends the functionality of Spark to hide the asset type being transferred. Spats is planned to be implemented in Elysium v2"
+              />
+              <BoxTimeline
+                status="FINALIZING"
+                title="Aura Private Voting"
+                description="Aura is our private voting mechanism for DAOs inspired by our Lelantus technology that allows anonymous but verifiable voting that also hides ballot progress. We intend to use this as the foundation of moving towards formalized decentralized governance."
+              />
+              <BoxTimeline
+                status="PENDING"
+                title="Fast sync clients"
+                description="Fast sync clients allow users to sync their wallets rapidly without needing to download the entire blockchain while supporting Lelantus transactions"
+              />
+              <BoxTimeline
+                status="PENDING"
+                title="Mixnets"
+                description="Tunnelling transactions and node communications into mixnets offer increased metadata protection even against state level adversaries. We are investigating the Meson mixnet that is built on Katzenpost software libraries"
+              />
+              <BoxTimeline
+                status="PENDING"
+                title="Cross-chain bridges"
+                description="Cross chain bridges will allow tokens from other ecosystems to bridge in and out of Firo’s Elysium token layer to utilize our privacy infrastructure"
+              />
+              <BoxTimeline
+                status="PENDING"
+                title="Avalanche"
+                description="Avalanche is a consensus algorithm that enables instant transactions, enhanced security and fork-free upgrades. We are exploring Avalanche consensus as a potential replacement our masternodes"
+              />
+              <BoxTimeline
+                status="PENDING"
+                title="Elysium v2"
+                description="Elysium v2 expands the capabilities of Elysium with easier bridging and DeFi capabilities. Elysium v2 will also implement Spats that will hide the asset type being transferred"
+              />
+            </VerticalTimeline>
+          </PaddedDiv>
         </PaddedDiv>
       </PaddedDiv>
     </div>

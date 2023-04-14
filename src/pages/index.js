@@ -1,10 +1,10 @@
 import React from "react"
 import { Layout } from "../infrastructure/layouts/Layout"
-import "../styles/global.css"
 import Home1 from "./sections/Home1"
 import Home2 from "./sections/Home2"
 import Home3 from "./sections/Home3"
 import Home4 from "./sections/Home4"
+import "../styles/global.css"
 
 function index() {
   return (

@@ -76,6 +76,14 @@ const Footer = () => {
               color={theme.colors.text.white}
               fontFamily={theme.fontFamily.ssp}
             >
+              Be a Bounty Hunter
+            </Text>
+            <Spacer />
+
+            <Text
+              color={theme.colors.text.white}
+              fontFamily={theme.fontFamily.ssp}
+            >
               Explorer
             </Text>
           </FlexStartDiv>
@@ -257,6 +265,17 @@ const Footer = () => {
                     style={{ cursor: "pointer" }}
                   >
                     Vulnerability Program
+                  </Text>
+                </div>
+
+                <div>
+                  <Text
+                    variant="label"
+                    color={theme.colors.text.white}
+                    fontFamily={theme.fontFamily.ssp}
+                    style={{ cursor: "pointer" }}
+                  >
+                    Be a Bounty Hunter
                   </Text>
                 </div>
                 <div>

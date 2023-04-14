@@ -1,31 +1,31 @@
-import React, { useState } from "react";
-import logoDark from "../../assets/header/firo-logo-dark.svg";
-import logoLight from "../../assets/header/firo-logo-light.svg";
-import android from "../../assets/header/android.svg";
-import apple from "../../assets/header/apple.svg";
-import divider from "../../assets/header/divider.svg";
-import dividerMobile from "../../assets/header/divider-mobile.svg";
+import React, { useState } from "react"
+import logoDark from "../../assets/header/firo-logo-dark.svg"
+import logoLight from "../../assets/header/firo-logo-light.svg"
+import android from "../../assets/header/android.svg"
+import apple from "../../assets/header/apple.svg"
+import divider from "../../assets/header/divider.svg"
+import dividerMobile from "../../assets/header/divider-mobile.svg"
 
-import { useTheme } from "styled-components";
-import { FaBars } from "react-icons/fa";
-import { useMediaQuery } from "react-responsive";
-import { Link } from "gatsby";
-import { Button } from "../../components/buttons/cta-button.component";
-import { FlexSpaceBetweenDiv } from "../../components/utilities/flex-space-between-div.component";
-import { FlexCenterDiv } from "../../components/utilities/flex-center-div.component";
-import { Spacer } from "../../components/utilities/spacer.component";
-import { BoxDiv } from "../../components/utilities/box-container.component";
-import { Text } from "../../components/utilities/text.component";
-import { FlexStartDiv } from "../../components/utilities/flex-start-div.component";
-import { FlexDiv } from "../../components/utilities/flex-div.component";
+import { useTheme } from "styled-components"
+import { FaBars } from "react-icons/fa"
+import { useMediaQuery } from "react-responsive"
+import { Link } from "gatsby"
+import { Button } from "../../components/buttons/cta-button.component"
+import { FlexSpaceBetweenDiv } from "../../components/utilities/flex-space-between-div.component"
+import { FlexCenterDiv } from "../../components/utilities/flex-center-div.component"
+import { Spacer } from "../../components/utilities/spacer.component"
+import { BoxDiv } from "../../components/utilities/box-container.component"
+import { Text } from "../../components/utilities/text.component"
+import { FlexStartDiv } from "../../components/utilities/flex-start-div.component"
+import { FlexDiv } from "../../components/utilities/flex-div.component"
 
 export const Header = ({ inverse, mobileInverse }) => {
-  const theme = useTheme();
-  const isBigDesktop = useMediaQuery({ query: "(min-width: 1824px)" });
-  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
-  const isTablet = useMediaQuery({ query: "(width: 768px)" });
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isBurgerOpen, setIsBurgerOpen] = useState(false);
+  const theme = useTheme()
+  const isBigDesktop = useMediaQuery({ query: "(min-width: 1824px)" })
+  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" })
+  const isTablet = useMediaQuery({ query: "(width: 768px)" })
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isBurgerOpen, setIsBurgerOpen] = useState(false)
 
   return (
     <FlexSpaceBetweenDiv
@@ -67,7 +67,7 @@ export const Header = ({ inverse, mobileInverse }) => {
             y="2"
             inverse={mobileInverse ? false : true}
             onClick={() => {
-              setIsModalOpen(!isModalOpen);
+              setIsModalOpen(!isModalOpen)
             }}
           >
             Get Firo
@@ -98,7 +98,7 @@ export const Header = ({ inverse, mobileInverse }) => {
                   textAlign: "start",
                   gap: theme.space[2],
                 }}
-                onClick={(e) => e.stopPropagation()}
+                onClick={e => e.stopPropagation()}
               >
                 <Link
                   style={{
@@ -147,7 +147,7 @@ export const Header = ({ inverse, mobileInverse }) => {
               fontSize: theme.sizes[2],
             }}
             onClick={() => {
-              setIsBurgerOpen(!isBurgerOpen);
+              setIsBurgerOpen(!isBurgerOpen)
             }}
           />
 
@@ -177,7 +177,7 @@ export const Header = ({ inverse, mobileInverse }) => {
                   textAlign: "start",
                   gap: theme.space[2],
                 }}
-                onClick={(e) => e.stopPropagation()}
+                onClick={e => e.stopPropagation()}
               >
                 <Link
                   activeStyle={{ color: theme.colors.brand.primary }}
@@ -211,9 +211,9 @@ export const Header = ({ inverse, mobileInverse }) => {
                     fontFamily: theme.fontFamily.s,
                     fontSize: theme.fontSizes.body,
                   }}
-                  to="/roadmap"
+                  to="/key-milestone"
                 >
-                  Roadmap
+                  Key Milestone
                 </Link>
                 <Link
                   activeStyle={{ color: theme.colors.brand.primary }}
@@ -238,6 +238,30 @@ export const Header = ({ inverse, mobileInverse }) => {
                   to="/our-team"
                 >
                   Our Team
+                </Link>
+                <Link
+                  activeStyle={{ color: theme.colors.brand.primary }}
+                  style={{
+                    color: theme.colors.text.secondary,
+                    textDecoration: "none",
+                    fontFamily: theme.fontFamily.s,
+                    fontSize: theme.fontSizes.body,
+                  }}
+                  to="/guides"
+                >
+                  Guides
+                </Link>
+                <Link
+                  activeStyle={{ color: theme.colors.brand.primary }}
+                  style={{
+                    color: theme.colors.text.secondary,
+                    textDecoration: "none",
+                    fontFamily: theme.fontFamily.s,
+                    fontSize: theme.fontSizes.body,
+                  }}
+                  to="/faq"
+                >
+                  FAQ
                 </Link>
               </BoxDiv>
             </FlexStartDiv>
@@ -297,9 +321,9 @@ export const Header = ({ inverse, mobileInverse }) => {
                     ? theme.fontSizes.tab
                     : theme.fontSizes.body,
                 }}
-                to="/roadmap"
+                to="/key-milestone"
               >
-                Roadmap
+                Key Milestone
               </Link>
             </li>
             <li>
@@ -338,6 +362,42 @@ export const Header = ({ inverse, mobileInverse }) => {
                 Our Team
               </Link>
             </li>
+            <li>
+              <Link
+                activeStyle={{ color: theme.colors.brand.primary }}
+                style={{
+                  color: inverse
+                    ? theme.colors.text.white
+                    : theme.colors.text.secondary,
+                  textDecoration: "none",
+                  fontFamily: theme.fontFamily.s,
+                  fontSize: isTablet
+                    ? theme.fontSizes.tab
+                    : theme.fontSizes.body,
+                }}
+                to="/guides"
+              >
+                Guides
+              </Link>
+            </li>
+            <li>
+              <Link
+                activeStyle={{ color: theme.colors.brand.primary }}
+                style={{
+                  color: inverse
+                    ? theme.colors.text.white
+                    : theme.colors.text.secondary,
+                  textDecoration: "none",
+                  fontFamily: theme.fontFamily.s,
+                  fontSize: isTablet
+                    ? theme.fontSizes.tab
+                    : theme.fontSizes.body,
+                }}
+                to="/faq"
+              >
+                FAQ
+              </Link>
+            </li>
           </ul>
           <Spacer position="left" size="large" />
           <Button
@@ -349,7 +409,7 @@ export const Header = ({ inverse, mobileInverse }) => {
               fontWeight: theme.fontWeights.medium,
             }}
             onClick={() => {
-              setIsModalOpen(!isModalOpen);
+              setIsModalOpen(!isModalOpen)
             }}
           >
             Get Firo
@@ -380,7 +440,7 @@ export const Header = ({ inverse, mobileInverse }) => {
                   textAlign: "start",
                   gap: theme.space[2],
                 }}
-                onClick={(e) => e.stopPropagation()}
+                onClick={e => e.stopPropagation()}
               >
                 <Link
                   style={{
@@ -422,5 +482,5 @@ export const Header = ({ inverse, mobileInverse }) => {
         </FlexCenterDiv>
       )}
     </FlexSpaceBetweenDiv>
-  );
-};
+  )
+}

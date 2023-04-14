@@ -1,33 +1,37 @@
-import React from "react";
+import React from "react"
 
-import greyBG from "../../../assets/download/greyBG.svg";
-import greyBGDesktop from "../../../assets/download/greyBGDesktop.svg";
-import appStoreWhite from "../../../assets/home4/app-store-white.svg";
-import appStore from "../../../assets/home4/app-store.svg";
-import firoLogo from "../../../assets/home4/firo-logo.svg";
-import phones from "../../../assets/home4/phones.svg";
-import playStoreWhite from "../../../assets/home4/play-store-white.svg";
-import playStore from "../../../assets/home4/play-store.svg";
+import greyBG from "../../../assets/download/greyBG.svg"
+import greyBGDesktop from "../../../assets/download/greyBGDesktop.svg"
+import appStoreWhite from "../../../assets/home4/app-store-white.svg"
+import appStore from "../../../assets/home4/app-store-red.svg"
+import apple from "../../../assets/home4/apple.svg"
+import appleWhite from "../../../assets/home4/appleWhite.svg"
+import firoLogo from "../../../assets/home4/firo-logo.svg"
+import phones from "../../../assets/home4/phones.svg"
+import playStoreWhite from "../../../assets/home4/play-store-white.svg"
+import playStore from "../../../assets/home4/play-store.svg"
+import windowsWhite from "../../../assets/download/windowsWhite.svg"
+import windowsRed from "../../../assets/download/windowsRed.svg"
 
-import { useMediaQuery } from "react-responsive";
-import { useTheme } from "styled-components";
-import { Button } from "../../../components/buttons/cta-button.component";
-import { FlexCenterDiv } from "../../../components/utilities/flex-center-div.component";
-import { FlexDiv } from "../../../components/utilities/flex-div.component";
-import { FlexEvenlyDiv } from "../../../components/utilities/flex-space-evenly.component";
-import { PaddedDiv } from "../../../components/utilities/padded-div.component";
-import { Spacer } from "../../../components/utilities/spacer.component";
-import { Text } from "../../../components/utilities/text.component";
+import { useMediaQuery } from "react-responsive"
+import { useTheme } from "styled-components"
+import { Button } from "../../../components/buttons/cta-button.component"
+import { FlexCenterDiv } from "../../../components/utilities/flex-center-div.component"
+import { FlexDiv } from "../../../components/utilities/flex-div.component"
+import { FlexEvenlyDiv } from "../../../components/utilities/flex-space-evenly.component"
+import { PaddedDiv } from "../../../components/utilities/padded-div.component"
+import { Spacer } from "../../../components/utilities/spacer.component"
+import { Text } from "../../../components/utilities/text.component"
 
 const FiroWallet = () => {
-  const theme = useTheme();
-  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
-  const isMediumDesktop = useMediaQuery({ query: "(min-width: 1440px)" });
-  const isBigDesktop = useMediaQuery({ query: "(min-width: 1824px)" });
+  const theme = useTheme()
+  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" })
+  const isMediumDesktop = useMediaQuery({ query: "(min-width: 1440px)" })
+  const isBigDesktop = useMediaQuery({ query: "(min-width: 1824px)" })
   const isTablet = useMediaQuery({
     query: "(min-width: 768px) and (max-width: 1023px)",
-  });
-  const isSmallMobile = useMediaQuery({ query: "(max-width: 320px)" });
+  })
+  const isSmallMobile = useMediaQuery({ query: "(max-width: 320px)" })
 
   return (
     <div>
@@ -87,7 +91,7 @@ const FiroWallet = () => {
                 }}
               >
                 <FlexDiv dir="row">
-                  <img src={appStore} alt={appStore} />
+                  <img src={appStore} alt={appStore} width={30} />
                   <Spacer position="right" />
                   <Text
                     variant="h5"
@@ -110,6 +114,50 @@ const FiroWallet = () => {
               >
                 <FlexDiv dir="row">
                   <img src={playStore} alt={playStore} />
+                  <Spacer position="right" />
+                  <Text
+                    variant="h5"
+                    bold="true"
+                    color={theme.colors.brand.primary}
+                  >
+                    Download
+                  </Text>
+                </FlexDiv>
+              </Button>
+              <Spacer size="xLarge" />
+
+              {/* Third Download Button */}
+              <Button
+                style={{
+                  border: `4px solid ${theme.colors.brand.primary}`,
+                  padding: `${theme.space[0]}`,
+                  borderRadius: `${theme.borderSizes[3]}px`,
+                }}
+              >
+                <FlexDiv dir="row">
+                  <img src={windowsRed} alt={windowsRed} width={25} />
+                  <Spacer position="right" />
+                  <Text
+                    variant="h5"
+                    bold="true"
+                    color={theme.colors.brand.primary}
+                  >
+                    Download
+                  </Text>
+                </FlexDiv>
+              </Button>
+              <Spacer size="xLarge" />
+
+              {/* Fourth Download Button */}
+              <Button
+                style={{
+                  border: `4px solid ${theme.colors.brand.primary}`,
+                  padding: `${theme.space[0]}`,
+                  borderRadius: `${theme.borderSizes[3]}px`,
+                }}
+              >
+                <FlexDiv dir="row">
+                  <img src={apple} alt={apple} />
                   <Spacer position="right" />
                   <Text
                     variant="h5"
@@ -167,6 +215,7 @@ const FiroWallet = () => {
                 </div>
                 <Spacer />
 
+                {/* First Row */}
                 <FlexDiv dir="row" x="0" y="0">
                   <Button
                     inverse={true}
@@ -229,13 +278,78 @@ const FiroWallet = () => {
                     </FlexDiv>
                   </Button>
                 </FlexDiv>
+
+                <Spacer />
+                {/* Second row */}
+                <FlexDiv dir="row" x="0" y="0">
+                  <Button
+                    inverse={true}
+                    style={{
+                      border: `4px solid ${theme.colors.text.white}`,
+                      padding: `${theme.space[0]} ${
+                        theme.space[isTablet ? 1 : 4]
+                      }px`,
+                      borderRadius: `${theme.borderSizes[3]}px`,
+                    }}
+                  >
+                    <FlexDiv dir="row">
+                      <img
+                        src={windowsWhite}
+                        alt={windowsWhite}
+                        width={
+                          isTablet ? "18px" : isBigDesktop ? "30px" : "25px"
+                        }
+                      />
+                      <Spacer position="right" />
+                      <Text
+                        variant={isTablet ? "caption" : "h5"}
+                        bold="true"
+                        color={theme.colors.text.white}
+                      >
+                        Download
+                      </Text>
+                    </FlexDiv>
+                  </Button>
+                  <Spacer
+                    position="right"
+                    size={isTablet ? "medium" : "xLarge"}
+                  />
+                  <Button
+                    inverse={true}
+                    style={{
+                      border: `4px solid ${theme.colors.text.white}`,
+                      padding: `${theme.space[0]} ${
+                        theme.space[isTablet ? 1 : 4]
+                      }px`,
+                      borderRadius: `${theme.borderSizes[3]}px`,
+                    }}
+                  >
+                    <FlexDiv dir="row">
+                      <img
+                        src={appleWhite}
+                        alt={appleWhite}
+                        width={
+                          isTablet ? "18px" : isBigDesktop ? "30px" : "25px"
+                        }
+                      />
+                      <Spacer position="right" />
+                      <Text
+                        variant={isTablet ? "caption" : "h5"}
+                        bold="true"
+                        color={theme.colors.text.white}
+                      >
+                        Download
+                      </Text>
+                    </FlexDiv>
+                  </Button>
+                </FlexDiv>
               </FlexDiv>
             </FlexEvenlyDiv>
           )}
         </div>
       </PaddedDiv>
     </div>
-  );
-};
+  )
+}
 
-export default FiroWallet;
+export default FiroWallet
