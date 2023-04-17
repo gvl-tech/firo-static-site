@@ -19,6 +19,7 @@ import { BubbleDiv } from "../../components/buttons/bubble-text.component"
 import { GridDiv } from "../../components/utilities/grid-div.component"
 import { FlexCenterDiv } from "../../components/utilities/flex-center-div.component"
 import { Button } from "../../components/buttons/cta-button.component"
+import { Link } from "gatsby"
 
 const Footer = () => {
   const theme = useTheme()
@@ -40,28 +41,40 @@ const Footer = () => {
               Resources
             </Text>
             <Spacer />
-            <Text
-              color={theme.colors.text.white}
-              fontFamily={theme.fontFamily.ssp}
+            <a
+              href="https://github.com/firoorg/firo"
+              target="_blank"
+              style={{ textDecoration: "none" }}
             >
-              GitHub
-            </Text>
+              <Text
+                color={theme.colors.text.white}
+                fontFamily={theme.fontFamily.ssp}
+              >
+                GitHub
+              </Text>
+            </a>
             <Spacer />
-
-            <Text
-              color={theme.colors.text.white}
-              fontFamily={theme.fontFamily.ssp}
+            <a
+              href="https://sourceforge.net/projects/firoorg/"
+              target="_blank"
+              style={{ textDecoration: "none" }}
             >
-              SourceForge
-            </Text>
+              <Text
+                color={theme.colors.text.white}
+                fontFamily={theme.fontFamily.ssp}
+              >
+                SourceForge
+              </Text>
+            </a>
             <Spacer />
-
-            <Text
-              color={theme.colors.text.white}
-              fontFamily={theme.fontFamily.ssp}
-            >
-              Branding
-            </Text>
+            <Link to="/branding" style={{ textDecoration: "none" }}>
+              <Text
+                color={theme.colors.text.white}
+                fontFamily={theme.fontFamily.ssp}
+              >
+                Branding
+              </Text>
+            </Link>
             <Spacer />
 
             <Text
@@ -72,20 +85,18 @@ const Footer = () => {
             </Text>
             <Spacer />
 
-            <Text
-              color={theme.colors.text.white}
-              fontFamily={theme.fontFamily.ssp}
+            <a
+              href="https://explorer.firo.org/"
+              target="_blank"
+              style={{ textDecoration: "none" }}
             >
-              Be a Bounty Hunter
-            </Text>
-            <Spacer />
-
-            <Text
-              color={theme.colors.text.white}
-              fontFamily={theme.fontFamily.ssp}
-            >
-              Explorer
-            </Text>
+              <Text
+                color={theme.colors.text.white}
+                fontFamily={theme.fontFamily.ssp}
+              >
+                Explorer
+              </Text>
+            </a>
           </FlexStartDiv>
 
           <Spacer size="xxLarge" />
@@ -101,12 +112,14 @@ const Footer = () => {
               Website
             </Text>
             <Spacer />
-            <Text
-              color={theme.colors.text.white}
-              fontFamily={theme.fontFamily.ssp}
-            >
-              Guides
-            </Text>
+            <Link to="/guides" style={{ textDecoration: "none" }}>
+              <Text
+                color={theme.colors.text.white}
+                fontFamily={theme.fontFamily.ssp}
+              >
+                Guides
+              </Text>
+            </Link>
             <Spacer />
             <Text
               color={theme.colors.text.white}
@@ -115,26 +128,27 @@ const Footer = () => {
               Careers
             </Text>
             <Spacer />
-            <Text
-              color={theme.colors.text.white}
-              fontFamily={theme.fontFamily.ssp}
+            <a
+              href="https://opencollective.com/firo"
+              target="_blank"
+              style={{ textDecoration: "none" }}
             >
-              Open Collective
-            </Text>
+              <Text
+                color={theme.colors.text.white}
+                fontFamily={theme.fontFamily.ssp}
+              >
+                Open Collective
+              </Text>
+            </a>
             <Spacer />
-            <Text
-              color={theme.colors.text.white}
-              fontFamily={theme.fontFamily.ssp}
-            >
-              Private Policy
-            </Text>
-            <Spacer />
-            <Text
-              color={theme.colors.text.white}
-              fontFamily={theme.fontFamily.ssp}
-            >
-              Terms of Service
-            </Text>
+            <Link to="/privacy-policy" style={{ textDecoration: "none" }}>
+              <Text
+                color={theme.colors.text.white}
+                fontFamily={theme.fontFamily.ssp}
+              >
+                Privacy Policy
+              </Text>
+            </Link>
           </FlexStartDiv>
 
           <Spacer size="xxLarge" />
@@ -228,34 +242,48 @@ const Footer = () => {
               <Spacer size="xLarge" />
               <FlexStartDiv style={{ gap: `${theme.space[3]}px` }}>
                 <div>
-                  <Text
-                    variant="label"
-                    color={theme.colors.text.white}
-                    fontFamily={theme.fontFamily.ssp}
-                    style={{ cursor: "pointer" }}
+                  <a
+                    href="https://github.com/firoorg/firo"
+                    target="_blank"
+                    style={{ textDecoration: "none" }}
                   >
-                    GitHub
-                  </Text>
+                    <Text
+                      variant="label"
+                      color={theme.colors.text.white}
+                      fontFamily={theme.fontFamily.ssp}
+                      style={{ cursor: "pointer" }}
+                    >
+                      GitHub
+                    </Text>
+                  </a>
                 </div>
                 <div>
-                  <Text
-                    variant="label"
-                    color={theme.colors.text.white}
-                    fontFamily={theme.fontFamily.ssp}
-                    style={{ cursor: "pointer" }}
+                  <a
+                    href="https://sourceforge.net/projects/firoorg/"
+                    target="_blank"
+                    style={{ textDecoration: "none" }}
                   >
-                    SourceForge
-                  </Text>
+                    <Text
+                      variant="label"
+                      color={theme.colors.text.white}
+                      fontFamily={theme.fontFamily.ssp}
+                      style={{ cursor: "pointer" }}
+                    >
+                      SourceForge
+                    </Text>
+                  </a>
                 </div>
                 <div>
-                  <Text
-                    variant="label"
-                    color={theme.colors.text.white}
-                    fontFamily={theme.fontFamily.ssp}
-                    style={{ cursor: "pointer" }}
-                  >
-                    Branding
-                  </Text>
+                  <Link to="/branding" style={{ textDecoration: "none" }}>
+                    <Text
+                      variant="label"
+                      color={theme.colors.text.white}
+                      fontFamily={theme.fontFamily.ssp}
+                      style={{ cursor: "pointer" }}
+                    >
+                      Branding
+                    </Text>
+                  </Link>
                 </div>
                 <div>
                   <Text
@@ -269,24 +297,20 @@ const Footer = () => {
                 </div>
 
                 <div>
-                  <Text
-                    variant="label"
-                    color={theme.colors.text.white}
-                    fontFamily={theme.fontFamily.ssp}
-                    style={{ cursor: "pointer" }}
+                  <a
+                    href="https://explorer.firo.org/"
+                    target="_blank"
+                    style={{ textDecoration: "none" }}
                   >
-                    Be a Bounty Hunter
-                  </Text>
-                </div>
-                <div>
-                  <Text
-                    variant="label"
-                    color={theme.colors.text.white}
-                    fontFamily={theme.fontFamily.ssp}
-                    style={{ cursor: "pointer" }}
-                  >
-                    Explorer
-                  </Text>
+                    <Text
+                      variant="label"
+                      color={theme.colors.text.white}
+                      fontFamily={theme.fontFamily.ssp}
+                      style={{ cursor: "pointer" }}
+                    >
+                      Explorer
+                    </Text>
+                  </a>
                 </div>
               </FlexStartDiv>
             </FlexStartDiv>
@@ -305,14 +329,16 @@ const Footer = () => {
               <Spacer size="xLarge" />
               <FlexStartDiv style={{ gap: `${theme.space[3]}px` }}>
                 <div>
-                  <Text
-                    variant="label"
-                    color={theme.colors.text.white}
-                    fontFamily={theme.fontFamily.ssp}
-                    style={{ cursor: "pointer" }}
-                  >
-                    Guides
-                  </Text>
+                  <Link to="/guides" style={{ textDecoration: "none" }}>
+                    <Text
+                      variant="label"
+                      color={theme.colors.text.white}
+                      fontFamily={theme.fontFamily.ssp}
+                      style={{ cursor: "pointer" }}
+                    >
+                      Guides
+                    </Text>
+                  </Link>
                 </div>
                 <div>
                   <Text
@@ -325,34 +351,31 @@ const Footer = () => {
                   </Text>
                 </div>
                 <div>
-                  <Text
-                    variant="label"
-                    color={theme.colors.text.white}
-                    fontFamily={theme.fontFamily.ssp}
-                    style={{ cursor: "pointer" }}
+                  <a
+                    href="https://opencollective.com/firo"
+                    target="_blank"
+                    style={{ textDecoration: "none" }}
                   >
-                    Open Collective
-                  </Text>
+                    <Text
+                      variant="label"
+                      color={theme.colors.text.white}
+                      fontFamily={theme.fontFamily.ssp}
+                      style={{ cursor: "pointer" }}
+                    >
+                      Open Collective
+                    </Text>
+                  </a>
                 </div>
                 <div>
-                  <Text
-                    variant="label"
-                    color={theme.colors.text.white}
-                    fontFamily={theme.fontFamily.ssp}
-                    style={{ cursor: "pointer" }}
-                  >
-                    Private Policy
-                  </Text>
-                </div>
-                <div>
-                  <Text
-                    variant="label"
-                    color={theme.colors.text.white}
-                    fontFamily={theme.fontFamily.ssp}
-                    style={{ cursor: "pointer" }}
-                  >
-                    Terms of Service
-                  </Text>
+                  <Link to="/privacy-policy" style={{ textDecoration: "none" }}>
+                    <Text
+                      variant="label"
+                      color={theme.colors.text.white}
+                      fontFamily={theme.fontFamily.ssp}
+                    >
+                      Privacy Policy
+                    </Text>
+                  </Link>
                 </div>
               </FlexStartDiv>
             </FlexStartDiv>
@@ -416,11 +439,9 @@ const Footer = () => {
                 </Text>
                 <Spacer />
                 <FlexStartDiv dir="row">
-                  <img
-                    src={twitter}
-                    alt={twitter}
-                    style={{ cursor: "pointer" }}
-                  />
+                  <a href="https://twitter.com/firoorg" target="_blank">
+                    <img src={twitter} alt={twitter} />
+                  </a>
                   <Spacer size="xLarge" position="right" />
                   <img
                     src={facebook}
