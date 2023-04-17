@@ -1,39 +1,39 @@
 import React from "react"
 
-import redBG from "../../assets/home4/red-bg.svg"
-import redBGDesktop from "../../assets/home4/red-bg-desktop.svg"
-import firoLogo from "../../assets/home4/firo-logo.svg"
-import phones from "../../assets/home4/phones.svg"
-import appStoreWhite from "../../assets/home4/app-store-white.svg"
+import windowsRed from "../../assets/download/windowsRed.svg"
+import windowsWhite from "../../assets/download/windowsWhite.svg"
+import amazonMusic from "../../assets/home4/amazon-music.svg"
 import appStore from "../../assets/home4/app-store-red.svg"
+import appStoreWhite from "../../assets/home4/app-store-white.svg"
 import apple from "../../assets/home4/apple.svg"
 import appleWhite from "../../assets/home4/appleWhite.svg"
-import playStore from "../../assets/home4/play-store.svg"
-import playStoreWhite from "../../assets/home4/play-store-white.svg"
-import windowsWhite from "../../assets/download/windowsWhite.svg"
-import windowsRed from "../../assets/download/windowsRed.svg"
-import election from "../../assets/home4/election.svg"
-import joins from "../../assets/home4/joins.svg"
-import nasdaq from "../../assets/home4/nasdaq.svg"
-import amazonMusic from "../../assets/home4/amazon-music.svg"
 import bscNews from "../../assets/home4/bsc-news.svg"
 import media1 from "../../assets/home4/featured-media-1.svg"
 import media2 from "../../assets/home4/featured-media-2.svg"
 import media3 from "../../assets/home4/featured-media-3.svg"
+import firoLogo from "../../assets/home4/firo-logo.svg"
+import nasdaq from "../../assets/home4/nasdaq.svg"
+import phones from "../../assets/home4/phones.svg"
+import playStoreWhite from "../../assets/home4/play-store-white.svg"
+import playStore from "../../assets/home4/play-store.svg"
+import redBGDesktop from "../../assets/home4/red-bg-desktop.svg"
+import redBG from "../../assets/home4/red-bg.svg"
 
-import BoxHome4 from "../components/Box/BoxHome4"
+import { graphql, Link, useStaticQuery } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useMediaQuery } from "react-responsive"
 import { useTheme } from "styled-components"
-import { Text } from "../../components/utilities/text.component"
+import { Button } from "../../components/buttons/cta-button.component"
 import { FlexCenterDiv } from "../../components/utilities/flex-center-div.component"
 import { FlexDiv } from "../../components/utilities/flex-div.component"
-import { Spacer } from "../../components/utilities/spacer.component"
-import { Button } from "../../components/buttons/cta-button.component"
-import { FlexEvenlyDiv } from "../../components/utilities/flex-space-evenly.component"
-import { PaddedDiv } from "../../components/utilities/padded-div.component.js"
-import { GridDiv } from "../../components/utilities/grid-div.component"
-import { FlexStartDiv } from "../../components/utilities/flex-start-div.component"
 import { FlexSpaceBetweenDiv } from "../../components/utilities/flex-space-between-div.component"
+import { FlexEvenlyDiv } from "../../components/utilities/flex-space-evenly.component"
+import { FlexStartDiv } from "../../components/utilities/flex-start-div.component"
+import { GridDiv } from "../../components/utilities/grid-div.component"
+import { PaddedDiv } from "../../components/utilities/padded-div.component.js"
+import { Spacer } from "../../components/utilities/spacer.component"
+import { Text } from "../../components/utilities/text.component"
+import BoxHome4 from "../components/Box/BoxHome4"
 
 const Home4 = () => {
   const theme = useTheme()
@@ -44,6 +44,41 @@ const Home4 = () => {
   const isTablet = useMediaQuery({
     query: "(min-width: 768px) and (max-width: 1023px)",
   })
+  const data = useStaticQuery(graphql`
+    {
+      allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/blogs/" } }
+        sort: { frontmatter: { date: DESC } }
+      ) {
+        edges {
+          node {
+            id
+            frontmatter {
+              date
+              slug
+              title
+              author
+              img {
+                childImageSharp {
+                  gatsbyImageData(width: 800)
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+  let featuredImg1 = getImage(
+    data.allMarkdownRemark.edges[0].node.frontmatter.img?.childImageSharp
+      ?.gatsbyImageData
+  )
+  let featuredImg2 = getImage(
+    data.allMarkdownRemark.edges[1].node.frontmatter.img?.childImageSharp
+      ?.gatsbyImageData
+  )
+
+  console.log(data)
   return (
     <div>
       <img
@@ -79,6 +114,13 @@ const Home4 = () => {
               padding: `${theme.space[0]}`,
               borderRadius: `${theme.borderSizes[3]}px`,
             }}
+            onClick={() =>
+              window.open(
+                "https://apps.apple.com/us/app/campfire-firo-wallet/id1613267898",
+                "_blank",
+                "noreferrer"
+              )
+            }
           >
             <FlexDiv dir="row">
               <img src={appStore} alt={appStore} width={30} />
@@ -97,6 +139,13 @@ const Home4 = () => {
               padding: `${theme.space[0]}`,
               borderRadius: `${theme.borderSizes[3]}px`,
             }}
+            onClick={() =>
+              window.open(
+                "https://play.google.com/store/apps/details?id=com.cypherstack.campfire",
+                "_blank",
+                "noreferrer"
+              )
+            }
           >
             <FlexDiv dir="row">
               <img src={playStore} alt={playStore} />
@@ -115,6 +164,11 @@ const Home4 = () => {
               padding: `${theme.space[0]}`,
               borderRadius: `${theme.borderSizes[3]}px`,
             }}
+            onClick={() =>
+              window.open(
+                "https://github.com/firoorg/firo-client/releases/download/v3.0.1/Firo-Client-3.0.1.exe"
+              )
+            }
           >
             <FlexDiv dir="row">
               <img src={windowsRed} alt={windowsRed} width={25} />
@@ -133,6 +187,11 @@ const Home4 = () => {
               padding: `${theme.space[0]}`,
               borderRadius: `${theme.borderSizes[3]}px`,
             }}
+            onClick={() =>
+              window.open(
+                "https://github.com/firoorg/firo-client/releases/download/v3.0.1/Firo-Client-3.0.1.dmg"
+              )
+            }
           >
             <FlexDiv dir="row">
               <img src={apple} alt={apple} />
@@ -200,6 +259,13 @@ const Home4 = () => {
                   }px`,
                   borderRadius: `${theme.borderSizes[3]}px`,
                 }}
+                onClick={() =>
+                  window.open(
+                    "https://apps.apple.com/us/app/campfire-firo-wallet/id1613267898",
+                    "_blank",
+                    "noreferrer"
+                  )
+                }
               >
                 <FlexDiv dir="row">
                   <img
@@ -227,6 +293,13 @@ const Home4 = () => {
                   }px`,
                   borderRadius: `${theme.borderSizes[3]}px`,
                 }}
+                onClick={() =>
+                  window.open(
+                    "https://play.google.com/store/apps/details?id=com.cypherstack.campfire",
+                    "_blank",
+                    "noreferrer"
+                  )
+                }
               >
                 <FlexDiv dir="row">
                   <img
@@ -258,6 +331,11 @@ const Home4 = () => {
                   }px`,
                   borderRadius: `${theme.borderSizes[3]}px`,
                 }}
+                onClick={() =>
+                  window.open(
+                    "https://github.com/firoorg/firo-client/releases/download/v3.0.1/Firo-Client-3.0.1.exe"
+                  )
+                }
               >
                 <FlexDiv dir="row">
                   <img
@@ -285,6 +363,11 @@ const Home4 = () => {
                   }px`,
                   borderRadius: `${theme.borderSizes[3]}px`,
                 }}
+                onClick={() =>
+                  window.open(
+                    "https://github.com/firoorg/firo-client/releases/download/v3.0.1/Firo-Client-3.0.1.dmg"
+                  )
+                }
               >
                 <FlexDiv dir="row">
                   <img
@@ -318,52 +401,66 @@ const Home4 = () => {
           style={{ gap: `${theme.space[4]}px` }}
         >
           <FlexStartDiv>
-            <div
-              style={{
-                borderRadius: `${theme.borderSizes[2]}px`,
-                alignSelf: "center",
-              }}
+            <Link
+              to={`/blog${data.allMarkdownRemark.edges[0].node.frontmatter.slug}`}
+              style={{ textDecoration: "none" }}
             >
-              <img src={election} alt={election} width="100%" />
-            </div>
-            <Spacer />
-            <Text variant="label" bold="true">
-              Community Fund Committee Elected
-            </Text>
-            <Spacer />
-            <FlexSpaceBetweenDiv dir={isDesktop ? "column" : "row"}>
-              <Text variant="caption" color={theme.colors.text.secondary}>
-                July 04, 2022 by Reuben Yap
+              <GatsbyImage
+                image={featuredImg1}
+                style={{
+                  borderRadius: `${theme.borderSizes[2]}px`,
+                  alignSelf: "center",
+                  width: "100%",
+                }}
+              />
+              <Spacer />
+              <Text variant="label" bold="true">
+                {data.allMarkdownRemark.edges[0].node.frontmatter.title}
               </Text>
               <Spacer />
-              <Text variant="caption" color={theme.colors.text.secondary}>
-                Read More &gt;
-              </Text>
-            </FlexSpaceBetweenDiv>
+              <FlexSpaceBetweenDiv dir={isDesktop ? "column" : "row"}>
+                <Text variant="caption" color={theme.colors.text.secondary}>
+                  {data.allMarkdownRemark.edges[0].node.frontmatter.date} by{" "}
+                  {data.allMarkdownRemark.edges[0].node.frontmatter.author}
+                </Text>
+                <Spacer />
+
+                <Text variant="caption" color={theme.colors.text.secondary}>
+                  Read More &gt;
+                </Text>
+              </FlexSpaceBetweenDiv>
+            </Link>
           </FlexStartDiv>
           <FlexStartDiv>
-            <div
-              style={{
-                borderRadius: `${theme.borderSizes[2]}px`,
-                alignSelf: "center",
-              }}
+            <Link
+              to={`/blog${data.allMarkdownRemark.edges[1].node.frontmatter.slug}`}
+              style={{ textDecoration: "none" }}
             >
-              <img src={joins} alt={joins} width="100%" />
-            </div>
-            <Spacer />
-            <Text variant="label" bold="true">
-              Firo joins BPSAA
-            </Text>
-            <Spacer />
-            <FlexSpaceBetweenDiv dir={isDesktop ? "column" : "row"}>
-              <Text variant="caption" color={theme.colors.text.secondary}>
-                May 28, 2022 by Lucas Fullam
+              <GatsbyImage
+                image={featuredImg2}
+                style={{
+                  borderRadius: `${theme.borderSizes[2]}px`,
+                  alignSelf: "center",
+                  width: "100%",
+                }}
+              />
+              <Spacer />
+              <Text variant="label" bold="true">
+                {data.allMarkdownRemark.edges[1].node.frontmatter.title}
               </Text>
               <Spacer />
-              <Text variant="caption" color={theme.colors.text.secondary}>
-                Read More &gt;
-              </Text>
-            </FlexSpaceBetweenDiv>
+              <FlexSpaceBetweenDiv dir={isDesktop ? "column" : "row"}>
+                <Text variant="caption" color={theme.colors.text.secondary}>
+                  {data.allMarkdownRemark.edges[1].node.frontmatter.date} by{" "}
+                  {data.allMarkdownRemark.edges[1].node.frontmatter.author}
+                </Text>
+                <Spacer />
+
+                <Text variant="caption" color={theme.colors.text.secondary}>
+                  Read More &gt;
+                </Text>
+              </FlexSpaceBetweenDiv>
+            </Link>
           </FlexStartDiv>
         </GridDiv>
       </PaddedDiv>
@@ -396,6 +493,7 @@ const Home4 = () => {
             title="Thailand Uses Blockchain-Supported Electronic Voting System in Primaries"
             date="November 13, 2018"
             more="See"
+            url="https://www.nasdaq.com/articles/privacy-coin-firo-in-midst-of-hash-war-with-51-attacker-2021-01-20"
           />
           <BoxHome4
             logo={amazonMusic}
@@ -403,6 +501,7 @@ const Home4 = () => {
             title='"FINANCIAL PRIVACY" - Feat Reuben Yap (FIRO)- The BPSAA Podcast'
             date="April 20, 2021"
             more="See"
+            url="https://music.amazon.com/podcasts/3e55883e-d051-42ae-af28-f3ffd303bacd/episodes/69c7f953-4898-41be-acb7-37f861ad9d41/bpsaa-crypto-podcast-financial-privacy---feat-reuben-yap-firo---the-bpsaa-podcast"
           />
           <BoxHome4
             logo={bscNews}
@@ -410,6 +509,7 @@ const Home4 = () => {
             title="Binance Announces Its Support Fort the Firo (FIRO) Network Upgrade & Hard Fork"
             date="June 16, 2022"
             more="See"
+            url="https://www.binance.com/en/support/announcement/binance-will-support-the-firo-firo-network-upgrade-hard-fork-6e98d3a9a51247eaa1dd2bdd49e66196"
           />
         </GridDiv>
       </PaddedDiv>

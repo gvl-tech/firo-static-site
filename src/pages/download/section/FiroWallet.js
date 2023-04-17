@@ -89,6 +89,13 @@ const FiroWallet = () => {
                   padding: `${theme.space[0]}`,
                   borderRadius: `${theme.borderSizes[3]}px`,
                 }}
+                onClick={() =>
+                  window.open(
+                    "https://apps.apple.com/us/app/campfire-firo-wallet/id1613267898",
+                    "_blank",
+                    "noreferrer"
+                  )
+                }
               >
                 <FlexDiv dir="row">
                   <img src={appStore} alt={appStore} width={30} />
@@ -111,6 +118,13 @@ const FiroWallet = () => {
                   padding: `${theme.space[0]}`,
                   borderRadius: `${theme.borderSizes[3]}px`,
                 }}
+                onClick={() =>
+                  window.open(
+                    "https://play.google.com/store/apps/details?id=com.cypherstack.campfire",
+                    "_blank",
+                    "noreferrer"
+                  )
+                }
               >
                 <FlexDiv dir="row">
                   <img src={playStore} alt={playStore} />
@@ -133,6 +147,11 @@ const FiroWallet = () => {
                   padding: `${theme.space[0]}`,
                   borderRadius: `${theme.borderSizes[3]}px`,
                 }}
+                onClick={() =>
+                  window.open(
+                    "https://github.com/firoorg/firo-client/releases/download/v3.0.1/Firo-Client-3.0.1.exe"
+                  )
+                }
               >
                 <FlexDiv dir="row">
                   <img src={windowsRed} alt={windowsRed} width={25} />
@@ -155,6 +174,11 @@ const FiroWallet = () => {
                   padding: `${theme.space[0]}`,
                   borderRadius: `${theme.borderSizes[3]}px`,
                 }}
+                onClick={() =>
+                  window.open(
+                    "https://github.com/firoorg/firo-client/releases/download/v3.0.1/Firo-Client-3.0.1.dmg"
+                  )
+                }
               >
                 <FlexDiv dir="row">
                   <img src={apple} alt={apple} />
@@ -226,6 +250,13 @@ const FiroWallet = () => {
                       }px`,
                       borderRadius: `${theme.borderSizes[3]}px`,
                     }}
+                    onClick={() =>
+                      window.open(
+                        "https://apps.apple.com/us/app/campfire-firo-wallet/id1613267898",
+                        "_blank",
+                        "noreferrer"
+                      )
+                    }
                   >
                     <FlexDiv dir="row">
                       <img
@@ -258,6 +289,13 @@ const FiroWallet = () => {
                       }px`,
                       borderRadius: `${theme.borderSizes[3]}px`,
                     }}
+                    onClick={() =>
+                      window.open(
+                        "https://play.google.com/store/apps/details?id=com.cypherstack.campfire",
+                        "_blank",
+                        "noreferrer"
+                      )
+                    }
                   >
                     <FlexDiv dir="row">
                       <img
@@ -291,6 +329,11 @@ const FiroWallet = () => {
                       }px`,
                       borderRadius: `${theme.borderSizes[3]}px`,
                     }}
+                    onClick={() =>
+                      window.open(
+                        "https://github.com/firoorg/firo-client/releases/download/v3.0.1/Firo-Client-3.0.1.exe"
+                      )
+                    }
                   >
                     <FlexDiv dir="row">
                       <img
@@ -323,6 +366,11 @@ const FiroWallet = () => {
                       }px`,
                       borderRadius: `${theme.borderSizes[3]}px`,
                     }}
+                    onClick={() =>
+                      window.open(
+                        "https://github.com/firoorg/firo-client/releases/download/v3.0.1/Firo-Client-3.0.1.dmg"
+                      )
+                    }
                   >
                     <FlexDiv dir="row">
                       <img

@@ -1,25 +1,25 @@
 import React from "react"
 import arrow from "../../assets/footer/arrow-button.svg"
-import twitter from "../../assets/footer/twitter.svg"
 import facebook from "../../assets/footer/facebook.svg"
 import instagram from "../../assets/footer/instagram.svg"
+import twitter from "../../assets/footer/twitter.svg"
+import reddit from "../../assets/footer/reddit.svg"
 import youtube from "../../assets/footer/youtube.svg"
-import weibo from "../../assets/footer/weibo.svg"
-import language from "../../assets/footer/language.svg"
+import discord from "../../assets/footer/discord.svg"
+import telegram from "../../assets/footer/telegram.svg"
 
-import { useTheme } from "styled-components"
-import { useMediaQuery } from "react-responsive"
-import { AiOutlineDown } from "react-icons/ai"
-import { Text } from "../../components/utilities/text.component"
-import { PaddedDiv } from "../../components/utilities/padded-div.component"
-import { FlexStartDiv } from "../../components/utilities/flex-start-div.component"
-import { FlexSpaceBetweenDiv } from "../../components/utilities/flex-space-between-div.component"
-import { Spacer } from "../../components/utilities/spacer.component"
-import { BubbleDiv } from "../../components/buttons/bubble-text.component"
-import { GridDiv } from "../../components/utilities/grid-div.component"
-import { FlexCenterDiv } from "../../components/utilities/flex-center-div.component"
-import { Button } from "../../components/buttons/cta-button.component"
 import { Link } from "gatsby"
+import { useMediaQuery } from "react-responsive"
+import { useTheme } from "styled-components"
+import { BubbleDiv } from "../../components/buttons/bubble-text.component"
+import { Button } from "../../components/buttons/cta-button.component"
+import { FlexCenterDiv } from "../../components/utilities/flex-center-div.component"
+import { FlexSpaceBetweenDiv } from "../../components/utilities/flex-space-between-div.component"
+import { FlexStartDiv } from "../../components/utilities/flex-start-div.component"
+import { GridDiv } from "../../components/utilities/grid-div.component"
+import { PaddedDiv } from "../../components/utilities/padded-div.component"
+import { Spacer } from "../../components/utilities/spacer.component"
+import { Text } from "../../components/utilities/text.component"
 
 const Footer = () => {
   const theme = useTheme()
@@ -44,6 +44,7 @@ const Footer = () => {
             <a
               href="https://github.com/firoorg/firo"
               target="_blank"
+              rel="noreferrer"
               style={{ textDecoration: "none" }}
             >
               <Text
@@ -57,6 +58,7 @@ const Footer = () => {
             <a
               href="https://sourceforge.net/projects/firoorg/"
               target="_blank"
+              rel="noreferrer"
               style={{ textDecoration: "none" }}
             >
               <Text
@@ -77,17 +79,24 @@ const Footer = () => {
             </Link>
             <Spacer />
 
-            <Text
-              color={theme.colors.text.white}
-              fontFamily={theme.fontFamily.ssp}
+            <Link
+              to="/blog/2018-07-15-firo-vulnerability-bounty-program/"
+              style={{ textDecoration: "none" }}
             >
-              Vulnerability Program
-            </Text>
+              <Text
+                color={theme.colors.text.white}
+                fontFamily={theme.fontFamily.ssp}
+              >
+                Vulnerability Program
+              </Text>
+            </Link>
+
             <Spacer />
 
             <a
               href="https://explorer.firo.org/"
               target="_blank"
+              rel="noreferrer"
               style={{ textDecoration: "none" }}
             >
               <Text
@@ -131,6 +140,7 @@ const Footer = () => {
             <a
               href="https://opencollective.com/firo"
               target="_blank"
+              rel="noreferrer"
               style={{ textDecoration: "none" }}
             >
               <Text
@@ -202,23 +212,60 @@ const Footer = () => {
             </Text>
             <Spacer />
             <GridDiv
-              y="repeat(5, 1fr)"
+              y="repeat(6, 1fr)"
               style={{ gap: `${theme.space[2]}px`, alignSelf: "center" }}
             >
               <FlexCenterDiv>
-                <img src={twitter} alt={twitter} />
+                <a
+                  href="https://discord.gg/TGZPRbRT3Y"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={discord} alt={discord} />
+                </a>
               </FlexCenterDiv>
               <FlexCenterDiv>
-                <img src={facebook} alt={facebook} />
+                <a href="https://t.me/firoorg" target="_blank" rel="noreferrer">
+                  <img src={telegram} alt={telegram} />
+                </a>
+              </FlexCenterDiv>
+
+              <FlexCenterDiv>
+                <a
+                  href="https://twitter.com/firoorg"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={twitter} alt={twitter} />
+                </a>
               </FlexCenterDiv>
               <FlexCenterDiv>
-                <img src={instagram} alt={instagram} />
+                <a
+                  href="https://www.facebook.com/firoorg/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={facebook} alt={facebook} />
+                </a>
+              </FlexCenterDiv>
+
+              <FlexCenterDiv>
+                <a
+                  href="https://www.youtube.com/c/firoorg"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={youtube} alt={youtube} />
+                </a>
               </FlexCenterDiv>
               <FlexCenterDiv>
-                <img src={youtube} alt={youtube} />
-              </FlexCenterDiv>
-              <FlexCenterDiv>
-                <img src={weibo} alt={weibo} />
+                <a
+                  href="https://www.reddit.com/r/FiroProject/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={reddit} alt={reddit} />
+                </a>
               </FlexCenterDiv>
             </GridDiv>
           </div>
@@ -245,13 +292,13 @@ const Footer = () => {
                   <a
                     href="https://github.com/firoorg/firo"
                     target="_blank"
+                    rel="noreferrer"
                     style={{ textDecoration: "none" }}
                   >
                     <Text
                       variant="label"
                       color={theme.colors.text.white}
                       fontFamily={theme.fontFamily.ssp}
-                      style={{ cursor: "pointer" }}
                     >
                       GitHub
                     </Text>
@@ -261,6 +308,7 @@ const Footer = () => {
                   <a
                     href="https://sourceforge.net/projects/firoorg/"
                     target="_blank"
+                    rel="noreferrer"
                     style={{ textDecoration: "none" }}
                   >
                     <Text
@@ -279,34 +327,37 @@ const Footer = () => {
                       variant="label"
                       color={theme.colors.text.white}
                       fontFamily={theme.fontFamily.ssp}
-                      style={{ cursor: "pointer" }}
                     >
                       Branding
                     </Text>
                   </Link>
                 </div>
                 <div>
-                  <Text
-                    variant="label"
-                    color={theme.colors.text.white}
-                    fontFamily={theme.fontFamily.ssp}
-                    style={{ cursor: "pointer" }}
-                  >
-                    Vulnerability Program
-                  </Text>
-                </div>
-
-                <div>
-                  <a
-                    href="https://explorer.firo.org/"
-                    target="_blank"
+                  <Link
+                    to="/blog/2018-07-15-firo-vulnerability-bounty-program/"
                     style={{ textDecoration: "none" }}
                   >
                     <Text
                       variant="label"
                       color={theme.colors.text.white}
                       fontFamily={theme.fontFamily.ssp}
-                      style={{ cursor: "pointer" }}
+                    >
+                      Vulnerability Program
+                    </Text>
+                  </Link>
+                </div>
+
+                <div>
+                  <a
+                    href="https://explorer.firo.org/"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Text
+                      variant="label"
+                      color={theme.colors.text.white}
+                      fontFamily={theme.fontFamily.ssp}
                     >
                       Explorer
                     </Text>
@@ -334,7 +385,6 @@ const Footer = () => {
                       variant="label"
                       color={theme.colors.text.white}
                       fontFamily={theme.fontFamily.ssp}
-                      style={{ cursor: "pointer" }}
                     >
                       Guides
                     </Text>
@@ -345,7 +395,6 @@ const Footer = () => {
                     variant="label"
                     color={theme.colors.text.white}
                     fontFamily={theme.fontFamily.ssp}
-                    style={{ cursor: "pointer" }}
                   >
                     Careers
                   </Text>
@@ -354,13 +403,13 @@ const Footer = () => {
                   <a
                     href="https://opencollective.com/firo"
                     target="_blank"
+                    rel="noreferrer"
                     style={{ textDecoration: "none" }}
                   >
                     <Text
                       variant="label"
                       color={theme.colors.text.white}
                       fontFamily={theme.fontFamily.ssp}
-                      style={{ cursor: "pointer" }}
                     >
                       Open Collective
                     </Text>
@@ -438,30 +487,56 @@ const Footer = () => {
                   Socials
                 </Text>
                 <Spacer />
-                <FlexStartDiv dir="row">
-                  <a href="https://twitter.com/firoorg" target="_blank">
+                <FlexStartDiv dir="row" style={{ alignItems: "center" }}>
+                  <a
+                    href="https://discord.gg/TGZPRbRT3Y"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={discord} alt={discord} />
+                  </a>
+                  <Spacer size="xLarge" position="right" />
+                  <a
+                    href="https://t.me/firoorg"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={telegram} alt={telegram} />
+                  </a>
+                  <Spacer size="xLarge" position="right" />
+                  <a
+                    href="https://twitter.com/firoorg"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <img src={twitter} alt={twitter} />
                   </a>
                   <Spacer size="xLarge" position="right" />
-                  <img
-                    src={facebook}
-                    alt={facebook}
-                    style={{ cursor: "pointer" }}
-                  />
+
+                  <a
+                    href="https://www.facebook.com/firoorg/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={facebook} alt={facebook} />
+                  </a>
                   <Spacer size="xLarge" position="right" />
-                  <img
-                    src={instagram}
-                    alt={instagram}
-                    style={{ cursor: "pointer" }}
-                  />
+
+                  <a
+                    href="https://www.youtube.com/c/firoorg"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={youtube} alt={youtube} />
+                  </a>
                   <Spacer size="xLarge" position="right" />
-                  <img
-                    src={youtube}
-                    alt={youtube}
-                    style={{ cursor: "pointer" }}
-                  />
-                  <Spacer size="xLarge" position="right" />
-                  <img src={weibo} alt={weibo} style={{ cursor: "pointer" }} />
+                  <a
+                    href="https://www.reddit.com/r/FiroProject/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={reddit} alt={reddit} />
+                  </a>
                 </FlexStartDiv>
               </div>
             </FlexSpaceBetweenDiv>
