@@ -7,17 +7,17 @@ const Guides = () => {
   return (
     <Layout>
       <div id="faq">
-        <section class="page-intro section">
-          <div class="row">
-            <div class="col">
+        <section className="page-intro section">
+          <div className="row">
+            <div className="col">
               <h1>Guides</h1>
             </div>
           </div>
         </section>
 
-        <section class="faq-nav">
-          <div class="container">
-            <ul class="row">
+        <section className="faq-nav">
+          <div className="container">
+            <ul className="row">
               <li>
                 <Link to="#wallet-guides">Wallet</Link>
               </li>
@@ -37,12 +37,12 @@ const Guides = () => {
           </div>
         </section>
 
-        <section class="faq-section" id="wallet-guides">
-          <div class="container">
-            <div class="row">
-              <div class="col">
+        <section className="faq-section" id="wallet-guides">
+          <div className="container">
+            <div className="row">
+              <div className="col">
                 <h2>Wallet</h2>
-                <ul class="guides-list">
+                <ul className="guides-list">
                   <li>
                     <Link to="/guides/common-problems">
                       Common wallet problems
@@ -74,12 +74,12 @@ const Guides = () => {
           </div>
         </section>
 
-        <section class="faq-section" id="mining-guides">
-          <div class="container">
-            <div class="row">
-              <div class="col">
+        <section className="faq-section" id="mining-guides">
+          <div className="container">
+            <div className="row">
+              <div className="col">
                 <h2>Mining</h2>
-                <ul class="guides-list">
+                <ul className="guides-list">
                   <li>
                     <Link to="/guides/how-to-mine-firo">
                       How to Mine Firo (FIRO) with FiroPoW
@@ -91,12 +91,12 @@ const Guides = () => {
           </div>
         </section>
 
-        <section class="faq-section" id="masternode-guides">
-          <div class="container">
-            <div class="row">
-              <div class="col">
+        <section className="faq-section" id="masternode-guides">
+          <div className="container">
+            <div className="row">
+              <div className="col">
                 <h2>Masternode</h2>
-                <ul class="guides-list">
+                <ul className="guides-list">
                   <li>
                     <Link to="/guides/masternode-setup">
                       Firo masternode setup guide
@@ -118,12 +118,12 @@ const Guides = () => {
           </div>
         </section>
 
-        <section class="faq-section" id="privacy-tech-guides">
-          <div class="container">
-            <div class="row">
-              <div class="col">
+        <section className="faq-section" id="privacy-tech-guides">
+          <div className="container">
+            <div className="row">
+              <div className="col">
                 <h2>Privacy Tech</h2>
-                <ul class="guides-list">
+                <ul className="guides-list">
                   <li>
                     <Link to="/guides/privacy-coin-comparison">
                       How Firo's Privacy Technology Compares to the Competition
@@ -135,12 +135,12 @@ const Guides = () => {
           </div>
         </section>
 
-        <section class="faq-section" id="defi">
-          <div class="container">
-            <div class="row">
-              <div class="col">
+        <section className="faq-section" id="defi">
+          <div className="container">
+            <div className="row">
+              <div className="col">
                 <h2>DeFi</h2>
-                <ul class="guides-list">
+                <ul className="guides-list">
                   <li>
                     <Link to="/guides/liquidity-firo-pancakeswap">
                       How to Provide Liquidity for Firo on Pancakeswap

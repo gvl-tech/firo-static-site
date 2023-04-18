@@ -79,8 +79,8 @@ const BoxTimeline = ({ isComplete, status, title, description }) => {
           transform="translate(1 1)"
           fill="none"
           stroke="#9b1c2e"
-          stroke-linecap="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeWidth="2"
         />
       </svg>
     </VerticalTimelineElement>

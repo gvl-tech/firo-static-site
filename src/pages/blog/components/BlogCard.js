@@ -7,19 +7,21 @@ const BlogCard = ({ post }) => {
   let featuredImg = getImage(
     post?.frontmatter.img?.childImageSharp?.gatsbyImageData
   )
-
   return (
     <div id="blogCard">
-      <section class="blog-section">
-        <div class="container">
-          <div class="row">
-            <div class="col post-section">
-              <div class="post-meta">
-                <p class="post-date">{post?.frontmatter?.date}</p>
-                <p class="post-author">by {post?.frontmatter?.author}</p>
+      <section className="blog-section">
+        <div className="container">
+          <div className="row">
+            <div className="col post-section">
+              <div className="post-meta">
+                <p className="post-date">{post?.frontmatter?.date}</p>
+                <p className="post-author">by {post?.frontmatter?.author}</p>
               </div>
 
-              <Link to={`/blog${post?.frontmatter?.slug}`} class="post-link">
+              <Link
+                to={`/blog${post?.frontmatter?.slug}`}
+                className="post-link"
+              >
                 <GatsbyImage
                   image={featuredImg}
                   alt={post?.frontmatter?.title}
@@ -27,9 +29,11 @@ const BlogCard = ({ post }) => {
                 <h2>{post?.frontmatter?.title}</h2>
                 <p>{post?.frontmatter?.summary}</p>
               </Link>
-              <p class="post-tag">
+              <p className="post-tag">
                 {post?.frontmatter?.tags?.map(tag => (
-                  <Link to={`/tag/${tag}`}>#{tag}</Link>
+                  <Link key={tag} to={`/tag/${tag}`}>
+                    #{tag}
+                  </Link>
                 ))}
               </p>
             </div>

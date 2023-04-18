@@ -78,7 +78,6 @@ const Home4 = () => {
       ?.gatsbyImageData
   )
 
-  console.log(data)
   return (
     <div>
       <img
@@ -396,8 +395,12 @@ const Home4 = () => {
         </Text>
         <Spacer size="xLarge" />
         <GridDiv
-          x={!isDesktop && "1fr 1fr"}
-          y={isDesktop && "repeat(auto-fit, minmax(200px, max-content))"}
+          x={!isDesktop ? "1fr 1fr" : undefined}
+          y={
+            isDesktop
+              ? "repeat(auto-fit, minmax(200px, max-content))"
+              : undefined
+          }
           style={{ gap: `${theme.space[4]}px` }}
         >
           <FlexStartDiv>
@@ -412,6 +415,7 @@ const Home4 = () => {
                   alignSelf: "center",
                   width: "100%",
                 }}
+                alt="blog-1-banner"
               />
               <Spacer />
               <Text variant="label" bold="true">
@@ -443,6 +447,7 @@ const Home4 = () => {
                   alignSelf: "center",
                   width: "100%",
                 }}
+                alt="blog-2-banner"
               />
               <Spacer />
               <Text variant="label" bold="true">
@@ -481,9 +486,11 @@ const Home4 = () => {
         <Spacer size="xLarge" />
 
         <GridDiv
-          x={!isDesktop && "1fr 1fr 1fr"}
+          x={!isDesktop ? "1fr 1fr 1fr" : undefined}
           y={
-            isDesktop && "fit-content(100%) fit-content(100%) fit-content(100%)"
+            isDesktop
+              ? "fit-content(100%) fit-content(100%) fit-content(100%)"
+              : undefined
           }
           style={{ gap: `${theme.space[4]}px` }}
         >

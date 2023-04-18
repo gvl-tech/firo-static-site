@@ -68,7 +68,7 @@ const Products = () => {
             {/* <Spacer size="xxLarge" /> */}
 
             <GridDiv
-              y={isDesktop && "1fr 1fr"}
+              y={isDesktop ? "1fr 1fr" : undefined}
               gap="3"
               style={
                 isDesktop
@@ -81,7 +81,7 @@ const Products = () => {
             >
               <FlexStartDiv
                 style={isDesktop ? { gridArea: "a" } : {}}
-                width={isDesktop && "80"}
+                width={isDesktop ? "80" : undefined}
                 bg={theme.colors.bg.grey}
                 padding={theme.space[3]}
                 br="1"
@@ -108,7 +108,7 @@ const Products = () => {
 
               <FlexStartDiv
                 style={isDesktop ? { gridArea: "c" } : {}}
-                width={isDesktop && "80"}
+                width={isDesktop ? "80" : undefined}
                 bg={theme.colors.bg.grey}
                 padding={theme.space[3]}
                 br="1"
@@ -130,7 +130,7 @@ const Products = () => {
 
               <FlexStartDiv
                 style={isDesktop ? { gridArea: "d" } : {}}
-                width={isDesktop && "80"}
+                width={isDesktop ? "80" : undefined}
                 bg={theme.colors.bg.grey}
                 padding={theme.space[3]}
                 br="1"
@@ -333,7 +333,6 @@ const Products = () => {
               )}
               <FlexCenterDiv
                 dir="row"
-                // width="50"
                 style={{ flexWrap: "wrap", gap: theme.space[2] }}
               >
                 <img src={nasdaq} alt={nasdaq} />

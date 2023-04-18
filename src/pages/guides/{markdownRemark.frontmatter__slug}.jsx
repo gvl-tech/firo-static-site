@@ -29,7 +29,7 @@ export default function GuidePostTemplate({
               {frontmatter.title}
             </Text>
             <Spacer />
-            <GatsbyImage image={featuredImg} />
+            <GatsbyImage image={featuredImg} alt="guide-banner" />
             <div dangerouslySetInnerHTML={{ __html: html }} />
           </FlexStartDiv>
         </PaddedDiv>
