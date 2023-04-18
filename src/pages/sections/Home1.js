@@ -27,7 +27,7 @@ const Home1 = () => {
   const [showInitial, setShowInitial] = useState(true)
 
   return (
-    <PaddedDiv y={!isDesktop && "6"}>
+    <PaddedDiv y={!isDesktop ? "6" : "3"}>
       <FlexCenterDiv
         bg={theme.colors.brand.primary}
         br={theme.borderSizes[1]}
@@ -65,7 +65,7 @@ const Home1 = () => {
               <FlexDiv
                 style={{
                   position: "relative",
-                  top: "-750px",
+                  top: "-850px",
                   right: "20%",
                   zIndex: -1,
                 }}
@@ -191,15 +191,31 @@ const Home1 = () => {
               dir="row"
               style={{ gap: theme.space[4], flexWrap: "wrap" }}
             >
-              <img src={nasdaq} alt={nasdaq} width={isDesktop && "150px"} />
-              <img src={yahoo} alt={yahoo} width={isDesktop && "150px"} />
-              <img src={amazon} alt={amazon} width={isDesktop && "150px"} />
+              <img
+                src={nasdaq}
+                alt={nasdaq}
+                width={isDesktop ? "150px" : undefined}
+              />
+              <img
+                src={yahoo}
+                alt={yahoo}
+                width={isDesktop ? "150px" : undefined}
+              />
+              <img
+                src={amazon}
+                alt={amazon}
+                width={isDesktop ? "150px" : undefined}
+              />
               <img
                 src={cointelegraph}
                 alt={cointelegraph}
-                width={isDesktop && "150px"}
+                width={isDesktop ? "150px" : undefined}
               />
-              <img src={coindesk} alt={coindesk} width={isDesktop && "150px"} />
+              <img
+                src={coindesk}
+                alt={coindesk}
+                width={isDesktop ? "150px" : undefined}
+              />
             </FlexCenterDiv>
           </PaddedDiv>
         </FlexCenterDiv>

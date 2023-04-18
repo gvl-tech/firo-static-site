@@ -7,17 +7,17 @@ const FAQ = () => {
   return (
     <Layout>
       <div id="faq">
-        <section class="page-intro section">
-          <div class="row">
-            <div class="col">
+        <section className="page-intro section">
+          <div className="row">
+            <div className="col">
               <h1>Frequently Asked Questions</h1>
             </div>
           </div>
         </section>
 
-        <section class="faq-nav">
-          <div class="container">
-            <ul class="row">
+        <section className="faq-nav">
+          <div className="container">
+            <ul className="row">
               <li>
                 <Link to="#overview">Overview</Link>
               </li>
@@ -49,48 +49,48 @@ const FAQ = () => {
           </div>
         </section>
 
-        <section class="faq-section" id="overview">
-          <div class="container">
-            <div class="row">
-              <div class="col">
+        <section className="faq-section" id="overview">
+          <div className="container">
+            <div className="row">
+              <div className="col">
                 <h2>Overview</h2>
-                <div class="tabs">
-                  <div class="tab">
+                <div className="tabs">
+                  <div className="tab">
                     <input type="checkbox" id="q1" />
-                    <label class="tab-label" for="q1">
+                    <label className="tab-label" htmlFor="q1">
                       <h4>Where can I download Firo?</h4>
                     </label>
-                    <div class="tab-content">
+                    <div className="tab-content">
                       <p>
                         The wallet is available for download from our{" "}
-                        <Link
-                          to="https://firo.org/get-firo/download/"
+                        <a
+                          href="/download"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           website
-                        </Link>{" "}
+                        </a>{" "}
                         or{" "}
-                        <Link
-                          to="https://github.com/firoorg/firo/releases"
+                        <a
+                          href="https://github.com/firoorg/firo/releases"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           Github Releases page
-                        </Link>
+                        </a>
                         .
                       </p>
                     </div>
                   </div>
-                  <div class="tab">
+                  <div className="tab">
                     <input type="checkbox" id="q2" />
-                    <label class="tab-label" for="q2">
+                    <label className="tab-label" htmlFor="q2">
                       <h4>
                         As a truly private cryptocurrency, won’t Firo be used
                         for terrible things?
                       </h4>
                     </label>
-                    <div class="tab-content">
+                    <div className="tab-content">
                       <p>
                         As with any other technology, Firo can be used for both
                         good and evil. However, we are firm believers that the
@@ -122,10 +122,10 @@ const FAQ = () => {
                         use on the darknet or perceived illicit behaviour, these
                         form a very small proportion of overall transactions.
                         Privacy preserving cryptocurrencies also{" "}
-                        <Link to="https://www.perkinscoie.com/en/news-insights/anti-money-laundering-regulation-of-privacy-enabling-cryptocurrencies.html">
+                        <a href="https://www.perkinscoie.com/en/news-insights/anti-money-laundering-regulation-of-privacy-enabling-cryptocurrencies.html">
                           aren't necessarily at odds with existing KYC/AML
                           practices
-                        </Link>
+                        </a>
                         .
                       </p>
                       <p>
@@ -137,12 +137,12 @@ const FAQ = () => {
                       </p>
                     </div>
                   </div>
-                  <div class="tab">
+                  <div className="tab">
                     <input type="checkbox" id="q3" />
-                    <label class="tab-label" for="q3">
+                    <label className="tab-label" htmlFor="q3">
                       <h4>What is Firo's mission?</h4>
                     </label>
-                    <div class="tab-content">
+                    <div className="tab-content">
                       <p>
                         Firo believes in the importance of financial privacy in
                         cryptocurrency as an essential element in maintaining
@@ -169,13 +169,11 @@ const FAQ = () => {
                         Firo has dedicated itself to being a privacy preserving
                         cryptocurrency and have designed and built trustless
                         privacy protocols such as{" "}
-                        <Link to="https://eprint.iacr.org/2019/373">
-                          Lelantus
-                        </Link>{" "}
+                        <a href="https://eprint.iacr.org/2019/373">Lelantus</a>{" "}
                         and{" "}
-                        <Link to="https://eprint.iacr.org/2021/1173">
+                        <a href="https://eprint.iacr.org/2021/1173">
                           Lelantus Spark
-                        </Link>{" "}
+                        </a>{" "}
                         that have inspired and shaped the designs of other
                         privacy protocols (for e.g. Triptych, Seraphis,
                         Lelantus-MW).
@@ -194,13 +192,13 @@ const FAQ = () => {
                         facilitates peace and prosperity across countries and
                         cultures. By guaranteeing financial privacy, Firo can
                         directly guarantee{" "}
-                        <Link
-                          to="https://www.youtube.com/watch?v=3dAdI3Gzodo"
+                        <a
+                          href="https://www.youtube.com/watch?v=3dAdI3Gzodo"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           fungibility
-                        </Link>
+                        </a>
                         , an essential property for free commerce.
                       </p>
                       <p>
@@ -217,18 +215,18 @@ const FAQ = () => {
             </div>
           </div>
         </section>
-        <section class="faq-section" id="privacy">
-          <div class="container">
-            <div class="row">
-              <div class="col">
+        <section className="faq-section" id="privacy">
+          <div className="container">
+            <div className="row">
+              <div className="col">
                 <h2>Privacy</h2>
-                <div class="tabs">
-                  <div class="tab">
+                <div className="tabs">
+                  <div className="tab">
                     <input type="checkbox" id="q4" />
-                    <label class="tab-label" for="q4">
+                    <label className="tab-label" htmlFor="q4">
                       <h4>How does Firo's privacy mechanism work?</h4>
                     </label>
-                    <div class="tab-content">
+                    <div className="tab-content">
                       <p>
                         Blockchains without privacy like Bitcoin only offer
                         pseudo-anonymity. In blockchains without complete
@@ -238,10 +236,10 @@ const FAQ = () => {
                       </p>
                       <p>
                         This is why{" "}
-                        <Link to="https://newconomy.media/news/the-premium-value-of-freshly-mined-virgin-bitcoin/">
+                        <a href="https://newconomy.media/news/the-premium-value-of-freshly-mined-virgin-bitcoin/">
                           freshly mined Bitcoins with no previous transaction
                           history can command premiums of 20% or more
-                        </Link>{" "}
+                        </a>{" "}
                         as the holder does not have to worry whether it has been
                         tainted.
                       </p>
@@ -278,24 +276,22 @@ const FAQ = () => {
                       </p>
                     </div>
                   </div>
-                  <div class="tab">
+                  <div className="tab">
                     <input type="checkbox" id="q5" />
-                    <label class="tab-label" for="q5">
+                    <label className="tab-label" htmlFor="q5">
                       <h4>
                         How does Firo compare to other privacy preserving
                         cryptocurrencies?
                       </h4>
                     </label>
-                    <div class="tab-content">
+                    <div className="tab-content">
                       <p>
                         Firo's privacy protocols{" "}
-                        <Link to="https://eprint.iacr.org/2019/373">
-                          Lelantus
-                        </Link>{" "}
+                        <a href="https://eprint.iacr.org/2019/373">Lelantus</a>{" "}
                         and{" "}
-                        <Link to="https://eprint.iacr.org/2021/1173">
+                        <a href="https://eprint.iacr.org/2021/1173">
                           Lelantus Spark
-                        </Link>{" "}
+                        </a>{" "}
                         combines very high anonymity sets (~65,000) while
                         relying on well tested cryptographic building blocks
                         that do not require trusted setup.
@@ -307,24 +303,24 @@ const FAQ = () => {
                         has a ring size of 11). Models that rely on decoys also
                         have weaknesses where deanonymization becomes easier
                         when{" "}
-                        <Link to="https://slideslive.com/38911785/satoshi-has-no-clothes-failures-in-onchain-privacy">
+                        <a href="https://slideslive.com/38911785/satoshi-has-no-clothes-failures-in-onchain-privacy">
                           paying repeatedly to the same entity
-                        </Link>
+                        </a>
                         .{" "}
-                        <Link to="https://arxiv.org/abs/1704.04299">
+                        <a href="https://arxiv.org/abs/1704.04299">
                           Decoy selection algorithms have to be also carefully
                           selected
-                        </Link>{" "}
+                        </a>{" "}
                         to avoid reducing the effective anonymity set and if
                         ring sizes are not large enough, can be subject to{" "}
-                        <Link to="https://eprint.iacr.org/2019/455">
+                        <a href="https://eprint.iacr.org/2019/455">
                           Sybil attacks
-                        </Link>
+                        </a>
                         . Similarly, Mimblewimble based coins rely highly on
                         high transaction volumes in a block and also have{" "}
-                        <Link to="https://medium.com/beam-mw/on-linkability-of-mimblewimble-da9ba71e83b4">
+                        <a href="https://medium.com/beam-mw/on-linkability-of-mimblewimble-da9ba71e83b4">
                           limited resistance towards Sybil attacks
-                        </Link>
+                        </a>
                         . Firo's use of large anonymity pools and sliding
                         windows greatly alleviate these problems.
                       </p>
@@ -358,19 +354,19 @@ const FAQ = () => {
                       <p>
                         You can view a more detailed comparison and analysis on
                         our{" "}
-                        <Link to="https://firo.org/guide/privacy-coin-comparison.html">
+                        <a href="https://firo.org/guide/privacy-coin-comparison.html">
                           privacy comparison guide
-                        </Link>
+                        </a>
                         .
                       </p>
                     </div>
                   </div>
-                  <div class="tab">
+                  <div className="tab">
                     <input type="checkbox" id="q6" />
-                    <label class="tab-label" for="q6">
+                    <label className="tab-label" htmlFor="q6">
                       <h4>Why aren't Firo transactions private by default?</h4>
                     </label>
-                    <div class="tab-content">
+                    <div className="tab-content">
                       <p>
                         The short answer is that our earlier privacy protocols
                         made this difficult but we are moving towards it
@@ -438,15 +434,15 @@ const FAQ = () => {
                       </p>
                     </div>
                   </div>
-                  <div class="tab">
+                  <div className="tab">
                     <input type="checkbox" id="q7" />
-                    <label class="tab-label" for="q7">
+                    <label className="tab-label" htmlFor="q7">
                       <h4>
                         What are sliding windows as used in Lelantus and
                         Lelantus Spark?
                       </h4>
                     </label>
-                    <div class="tab-content">
+                    <div className="tab-content">
                       <p>
                         The way privacy works for cryptocurrency transactions is
                         that you want to be hiding in a big crowd. The more
@@ -481,15 +477,15 @@ const FAQ = () => {
                       </p>
                     </div>
                   </div>
-                  <div class="tab">
+                  <div className="tab">
                     <input type="checkbox" id="q8" />
-                    <label class="tab-label" for="q8">
+                    <label className="tab-label" htmlFor="q8">
                       <h4>
                         What is the relationship between Lelantus Spark and
                         Seraphis?
                       </h4>
                     </label>
-                    <div class="tab-content">
+                    <div className="tab-content">
                       <p>
                         Seraphis was previously named ZCT and was a framework
                         developed independently by Koe that did not have exact
@@ -519,12 +515,12 @@ const FAQ = () => {
                       </p>
                     </div>
                   </div>
-                  <div class="tab">
+                  <div className="tab">
                     <input type="checkbox" id="q9" />
-                    <label class="tab-label" for="q9">
+                    <label className="tab-label" htmlFor="q9">
                       <h4>What is trusted setup?</h4>
                     </label>
-                    <div class="tab-content">
+                    <div className="tab-content">
                       <p>
                         In cryptography, a trusted setup is used to create a
                         cryptographic system by generating certain initial
@@ -574,31 +570,31 @@ const FAQ = () => {
                       <p>
                         For example, Zcash’s original Sprout MPC ceremony
                         sparked controversy because of binaries that were not{" "}
-                        <Link to="https://twitter.com/peterktodd/status/919586655480066048?lang=en">
+                        <a href="https://twitter.com/peterktodd/status/919586655480066048?lang=en">
                           deterministically built
-                        </Link>{" "}
+                        </a>{" "}
                         and{" "}
-                        <Link to="https://twitter.com/peterktodd/status/1052999647793504256?lang=en">
+                        <a href="https://twitter.com/peterktodd/status/1052999647793504256?lang=en">
                           MPC transcripts that went missing
-                        </Link>{" "}
+                        </a>{" "}
                         (which turned out to be to{" "}
-                        <Link to="https://electriccoin.co/blog/zcash-counterfeiting-vulnerability-successfully-remediated/#background">
+                        <a href="https://electriccoin.co/blog/zcash-counterfeiting-vulnerability-successfully-remediated/#background">
                           prevent a flaw from being exploited until it was
                           patched
-                        </Link>
+                        </a>
                         ).
                       </p>
                     </div>
                   </div>
-                  <div class="tab">
+                  <div className="tab">
                     <input type="checkbox" id="q10" />
-                    <label class="tab-label" for="q10">
+                    <label className="tab-label" htmlFor="q10">
                       <h4>
                         What is a zero-knowledge cryptographic proof, and how
                         does it work?
                       </h4>
                     </label>
-                    <div class="tab-content">
+                    <div className="tab-content">
                       <p>
                         A zero-knowledge proof is a cryptographic method to
                         prove that you know something without giving any other
@@ -630,15 +626,15 @@ const FAQ = () => {
                       </p>
                     </div>
                   </div>
-                  <div class="tab">
+                  <div className="tab">
                     <input type="checkbox" id="q11" />
-                    <label class="tab-label" for="q11">
+                    <label className="tab-label" htmlFor="q11">
                       <h4>
                         How does blockchain-tracking software work, and why is
                         it so dangerous to anonymity?
                       </h4>
                     </label>
-                    <div class="tab-content">
+                    <div className="tab-content">
                       <p>
                         To best understand how blockchain-tracking software
                         works, it helps to view Bitcoin as a kind of financial
@@ -666,35 +662,35 @@ const FAQ = () => {
                         anonymous network such as Bitcoin, and use data from a
                         social network from Facebook or Bitcointalk, we can use
                         topological analysis to identify a lot of users.{" "}
-                        <Link to="https://eprint.iacr.org/2012/596.pdf">
+                        <a href="https://eprint.iacr.org/2012/596.pdf">
                           A comprehensive study on Bitcoin’s privacy
-                        </Link>{" "}
+                        </a>{" "}
                         also shows that even with best practices, a significant
                         proportion of users can be identified from their
                         behaviour.
                       </p>
                       <p>
                         The converse is also true where{" "}
-                        <Link to="https://arxiv.org/pdf/1801.07501.pdf">
+                        <a href="https://arxiv.org/pdf/1801.07501.pdf">
                           Bitcoin’s network can also deanonymize TOR users
-                        </Link>
+                        </a>
                         .
                       </p>
                     </div>
                   </div>
-                  <div class="tab">
+                  <div className="tab">
                     <input type="checkbox" id="q12" />
-                    <label class="tab-label" for="q12">
+                    <label className="tab-label" htmlFor="q12">
                       <h4>
                         How does Firo protect transactions on a network level?
                       </h4>
                     </label>
-                    <div class="tab-content">
+                    <div className="tab-content">
                       <p>
                         Firo was the first cryptocurrency to go live with{" "}
-                        <Link to="https://arxiv.org/abs/1805.11060">
+                        <a href="https://arxiv.org/abs/1805.11060">
                           Dandelion++
-                        </Link>{" "}
+                        </a>{" "}
                         on mainnet. Most other cryptocurrencies use a gossip
                         model whereby when they receive a transaction, they tell
                         all other nodes connected to it about the transaction.
@@ -702,9 +698,9 @@ const FAQ = () => {
                         the network. The downside is that an adversary who can
                         monitor the network can see this chain reaction
                         happening and can{" "}
-                        <Link to="https://arxiv.org/abs/1405.7418">
+                        <a href="https://arxiv.org/abs/1405.7418">
                           approximate with a high degree of accuracy
-                        </Link>{" "}
+                        </a>{" "}
                         which node the transaction originated from.
                       </p>
                       <p>
@@ -721,9 +717,9 @@ const FAQ = () => {
                       </p>
                       <p>
                         Firo is intending to move to a{" "}
-                        <Link to="https://en.wikipedia.org/wiki/Mix_network">
+                        <a href="https://en.wikipedia.org/wiki/Mix_network">
                           mixnet
-                        </Link>{" "}
+                        </a>{" "}
                         model in the future.
                       </p>
                     </div>
@@ -733,46 +729,44 @@ const FAQ = () => {
             </div>
           </div>
         </section>
-        <section class="faq-section" id="economics">
-          <div class="container">
-            <div class="row">
-              <div class="col">
+        <section className="faq-section" id="economics">
+          <div className="container">
+            <div className="row">
+              <div className="col">
                 <h2>Economics</h2>
-                <div class="tabs">
-                  <div class="tab">
+                <div className="tabs">
+                  <div className="tab">
                     <input type="checkbox" id="q13" />
-                    <label class="tab-label" for="q13">
+                    <label className="tab-label" htmlFor="q13">
                       <h4>Where can I buy Firo?</h4>
                     </label>
-                    <div class="tab-content">
+                    <div className="tab-content">
                       <p>
                         You can see all the exchanges and/or swap services Firo
                         is available{" "}
-                        <Link to="https://firo.org/get-firo/buy-firo/">
-                          here
-                        </Link>{" "}
+                        <a href="https://firo.org/get-firo/buy-firo/">here</a>{" "}
                         or on{" "}
-                        <Link
-                          to="https://www.coingecko.com/en/coins/firo"
+                        <a
+                          href="https://www.coingecko.com/en/coins/firo"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           Coingecko
-                        </Link>
+                        </a>
                       </p>
                     </div>
                   </div>
-                  <div class="tab">
+                  <div className="tab">
                     <input type="checkbox" id="q14" />
-                    <label class="tab-label" for="q14">
+                    <label className="tab-label" htmlFor="q14">
                       <h4>What will Firo's Development Reward be used for?</h4>
                     </label>
-                    <div class="tab-content">
+                    <div className="tab-content">
                       <p>
                         15% of Firo’s block reward goes towards a{" "}
-                        <Link to="https://explorer.firo.org/address/aFrAVZFr8pva5mG8XKaUH8EXcFVVNxLiuB">
+                        <a href="https://explorer.firo.org/address/aFrAVZFr8pva5mG8XKaUH8EXcFVVNxLiuB">
                           development fund
-                        </Link>{" "}
+                        </a>{" "}
                         to fund development work and other efforts in promoting
                         Firo’s adoption.
                       </p>
@@ -781,28 +775,28 @@ const FAQ = () => {
                         researchers, community managers, audits, bug bounties,
                         integration costs and infrastructure overheads.We
                         regularly publish summaries of how these funds are being
-                        spent on{" "}
-                        <Link to="https://forum.firo.org">our forums</Link>.
+                        spent on <a href="https://forum.firo.org">our forums</a>
+                        .
                       </p>
                       <p>
                         We are always actively looking for talent so please do
-                        reach out over{" "}
-                        <Link to="mailto:team@firo.org">email</Link> or our{" "}
-                        <Link to="https://discord.com/invite/TGZPRbRT3Y">
+                        reach out over <a href="mailto:team@firo.org">email</a>{" "}
+                        or our{" "}
+                        <a href="https://discord.com/invite/TGZPRbRT3Y">
                           Discord
-                        </Link>
+                        </a>
                         .
                       </p>
                     </div>
                   </div>
-                  <div class="tab">
+                  <div className="tab">
                     <input type="checkbox" id="q15" />
-                    <label class="tab-label" for="q15">
+                    <label className="tab-label" htmlFor="q15">
                       <h4>
                         What is the total supply and distribution of Firo?
                       </h4>
                     </label>
-                    <div class="tab-content">
+                    <div className="tab-content">
                       <p>
                         There will be 21.4 million Firos. Firo follows the same
                         distribution and halving cycle as Bitcoin (every 4
@@ -821,9 +815,9 @@ const FAQ = () => {
                       <p>
                         For more information about how we arrived at this new
                         distribution and the development fund, please read this{" "}
-                        <Link to="https://firo.org/2020/05/04/block-reward-allocation-and-development-fund-for-the-next-4-years.html">
+                        <a href="https://firo.org/2020/05/04/block-reward-allocation-and-development-fund-for-the-next-4-years.html">
                           blog post.
-                        </Link>
+                        </a>
                       </p>
                     </div>
                   </div>
@@ -833,18 +827,18 @@ const FAQ = () => {
           </div>
         </section>
 
-        <section class="faq-section" id="mining">
-          <div class="container">
-            <div class="row">
-              <div class="col">
+        <section className="faq-section" id="mining">
+          <div className="container">
+            <div className="row">
+              <div className="col">
                 <h2>Mining</h2>
-                <div class="tabs">
-                  <div class="tab">
+                <div className="tabs">
+                  <div className="tab">
                     <input type="checkbox" id="q16" />
-                    <label class="tab-label" for="q16">
+                    <label className="tab-label" htmlFor="q16">
                       <h4>What mining algorithm does Firo use?</h4>
                     </label>
-                    <div class="tab-content">
+                    <div className="tab-content">
                       <p>
                         Firo uses the FiroPoW algorithm targeted at GPUs that
                         keeps mining accessible to everyone.
@@ -857,12 +851,12 @@ const FAQ = () => {
                       </p>
                     </div>
                   </div>
-                  <div class="tab">
+                  <div className="tab">
                     <input type="checkbox" id="q17" />
-                    <label class="tab-label" for="q17">
+                    <label className="tab-label" htmlFor="q17">
                       <h4>What is FiroPoW?</h4>
                     </label>
-                    <div class="tab-content">
+                    <div className="tab-content">
                       <p>
                         FiroPoW is a mining algorithm that&nbsp;is highly
                         optimized for GPU mining and designed to be both FPGA
@@ -875,19 +869,19 @@ const FAQ = () => {
                       </p>
                       <p>
                         FiroPoW follows{" "}
-                        <Link to="https://github.com/ifdefelse/ProgPOW">
+                        <a href="https://github.com/ifdefelse/ProgPOW">
                           ProgPoW’s 0.9.4
-                        </Link>{" "}
+                        </a>{" "}
                         spec with a small change to have the algorithm randomly
                         change with every block. The starting DAG size will be
                         slightly over 4GB and will increase by 8MB every 1300
                         blocks (~4.5 days). This DAG size has been chosen to
                         support most modern graphics cards.
                       </p>
-                      <div class="iframe-embed">
+                      <div className="iframe-embed">
                         <iframe
                           src="https://www.youtube.com/embed/DAJirQaBIzY?feature=oembed&amp;wmode=transparent"
-                          allowfullscreen=""
+                          allowFullScreen=""
                           data-aspectratio="0.562962962962963"
                           width="100%"
                           height={350}
@@ -897,20 +891,20 @@ const FAQ = () => {
                     opacity: 1;
                     visibility: visible;
                   "
-                          frameborder="0"
+                          frameBorder="0"
                         ></iframe>
                       </div>
                     </div>
                   </div>
-                  <div class="tab">
+                  <div className="tab">
                     <input type="checkbox" id="q18" />
-                    <label class="tab-label" for="q18">
+                    <label className="tab-label" htmlFor="q18">
                       <h4>How can I mine Firo?</h4>
                     </label>
-                    <div class="tab-content">
+                    <div className="tab-content">
                       <p>
                         Do check out our{" "}
-                        <Link to="https://firo.org/guide/how-to-mine-firo.html">
+                        <Link to="/guides/how-to-mine-firo/">
                           Firo mining guide
                         </Link>
                         !
@@ -922,43 +916,43 @@ const FAQ = () => {
             </div>
           </div>
         </section>
-        <section class="faq-section" id="technical">
-          <div class="container">
-            <div class="row">
-              <div class="col">
+        <section className="faq-section" id="technical">
+          <div className="container">
+            <div className="row">
+              <div className="col">
                 <h2>Technical</h2>
-                <div class="tabs">
-                  <div class="tab">
+                <div className="tabs">
+                  <div className="tab">
                     <input type="checkbox" id="q19" />
-                    <label class="tab-label" for="q19">
+                    <label className="tab-label" htmlFor="q19">
                       <h4>Where are your blockchain explorers?</h4>
                     </label>
-                    <div class="tab-content">
+                    <div className="tab-content">
                       <p>
                         Our explorer can be found on{" "}
-                        <Link to="https://explorer.firo.org">
+                        <a href="https://explorer.firo.org">
                           https://explorer.firo.org
-                        </Link>{" "}
+                        </a>{" "}
                         and our testnet explorer can be found here:{" "}
-                        <Link
-                          to="https://testexplorer.firo.org"
+                        <a
+                          href="https://testexplorer.firo.org"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           https://testexplorer.firo.org
-                        </Link>
+                        </a>
                       </p>
                     </div>
                   </div>
-                  <div class="tab">
+                  <div className="tab">
                     <input type="checkbox" id="q20" />
-                    <label class="tab-label" for="q20">
+                    <label className="tab-label" htmlFor="q20">
                       <h4>
                         Why do some blocks deviate significantly from the target
                         block time?
                       </h4>
                     </label>
-                    <div class="tab-content">
+                    <div className="tab-content">
                       <p>Our target block time is 5 minutes.</p>
                       <p>
                         The chances of not getting a block in&nbsp;
@@ -988,41 +982,38 @@ const FAQ = () => {
           </div>
         </section>
 
-        <section class="faq-section" id="community">
-          <div class="container">
-            <div class="row">
-              <div class="col">
+        <section className="faq-section" id="community">
+          <div className="container">
+            <div className="row">
+              <div className="col">
                 <h2>Community</h2>
-                <div class="tabs">
-                  <div class="tab">
+                <div className="tabs">
+                  <div className="tab">
                     <input type="checkbox" id="q21" />
-                    <label class="tab-label" for="q21">
+                    <label className="tab-label" htmlFor="q21">
                       <h4>Do you have a blog?</h4>
                     </label>
-                    <div class="tab-content">
+                    <div className="tab-content">
                       <p>
-                        Yup! Visit <Link to="https://firo.org/blog/">here</Link>
-                        .
+                        Yup! Visit <Link to="/latest-updates/">here</Link>.
                       </p>
                     </div>
                   </div>
-                  <div class="tab">
+                  <div className="tab">
                     <input type="checkbox" id="q22" />
-                    <label class="tab-label" for="q22">
+                    <label className="tab-label" htmlFor="q22">
                       <h4>How can I get involved with the Firo community?</h4>
                     </label>
-                    <div class="tab-content">
+                    <div className="tab-content">
                       <p>
                         We have active communities on our{" "}
-                        <Link to="https://discord.com/invite/TGZPRbRT3Y">
+                        <a href="https://discord.com/invite/TGZPRbRT3Y">
                           Discord
-                        </Link>
-                        , <Link to="https://t.me/firoorg">Telegram</Link> and{" "}
-                        <Link to="https://forum.firo.org">Forums</Link>! You can
+                        </a>
+                        , <a href="https://t.me/firoorg">Telegram</a> and{" "}
+                        <a href="https://forum.firo.org">Forums</a>! You can
                         check out all our social links{" "}
-                        <Link to="https://firo.org/community/social/">
-                          here.
-                        </Link>
+                        <Link to="/community/">here.</Link>
                       </p>
                     </div>
                   </div>
@@ -1031,29 +1022,29 @@ const FAQ = () => {
             </div>
           </div>
         </section>
-        <section class="faq-section" id="resources">
-          <div class="container">
-            <div class="row">
-              <div class="col">
+        <section className="faq-section" id="resources">
+          <div className="container">
+            <div className="row">
+              <div className="col">
                 <h2>Resources</h2>
-                <div class="tabs">
-                  <div class="tab">
+                <div className="tabs">
+                  <div className="tab">
                     <input type="checkbox" id="q23" />
-                    <label class="tab-label" for="q23">
+                    <label className="tab-label" htmlFor="q23">
                       <h4>Where can I find a Firo block explorer?</h4>
                     </label>
-                    <div class="tab-content">
+                    <div className="tab-content">
                       <p>We have two primary block explorers:</p>
                       <p>
                         Official Firo explorer:{" "}
-                        <Link to="https://explorer.firo.org/">
+                        <a href="https://explorer.firo.org/">
                           explorer.firo.org
-                        </Link>
+                        </a>
                         <br />
                         CryptoID Explorer:{" "}
-                        <Link to="https://chainz.cryptoid.info/firo/">
+                        <a href="https://chainz.cryptoid.info/firo/">
                           chainz.cryptoid.info/firo
-                        </Link>
+                        </a>
                       </p>
                     </div>
                   </div>
@@ -1063,18 +1054,18 @@ const FAQ = () => {
           </div>
         </section>
 
-        <section class="faq-section" id="masternodes">
-          <div class="container">
-            <div class="row">
-              <div class="col">
+        <section className="faq-section" id="masternodes">
+          <div className="container">
+            <div className="row">
+              <div className="col">
                 <h2>Masternodes</h2>
-                <div class="tabs">
-                  <div class="tab">
+                <div className="tabs">
+                  <div className="tab">
                     <input type="checkbox" id="q24" />
-                    <label class="tab-label" for="q24">
+                    <label className="tab-label" htmlFor="q24">
                       <h4>What are Masternodes for</h4>
                     </label>
-                    <div class="tab-content">
+                    <div className="tab-content">
                       <p>
                         Masternodes in Firo are incentivized nodes that host
                         Firo’s infrastructure and provide additional services
@@ -1097,15 +1088,15 @@ const FAQ = () => {
                       </p>
                     </div>
                   </div>
-                  <div class="tab">
+                  <div className="tab">
                     <input type="checkbox" id="q25" />
-                    <label class="tab-label" for="q25">
+                    <label className="tab-label" htmlFor="q25">
                       <h4>
                         What happens if I don’t have 1000 FIRO? Can I share a
                         masternode with someone else?
                       </h4>
                     </label>
-                    <div class="tab-content">
+                    <div className="tab-content">
                       <p>
                         In the event people want to pool together their funds to
                         make a masternode, please take note that you have to{" "}
@@ -1132,12 +1123,12 @@ const FAQ = () => {
                       </p>
                     </div>
                   </div>
-                  <div class="tab">
+                  <div className="tab">
                     <input type="checkbox" id="q26" />
-                    <label class="tab-label" for="q26">
+                    <label className="tab-label" htmlFor="q26">
                       <h4>Are my coins safe on a Firo masternode?</h4>
                     </label>
-                    <div class="tab-content">
+                    <div className="tab-content">
                       <p>
                         Masternodes do not hold any funds. They merely hold a
                         masternode private key (not the same as your actual
@@ -1164,15 +1155,15 @@ const FAQ = () => {
                       </p>
                     </div>
                   </div>
-                  <div class="tab">
+                  <div className="tab">
                     <input type="checkbox" id="q27" />
-                    <label class="tab-label" for="q27">
+                    <label className="tab-label" htmlFor="q27">
                       <h4>How do I set up a Firo masternode?</h4>
                     </label>
-                    <div class="tab-content">
+                    <div className="tab-content">
                       <p>
                         Please refer to this{" "}
-                        <Link to="https://firo.org/guide/masternode-setup.html">
+                        <Link to="/guides/masternode-setup/">
                           masternode setup guide
                         </Link>
                         .
@@ -1184,14 +1175,14 @@ const FAQ = () => {
                       </p>
                     </div>
                   </div>
-                  <div class="tab">
+                  <div className="tab">
                     <input type="checkbox" id="q28" />
-                    <label class="tab-label" for="q28">
+                    <label className="tab-label" htmlFor="q28">
                       <h4>
                         How much are the rewards from hosting a masternode?
                       </h4>
                     </label>
-                    <div class="tab-content">
+                    <div className="tab-content">
                       <p>50% of the block reward is paid to masternodes.</p>
                       <p>
                         Masternodes are selected for payment in each block
@@ -1213,12 +1204,12 @@ const FAQ = () => {
                       </p>
                     </div>
                   </div>
-                  <div class="tab">
+                  <div className="tab">
                     <input type="checkbox" id="q29" />
-                    <label class="tab-label" for="q29">
+                    <label className="tab-label" htmlFor="q29">
                       <h4>What do I need to host a Firo masternode?</h4>
                     </label>
-                    <div class="tab-content">
+                    <div className="tab-content">
                       <p>A Firo masternode requires</p>
                       <ul>
                         <li>1000 FIRO (refundable at any time)</li>
@@ -1233,28 +1224,26 @@ const FAQ = () => {
                         Typically a VPS of this specification costs around USD5
                         to run a month per node and you can head on to Amazon
                         AWS, Google Cloud, Microsoft Azure, Leaseweb,{" "}
-                        <Link to="https://www.vultr.com/?ref=6847471">
-                          Vultr,
-                        </Link>{" "}
-                        <Link to="https://www.linode.com/?r=af3000184137a5eedea8fcfd03fd48f36b8471a3">
+                        <a href="https://www.vultr.com/?ref=6847471">Vultr,</a>{" "}
+                        <a href="https://www.linode.com/?r=af3000184137a5eedea8fcfd03fd48f36b8471a3">
                           Linode
-                        </Link>
+                        </a>
                         , or{" "}
-                        <Link to="https://m.do.co/c/f89c8c2af033">
+                        <a href="https://m.do.co/c/f89c8c2af033">
                           DigitalOcean
-                        </Link>{" "}
+                        </a>{" "}
                         to obtain a basic VPS when masternodes are launched.
                         There will also be masternodes providers who can assist
                         you to set this up and/or maintain it for a small fee.
                       </p>
                     </div>
                   </div>
-                  <div class="tab">
+                  <div className="tab">
                     <input type="checkbox" id="q30" />
-                    <label class="tab-label" for="q30">
+                    <label className="tab-label" htmlFor="q30">
                       <h4>What is a masternode?</h4>
                     </label>
-                    <div class="tab-content">
+                    <div className="tab-content">
                       <p>
                         Nodes are computers that host a full copy of Firo’s
                         blockchain and help to verify the validity of
@@ -1288,18 +1277,18 @@ const FAQ = () => {
           </div>
         </section>
 
-        <section class="faq-section" id="other">
-          <div class="container">
-            <div class="row">
-              <div class="col">
+        <section className="faq-section" id="other">
+          <div className="container">
+            <div className="row">
+              <div className="col">
                 <h2>Anything else?</h2>
-                <div class="tabs">
-                  <div class="tab">
+                <div className="tabs">
+                  <div className="tab">
                     <input type="checkbox" id="q31" />
-                    <label class="tab-label" for="q31">
+                    <label className="tab-label" htmlFor="q31">
                       <h4>What is BEP20 Firo or Binance-Pegged Firo?</h4>
                     </label>
-                    <div class="tab-content">
+                    <div className="tab-content">
                       <p>
                         Binance-Pegged Firo also know as BEP20 Firo is a token
                         issued by the Binance exchange on Binance Smart Chain
@@ -1321,21 +1310,21 @@ const FAQ = () => {
                       </p>
                     </div>
                   </div>
-                  <div class="tab">
+                  <div className="tab">
                     <input type="checkbox" id="q32" />
-                    <label class="tab-label" for="q32">
+                    <label className="tab-label" htmlFor="q32">
                       <h4>
                         I have a question that is not listed here, please help!
                       </h4>
                     </label>
-                    <div class="tab-content">
+                    <div className="tab-content">
                       <p>
                         Please drop by our{" "}
-                        <Link to="https://discord.com/invite/TGZPRbRT3Y">
+                        <a href="https://discord.com/invite/TGZPRbRT3Y">
                           Discord
-                        </Link>{" "}
-                        or <Link to="https://t.me/firoorg">Telegram</Link> to
-                        ask any questions!
+                        </a>{" "}
+                        or <a href="https://t.me/firoorg">Telegram</a> to ask
+                        any questions!
                       </p>
                     </div>
                   </div>

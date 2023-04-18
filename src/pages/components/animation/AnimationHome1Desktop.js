@@ -15,7 +15,7 @@ const AnimationHome1Desktop = ({ showInitial, setShowInitial }) => {
     <>
       {showInitial && (
         <>
-          <motion.FlexDiv
+          <motion.div
             style={{
               position: "relative",
               top: "-20px",
@@ -36,8 +36,8 @@ const AnimationHome1Desktop = ({ showInitial, setShowInitial }) => {
             >
               <img src={firoLogo} alt={firoLogo} width={300} />
             </FlexDiv>
-          </motion.FlexDiv>
-          <motion.FlexDiv
+          </motion.div>
+          <motion.div
             style={{
               position: "relative",
               right: "50%",
@@ -57,8 +57,8 @@ const AnimationHome1Desktop = ({ showInitial, setShowInitial }) => {
             >
               <img src={firoLogo} alt={firoLogo} width={150} />
             </FlexDiv>
-          </motion.FlexDiv>
-          <motion.FlexDiv
+          </motion.div>
+          <motion.div
             style={{
               position: "relative",
               top: "-580px",
@@ -79,8 +79,8 @@ const AnimationHome1Desktop = ({ showInitial, setShowInitial }) => {
             >
               <img src={firoLogo} alt={firoLogo} width={200} />
             </FlexDiv>
-          </motion.FlexDiv>
-          <motion.FlexDiv
+          </motion.div>
+          <motion.div
             style={{
               position: "relative",
               top: "-550px",
@@ -101,8 +101,8 @@ const AnimationHome1Desktop = ({ showInitial, setShowInitial }) => {
             >
               <img src={firoBox2} alt={firoBox2} width={250} />
             </FlexDiv>
-          </motion.FlexDiv>
-          <motion.FlexDiv
+          </motion.div>
+          <motion.div
             style={{
               position: "relative",
               top: "-575px",
@@ -123,8 +123,8 @@ const AnimationHome1Desktop = ({ showInitial, setShowInitial }) => {
             >
               <img src={firoBox2} alt={firoBox2} width={130} />
             </FlexDiv>
-          </motion.FlexDiv>
-          <motion.FlexDiv
+          </motion.div>
+          <motion.div
             style={{
               position: "relative",
               top: "-375px",
@@ -145,8 +145,8 @@ const AnimationHome1Desktop = ({ showInitial, setShowInitial }) => {
             >
               <img src={firoBox2} alt={firoBox2} width={100} />
             </FlexDiv>
-          </motion.FlexDiv>
-          <motion.FlexDiv
+          </motion.div>
+          <motion.div
             style={{
               position: "relative",
               top: "-405px",
@@ -167,8 +167,8 @@ const AnimationHome1Desktop = ({ showInitial, setShowInitial }) => {
             >
               <img src={firoBox1} alt={firoBox1} width={300} />
             </FlexDiv>
-          </motion.FlexDiv>
-          <motion.FlexDiv
+          </motion.div>
+          <motion.div
             style={{
               position: "relative",
               top: isTablet ? "-260px" : "-300px",
@@ -189,13 +189,13 @@ const AnimationHome1Desktop = ({ showInitial, setShowInitial }) => {
             >
               <img src={firoBox1} alt={firoBox1} width={270} />
             </FlexDiv>
-          </motion.FlexDiv>
+          </motion.div>
         </>
       )}
 
       {!showInitial && (
         <>
-          <motion.FlexDiv
+          <motion.div
             style={{
               position: "relative",
               top: "-20px",
@@ -216,8 +216,8 @@ const AnimationHome1Desktop = ({ showInitial, setShowInitial }) => {
             >
               <img src={firoLogo} alt={firoLogo} width={300} />
             </FlexDiv>
-          </motion.FlexDiv>
-          <motion.FlexDiv
+          </motion.div>
+          <motion.div
             style={{
               position: "relative",
               right: "50%",
@@ -237,8 +237,8 @@ const AnimationHome1Desktop = ({ showInitial, setShowInitial }) => {
             >
               <img src={firoLogo} alt={firoLogo} width={150} />
             </FlexDiv>
-          </motion.FlexDiv>
-          <motion.FlexDiv
+          </motion.div>
+          <motion.div
             style={{
               position: "relative",
               top: "-580px",
@@ -259,8 +259,8 @@ const AnimationHome1Desktop = ({ showInitial, setShowInitial }) => {
             >
               <img src={firoLogo} alt={firoLogo} width={200} />
             </FlexDiv>
-          </motion.FlexDiv>
-          <motion.FlexDiv
+          </motion.div>
+          <motion.div
             style={{
               position: "relative",
               top: "-550px",
@@ -281,8 +281,8 @@ const AnimationHome1Desktop = ({ showInitial, setShowInitial }) => {
             >
               <img src={firoBox2} alt={firoBox2} width={250} />
             </FlexDiv>
-          </motion.FlexDiv>
-          <motion.FlexDiv
+          </motion.div>
+          <motion.div
             style={{
               position: "relative",
               top: "-575px",
@@ -303,8 +303,8 @@ const AnimationHome1Desktop = ({ showInitial, setShowInitial }) => {
             >
               <img src={firoBox2} alt={firoBox2} width={130} />
             </FlexDiv>
-          </motion.FlexDiv>
-          <motion.FlexDiv
+          </motion.div>
+          <motion.div
             style={{
               position: "relative",
               top: "-375px",
@@ -325,8 +325,8 @@ const AnimationHome1Desktop = ({ showInitial, setShowInitial }) => {
             >
               <img src={firoBox2} alt={firoBox2} width={100} />
             </FlexDiv>
-          </motion.FlexDiv>
-          <motion.FlexDiv
+          </motion.div>
+          <motion.div
             style={{
               position: "relative",
               top: isTablet ? "-500px" : "-405px",
@@ -347,8 +347,8 @@ const AnimationHome1Desktop = ({ showInitial, setShowInitial }) => {
             >
               <img src={firoBox1} alt={firoBox1} width={300} />
             </FlexDiv>
-          </motion.FlexDiv>
-          <motion.FlexDiv
+          </motion.div>
+          <motion.div
             style={{
               position: "relative",
               top: isTablet ? "-260px" : "-300px",
@@ -369,7 +369,7 @@ const AnimationHome1Desktop = ({ showInitial, setShowInitial }) => {
             >
               <img src={firoBox1} alt={firoBox1} width={270} />
             </FlexDiv>
-          </motion.FlexDiv>
+          </motion.div>
         </>
       )}
     </>

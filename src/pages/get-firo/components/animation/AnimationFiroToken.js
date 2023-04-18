@@ -11,7 +11,7 @@ const AnimationFiroToken = ({ showInitial, setShowInitial }) => {
     <>
       {showInitial && (
         <>
-          <motion.FlexDiv
+          <motion.div
             style={{
               position: "relative",
               top: "-430px",
@@ -31,8 +31,8 @@ const AnimationFiroToken = ({ showInitial, setShowInitial }) => {
             >
               <img src={firoCoin5} alt={firoCoin5} width={150} />
             </FlexDiv>
-          </motion.FlexDiv>
-          <motion.FlexDiv
+          </motion.div>
+          <motion.div
             style={{
               position: "relative",
               top: "-300px",
@@ -53,8 +53,8 @@ const AnimationFiroToken = ({ showInitial, setShowInitial }) => {
             >
               <img src={firoCoin4} alt={firoCoin4} width={100} />
             </FlexDiv>
-          </motion.FlexDiv>
-          <motion.FlexDiv
+          </motion.div>
+          <motion.div
             style={{
               position: "relative",
               top: "20px",
@@ -75,8 +75,8 @@ const AnimationFiroToken = ({ showInitial, setShowInitial }) => {
             >
               <img src={firoCoin3} alt={firoCoin3} width={200} />
             </FlexDiv>
-          </motion.FlexDiv>
-          <motion.FlexDiv
+          </motion.div>
+          <motion.div
             style={{
               position: "relative",
               top: "-480px",
@@ -102,8 +102,8 @@ const AnimationFiroToken = ({ showInitial, setShowInitial }) => {
                 style={{ transform: "rotate(15deg)" }}
               />
             </FlexDiv>
-          </motion.FlexDiv>
-          <motion.FlexDiv
+          </motion.div>
+          <motion.div
             style={{
               position: "relative",
               top: "-100px",
@@ -129,8 +129,8 @@ const AnimationFiroToken = ({ showInitial, setShowInitial }) => {
                 style={{ transform: "rotate(-25deg)" }}
               />
             </FlexDiv>
-          </motion.FlexDiv>
-          <motion.FlexDiv
+          </motion.div>
+          <motion.div
             style={{
               position: "relative",
               top: "-80px",
@@ -156,13 +156,13 @@ const AnimationFiroToken = ({ showInitial, setShowInitial }) => {
                 style={{ opacity: 0.8 }}
               />
             </FlexDiv>
-          </motion.FlexDiv>
+          </motion.div>
         </>
       )}
 
       {!showInitial && (
         <>
-          <motion.FlexDiv
+          <motion.div
             style={{
               position: "relative",
               top: "-430px",
@@ -182,8 +182,8 @@ const AnimationFiroToken = ({ showInitial, setShowInitial }) => {
             >
               <img src={firoCoin5} alt={firoCoin5} width={150} />
             </FlexDiv>
-          </motion.FlexDiv>
-          <motion.FlexDiv
+          </motion.div>
+          <motion.div
             style={{
               position: "relative",
               top: "-300px",
@@ -204,8 +204,8 @@ const AnimationFiroToken = ({ showInitial, setShowInitial }) => {
             >
               <img src={firoCoin4} alt={firoCoin4} width={100} />
             </FlexDiv>
-          </motion.FlexDiv>
-          <motion.FlexDiv
+          </motion.div>
+          <motion.div
             style={{
               position: "relative",
               top: "20px",
@@ -226,8 +226,8 @@ const AnimationFiroToken = ({ showInitial, setShowInitial }) => {
             >
               <img src={firoCoin3} alt={firoCoin3} width={200} />
             </FlexDiv>
-          </motion.FlexDiv>
-          <motion.FlexDiv
+          </motion.div>
+          <motion.div
             style={{
               position: "relative",
               top: "-480px",
@@ -253,8 +253,8 @@ const AnimationFiroToken = ({ showInitial, setShowInitial }) => {
                 style={{ transform: "rotate(15deg)" }}
               />
             </FlexDiv>
-          </motion.FlexDiv>
-          <motion.FlexDiv
+          </motion.div>
+          <motion.div
             style={{
               position: "relative",
               top: "-100px",
@@ -280,8 +280,8 @@ const AnimationFiroToken = ({ showInitial, setShowInitial }) => {
                 style={{ transform: "rotate(-25deg)" }}
               />
             </FlexDiv>
-          </motion.FlexDiv>
-          <motion.FlexDiv
+          </motion.div>
+          <motion.div
             style={{
               position: "relative",
               top: "-80px",
@@ -307,7 +307,7 @@ const AnimationFiroToken = ({ showInitial, setShowInitial }) => {
                 style={{ opacity: 0.8 }}
               />
             </FlexDiv>
-          </motion.FlexDiv>
+          </motion.div>
         </>
       )}
     </>

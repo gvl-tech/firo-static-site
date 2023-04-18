@@ -41,7 +41,7 @@ export default function BlogPostTemplate({
               {frontmatter.date} | {frontmatter.author}
             </Text>
             <Spacer size="xLarge" />
-            <GatsbyImage image={featuredImg} />
+            <GatsbyImage image={featuredImg} alt="blog-banner" />
             <div dangerouslySetInnerHTML={{ __html: html }} />
           </FlexStartDiv>
         </PaddedDiv>

@@ -16,18 +16,18 @@ const BlogIndexTemplate = ({ pageContext }) => {
   return (
     <Layout>
       <div id="blogIndex">
-        <section class="page-intro section">
-          <div class="row">
-            <div class="col">
+        <section className="page-intro section">
+          <div className="row">
+            <div className="col">
               <span>Latest </span>
-              <span class="red">Updates</span>
+              <span className="red">Updates</span>
             </div>
           </div>
         </section>
 
-        <section class="blog-nav">
-          <div class="container">
-            <ul class="row">
+        <section className="blog-nav">
+          <div className="container">
+            <ul className="row">
               <li>
                 <Link
                   to="/latest-updates"
@@ -65,19 +65,21 @@ const BlogIndexTemplate = ({ pageContext }) => {
         </section>
 
         {group?.map(post => (
-          <BlogCard key={post.id} post={post} />
+          <li key={post.id}>
+            <BlogCard post={post} />
+          </li>
         ))}
 
-        <section class="blog-section">
-          <div class="container">
-            <div class="pagination">
-              <div class="text-center page-numbers">
+        <section className="blog-section">
+          <div className="container">
+            <div className="pagination">
+              <div className="text-center page-numbers">
                 <p>
-                  <Link to={previousPageUrl} class="page-button">
+                  <Link to={previousPageUrl} className="page-button">
                     &laquo; Prev
                   </Link>
                   {index} of {pageCount}
-                  <Link to={nextPageUrl} class="page-button">
+                  <Link to={nextPageUrl} className="page-button">
                     Next &raquo;
                   </Link>
                 </p>

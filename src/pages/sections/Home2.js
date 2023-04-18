@@ -37,7 +37,7 @@ const Home2 = () => {
           <FlexEvenlyDiv
             dir={isDesktop ? "column-reverse" : "column"}
             padding={isTablet ? "0" : isDesktop && "5em"}
-            width={isDesktop && "50"}
+            width={isDesktop ? "50" : undefined}
           >
             <FlexCenterDiv>
               <PaddedDiv y="5" x="0">
@@ -122,7 +122,7 @@ const Home2 = () => {
             </div>
           </FlexEvenlyDiv>
 
-          <FlexDiv x="0" width={isTablet ? "40" : isDesktop && "28"}>
+          <FlexDiv x="0" width={isTablet ? "40" : isDesktop ? "28" : undefined}>
             <BoxHome2
               image={build}
               title="Build"

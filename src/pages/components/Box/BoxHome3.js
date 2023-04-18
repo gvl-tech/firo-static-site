@@ -15,7 +15,7 @@ const BoxHome3 = ({ title, highlight, image, subtitle }) => {
 
   return (
     <BoxDiv
-      x={isTablet && "0"}
+      x={isTablet ? "0" : "2"}
       style={{
         flexDirection: isDesktop ? "column-reverse" : "column",
         alignItems: "center",
@@ -29,6 +29,8 @@ const BoxHome3 = ({ title, highlight, image, subtitle }) => {
           style={{
             color: `${theme.colors.text.primary}`,
             border: `2px solid ${theme.colors.text.primary}`,
+            position: "relative",
+            bottom: `${theme.space[5]}px`,
           }}
         >
           More

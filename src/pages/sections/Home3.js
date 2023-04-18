@@ -63,28 +63,84 @@ const Home3 = () => {
 
             <GridDiv y="repeat(4, 1fr)" style={{ gap: theme.space[3] }}>
               <FlexCenterDiv>
-                <img src={discord} alt={discord} />
-                <Text variant="tab" color={theme.colors.brand.primary}>
-                  Discord
-                </Text>
+                <a
+                  href="https://discord.com/invite/TGZPRbRT3Y"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ textDecoration: "none" }}
+                >
+                  <img src={discord} alt={discord} />
+                </a>
+                <a
+                  href="https://discord.com/invite/TGZPRbRT3Y"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ textDecoration: "none" }}
+                >
+                  <Text variant="tab" color={theme.colors.brand.primary}>
+                    Discord
+                  </Text>
+                </a>
               </FlexCenterDiv>
               <FlexCenterDiv>
-                <img src={youtube} alt={youtube} />
-                <Text variant="tab" color={theme.colors.brand.primary}>
-                  YouTube
-                </Text>
+                <a
+                  href="https://www.youtube.com/c/firoorg"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ textDecoration: "none" }}
+                >
+                  <img src={youtube} alt={youtube} />
+                </a>
+                <a
+                  href="https://www.youtube.com/c/firoorg"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ textDecoration: "none" }}
+                >
+                  <Text variant="tab" color={theme.colors.brand.primary}>
+                    YouTube
+                  </Text>
+                </a>
               </FlexCenterDiv>
               <FlexCenterDiv>
-                <img src={telegram} alt={telegram} />
-                <Text variant="tab" color={theme.colors.brand.primary}>
-                  Telegram
-                </Text>
+                <a
+                  href="https://t.me/firoorg"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ textDecoration: "none" }}
+                >
+                  <img src={telegram} alt={telegram} />
+                </a>
+                <a
+                  href="https://t.me/firoorg"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ textDecoration: "none" }}
+                >
+                  <Text variant="tab" color={theme.colors.brand.primary}>
+                    Telegram
+                  </Text>
+                </a>
               </FlexCenterDiv>
               <FlexCenterDiv>
-                <img src={forum} alt={forum} />
-                <Text variant="tab" color={theme.colors.brand.primary}>
-                  Forum
-                </Text>
+                <a
+                  href="https://forum.firo.org/"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ textDecoration: "none" }}
+                >
+                  <img src={forum} alt={forum} />
+                </a>
+                <a
+                  href="https://forum.firo.org/"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ textDecoration: "none" }}
+                >
+                  <Text variant="tab" color={theme.colors.brand.primary}>
+                    Forum
+                  </Text>
+                </a>
               </FlexCenterDiv>
             </GridDiv>
           </FlexCenterDiv>
@@ -121,28 +177,84 @@ const Home3 = () => {
               <Spacer size="xLarge" />
               <GridDiv y="repeat(4, 1fr)" gap={isTablet ? "3" : "5"}>
                 <FlexCenterDiv>
-                  <img src={discord} alt={discord} width={"70px"} />
-                  <Text variant="tab" color={theme.colors.brand.primary}>
-                    Discord
-                  </Text>
+                  <a
+                    href="https://discord.com/invite/TGZPRbRT3Y"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <img src={discord} alt={discord} height={"70px"} />
+                  </a>
+                  <a
+                    href="https://discord.com/invite/TGZPRbRT3Y"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Text variant="tab" color={theme.colors.brand.primary}>
+                      Discord
+                    </Text>
+                  </a>
                 </FlexCenterDiv>
                 <FlexCenterDiv>
-                  <img src={youtube} alt={youtube} width={"70px"} />
-                  <Text variant="tab" color={theme.colors.brand.primary}>
-                    YouTube
-                  </Text>
+                  <a
+                    href="https://www.youtube.com/c/firoorg"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <img src={youtube} alt={youtube} height={"70px"} />
+                  </a>
+                  <a
+                    href="https://www.youtube.com/c/firoorg"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Text variant="tab" color={theme.colors.brand.primary}>
+                      YouTube
+                    </Text>
+                  </a>
                 </FlexCenterDiv>
                 <FlexCenterDiv>
-                  <img src={telegram} alt={telegram} width={"70px"} />
-                  <Text variant="tab" color={theme.colors.brand.primary}>
-                    Telegram
-                  </Text>
+                  <a
+                    href="https://t.me/firoorg"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <img src={telegram} alt={telegram} height={"70px"} />
+                  </a>
+                  <a
+                    href="https://t.me/firoorg"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Text variant="tab" color={theme.colors.brand.primary}>
+                      Telegram
+                    </Text>
+                  </a>
                 </FlexCenterDiv>
                 <FlexCenterDiv>
-                  <img src={forum} alt={forum} width={"70px"} />
-                  <Text variant="tab" color={theme.colors.brand.primary}>
-                    Forum
-                  </Text>
+                  <a
+                    href="https://forum.firo.org/"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <img src={forum} alt={forum} height={"70px"} />
+                  </a>
+                  <a
+                    href="https://forum.firo.org/"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Text variant="tab" color={theme.colors.brand.primary}>
+                      Forum
+                    </Text>
+                  </a>
                 </FlexCenterDiv>
               </GridDiv>
             </FlexDiv>

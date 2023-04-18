@@ -11,18 +11,18 @@ const TagsIndexTemplate = ({ pageContext, data }) => {
   return (
     <Layout>
       <div id="blogIndex">
-        <section class="page-intro section">
-          <div class="row">
-            <div class="col">
+        <section className="page-intro section">
+          <div className="row">
+            <div className="col">
               <span>Latest </span>
-              <span class="red">Updates</span>
+              <span className="red">Updates</span>
             </div>
           </div>
         </section>
 
-        <section class="blog-nav">
-          <div class="container">
-            <ul class="row">
+        <section className="blog-nav">
+          <div className="container">
+            <ul className="row">
               <li>
                 <Link
                   to="/latest-updates"
@@ -59,9 +59,9 @@ const TagsIndexTemplate = ({ pageContext, data }) => {
           </div>
         </section>
 
-        <section class="page-tag">
-          <div class="row">
-            <div class="col">
+        <section className="page-tag">
+          <div className="row">
+            <div className="col">
               <h1>#{tag}</h1>
             </div>
           </div>

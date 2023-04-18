@@ -1,19 +1,19 @@
-import React from "react";
-import about from "../../../assets/about/about.jpeg";
-import { useTheme } from "styled-components";
-import { useMediaQuery } from "react-responsive";
+import React from "react"
+import about from "../../../assets/about/about.jpeg"
+import { useTheme } from "styled-components"
+import { useMediaQuery } from "react-responsive"
 
-import { FlexDiv } from "../../../components/utilities/flex-div.component";
-import { Text } from "../../../components/utilities/text.component";
-import { PaddedDiv } from "../../../components/utilities/padded-div.component";
-import { Spacer } from "../../../components/utilities/spacer.component";
-import { FlexStartDiv } from "../../../components/utilities/flex-start-div.component";
-import { FlexEvenlyDiv } from "../../../components/utilities/flex-space-evenly.component";
+import { FlexDiv } from "../../../components/utilities/flex-div.component"
+import { Text } from "../../../components/utilities/text.component"
+import { PaddedDiv } from "../../../components/utilities/padded-div.component"
+import { Spacer } from "../../../components/utilities/spacer.component"
+import { FlexStartDiv } from "../../../components/utilities/flex-start-div.component"
+import { FlexEvenlyDiv } from "../../../components/utilities/flex-space-evenly.component"
 
 const AboutFiro = () => {
-  const theme = useTheme();
-  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
-  const isBigDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
+  const theme = useTheme()
+  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" })
+  const isBigDesktop = useMediaQuery({ query: "(min-width: 1024px)" })
 
   return (
     <div>
@@ -52,7 +52,11 @@ const AboutFiro = () => {
             </FlexStartDiv>
 
             <div>
-              <img src={about} alt={about} width={isBigDesktop && "450px"} />
+              <img
+                src={about}
+                alt={about}
+                width={isBigDesktop ? "450px" : "300px"}
+              />
             </div>
           </FlexEvenlyDiv>
         ) : (
@@ -80,7 +84,7 @@ const AboutFiro = () => {
         )}
       </PaddedDiv>
     </div>
-  );
-};
+  )
+}
 
-export default AboutFiro;
+export default AboutFiro

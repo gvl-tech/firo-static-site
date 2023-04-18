@@ -1,24 +1,25 @@
 import React from "react"
 import arrow from "../../assets/footer/arrow-button.svg"
-import twitter from "../../assets/footer/twitter.svg"
 import facebook from "../../assets/footer/facebook.svg"
 import instagram from "../../assets/footer/instagram.svg"
+import twitter from "../../assets/footer/twitter.svg"
+import reddit from "../../assets/footer/reddit.svg"
 import youtube from "../../assets/footer/youtube.svg"
-import weibo from "../../assets/footer/weibo.svg"
-import language from "../../assets/footer/language.svg"
+import discord from "../../assets/footer/discord.svg"
+import telegram from "../../assets/footer/telegram.svg"
 
-import { useTheme } from "styled-components"
+import { Link } from "gatsby"
 import { useMediaQuery } from "react-responsive"
-import { AiOutlineDown } from "react-icons/ai"
-import { Text } from "../../components/utilities/text.component"
-import { PaddedDiv } from "../../components/utilities/padded-div.component"
-import { FlexStartDiv } from "../../components/utilities/flex-start-div.component"
-import { FlexSpaceBetweenDiv } from "../../components/utilities/flex-space-between-div.component"
-import { Spacer } from "../../components/utilities/spacer.component"
+import { useTheme } from "styled-components"
 import { BubbleDiv } from "../../components/buttons/bubble-text.component"
-import { GridDiv } from "../../components/utilities/grid-div.component"
-import { FlexCenterDiv } from "../../components/utilities/flex-center-div.component"
 import { Button } from "../../components/buttons/cta-button.component"
+import { FlexCenterDiv } from "../../components/utilities/flex-center-div.component"
+import { FlexSpaceBetweenDiv } from "../../components/utilities/flex-space-between-div.component"
+import { FlexStartDiv } from "../../components/utilities/flex-start-div.component"
+import { GridDiv } from "../../components/utilities/grid-div.component"
+import { PaddedDiv } from "../../components/utilities/padded-div.component"
+import { Spacer } from "../../components/utilities/spacer.component"
+import { Text } from "../../components/utilities/text.component"
 
 const Footer = () => {
   const theme = useTheme()
@@ -40,52 +41,71 @@ const Footer = () => {
               Resources
             </Text>
             <Spacer />
-            <Text
-              color={theme.colors.text.white}
-              fontFamily={theme.fontFamily.ssp}
+            <a
+              href="https://github.com/firoorg/firo"
+              target="_blank"
+              rel="noreferrer"
+              style={{ textDecoration: "none" }}
             >
-              GitHub
-            </Text>
+              <Text
+                color={theme.colors.text.white}
+                fontFamily={theme.fontFamily.ssp}
+              >
+                GitHub
+              </Text>
+            </a>
+            <Spacer />
+            <a
+              href="https://sourceforge.net/projects/firoorg/"
+              target="_blank"
+              rel="noreferrer"
+              style={{ textDecoration: "none" }}
+            >
+              <Text
+                color={theme.colors.text.white}
+                fontFamily={theme.fontFamily.ssp}
+              >
+                SourceForge
+              </Text>
+            </a>
+            <Spacer />
+            <Link to="/branding" style={{ textDecoration: "none" }}>
+              <Text
+                color={theme.colors.text.white}
+                fontFamily={theme.fontFamily.ssp}
+              >
+                Branding
+              </Text>
+            </Link>
             <Spacer />
 
-            <Text
-              color={theme.colors.text.white}
-              fontFamily={theme.fontFamily.ssp}
+            <Link
+              to="/blog/2018-07-15-firo-vulnerability-bounty-program/"
+              style={{ textDecoration: "none" }}
             >
-              SourceForge
-            </Text>
+              <Text
+                color={theme.colors.text.white}
+                fontFamily={theme.fontFamily.ssp}
+              >
+                Vulnerability Program
+              </Text>
+            </Link>
+
             <Spacer />
 
-            <Text
-              color={theme.colors.text.white}
-              fontFamily={theme.fontFamily.ssp}
+            <a
+              href="https://explorer.firo.org/"
+              target="_blank"
+              rel="noreferrer"
+              style={{ textDecoration: "none" }}
             >
-              Branding
-            </Text>
-            <Spacer />
-
-            <Text
-              color={theme.colors.text.white}
-              fontFamily={theme.fontFamily.ssp}
-            >
-              Vulnerability Program
-            </Text>
-            <Spacer />
-
-            <Text
-              color={theme.colors.text.white}
-              fontFamily={theme.fontFamily.ssp}
-            >
-              Be a Bounty Hunter
-            </Text>
-            <Spacer />
-
-            <Text
-              color={theme.colors.text.white}
-              fontFamily={theme.fontFamily.ssp}
-            >
-              Explorer
-            </Text>
+              <Text
+                color={theme.colors.text.white}
+                fontFamily={theme.fontFamily.ssp}
+              >
+                Explorer
+              </Text>
+            </a>
           </FlexStartDiv>
 
           <Spacer size="xxLarge" />
@@ -101,12 +121,14 @@ const Footer = () => {
               Website
             </Text>
             <Spacer />
-            <Text
-              color={theme.colors.text.white}
-              fontFamily={theme.fontFamily.ssp}
-            >
-              Guides
-            </Text>
+            <Link to="/guides" style={{ textDecoration: "none" }}>
+              <Text
+                color={theme.colors.text.white}
+                fontFamily={theme.fontFamily.ssp}
+              >
+                Guides
+              </Text>
+            </Link>
             <Spacer />
             <Text
               color={theme.colors.text.white}
@@ -115,26 +137,28 @@ const Footer = () => {
               Careers
             </Text>
             <Spacer />
-            <Text
-              color={theme.colors.text.white}
-              fontFamily={theme.fontFamily.ssp}
+            <a
+              href="https://opencollective.com/firo"
+              target="_blank"
+              rel="noreferrer"
+              style={{ textDecoration: "none" }}
             >
-              Open Collective
-            </Text>
+              <Text
+                color={theme.colors.text.white}
+                fontFamily={theme.fontFamily.ssp}
+              >
+                Open Collective
+              </Text>
+            </a>
             <Spacer />
-            <Text
-              color={theme.colors.text.white}
-              fontFamily={theme.fontFamily.ssp}
-            >
-              Private Policy
-            </Text>
-            <Spacer />
-            <Text
-              color={theme.colors.text.white}
-              fontFamily={theme.fontFamily.ssp}
-            >
-              Terms of Service
-            </Text>
+            <Link to="/privacy-policy" style={{ textDecoration: "none" }}>
+              <Text
+                color={theme.colors.text.white}
+                fontFamily={theme.fontFamily.ssp}
+              >
+                Privacy Policy
+              </Text>
+            </Link>
           </FlexStartDiv>
 
           <Spacer size="xxLarge" />
@@ -188,23 +212,60 @@ const Footer = () => {
             </Text>
             <Spacer />
             <GridDiv
-              y="repeat(5, 1fr)"
+              y="repeat(6, 1fr)"
               style={{ gap: `${theme.space[2]}px`, alignSelf: "center" }}
             >
               <FlexCenterDiv>
-                <img src={twitter} alt={twitter} />
+                <a
+                  href="https://discord.gg/TGZPRbRT3Y"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={discord} alt={discord} />
+                </a>
               </FlexCenterDiv>
               <FlexCenterDiv>
-                <img src={facebook} alt={facebook} />
+                <a href="https://t.me/firoorg" target="_blank" rel="noreferrer">
+                  <img src={telegram} alt={telegram} />
+                </a>
+              </FlexCenterDiv>
+
+              <FlexCenterDiv>
+                <a
+                  href="https://twitter.com/firoorg"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={twitter} alt={twitter} />
+                </a>
               </FlexCenterDiv>
               <FlexCenterDiv>
-                <img src={instagram} alt={instagram} />
+                <a
+                  href="https://www.facebook.com/firoorg/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={facebook} alt={facebook} />
+                </a>
+              </FlexCenterDiv>
+
+              <FlexCenterDiv>
+                <a
+                  href="https://www.youtube.com/c/firoorg"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={youtube} alt={youtube} />
+                </a>
               </FlexCenterDiv>
               <FlexCenterDiv>
-                <img src={youtube} alt={youtube} />
-              </FlexCenterDiv>
-              <FlexCenterDiv>
-                <img src={weibo} alt={weibo} />
+                <a
+                  href="https://www.reddit.com/r/FiroProject/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={reddit} alt={reddit} />
+                </a>
               </FlexCenterDiv>
             </GridDiv>
           </div>
@@ -228,65 +289,79 @@ const Footer = () => {
               <Spacer size="xLarge" />
               <FlexStartDiv style={{ gap: `${theme.space[3]}px` }}>
                 <div>
-                  <Text
-                    variant="label"
-                    color={theme.colors.text.white}
-                    fontFamily={theme.fontFamily.ssp}
-                    style={{ cursor: "pointer" }}
+                  <a
+                    href="https://github.com/firoorg/firo"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ textDecoration: "none" }}
                   >
-                    GitHub
-                  </Text>
+                    <Text
+                      variant="label"
+                      color={theme.colors.text.white}
+                      fontFamily={theme.fontFamily.ssp}
+                    >
+                      GitHub
+                    </Text>
+                  </a>
                 </div>
                 <div>
-                  <Text
-                    variant="label"
-                    color={theme.colors.text.white}
-                    fontFamily={theme.fontFamily.ssp}
-                    style={{ cursor: "pointer" }}
+                  <a
+                    href="https://sourceforge.net/projects/firoorg/"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ textDecoration: "none" }}
                   >
-                    SourceForge
-                  </Text>
+                    <Text
+                      variant="label"
+                      color={theme.colors.text.white}
+                      fontFamily={theme.fontFamily.ssp}
+                      style={{ cursor: "pointer" }}
+                    >
+                      SourceForge
+                    </Text>
+                  </a>
                 </div>
                 <div>
-                  <Text
-                    variant="label"
-                    color={theme.colors.text.white}
-                    fontFamily={theme.fontFamily.ssp}
-                    style={{ cursor: "pointer" }}
-                  >
-                    Branding
-                  </Text>
+                  <Link to="/branding" style={{ textDecoration: "none" }}>
+                    <Text
+                      variant="label"
+                      color={theme.colors.text.white}
+                      fontFamily={theme.fontFamily.ssp}
+                    >
+                      Branding
+                    </Text>
+                  </Link>
                 </div>
                 <div>
-                  <Text
-                    variant="label"
-                    color={theme.colors.text.white}
-                    fontFamily={theme.fontFamily.ssp}
-                    style={{ cursor: "pointer" }}
+                  <Link
+                    to="/blog/2018-07-15-firo-vulnerability-bounty-program/"
+                    style={{ textDecoration: "none" }}
                   >
-                    Vulnerability Program
-                  </Text>
+                    <Text
+                      variant="label"
+                      color={theme.colors.text.white}
+                      fontFamily={theme.fontFamily.ssp}
+                    >
+                      Vulnerability Program
+                    </Text>
+                  </Link>
                 </div>
 
                 <div>
-                  <Text
-                    variant="label"
-                    color={theme.colors.text.white}
-                    fontFamily={theme.fontFamily.ssp}
-                    style={{ cursor: "pointer" }}
+                  <a
+                    href="https://explorer.firo.org/"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ textDecoration: "none" }}
                   >
-                    Be a Bounty Hunter
-                  </Text>
-                </div>
-                <div>
-                  <Text
-                    variant="label"
-                    color={theme.colors.text.white}
-                    fontFamily={theme.fontFamily.ssp}
-                    style={{ cursor: "pointer" }}
-                  >
-                    Explorer
-                  </Text>
+                    <Text
+                      variant="label"
+                      color={theme.colors.text.white}
+                      fontFamily={theme.fontFamily.ssp}
+                    >
+                      Explorer
+                    </Text>
+                  </a>
                 </div>
               </FlexStartDiv>
             </FlexStartDiv>
@@ -305,54 +380,51 @@ const Footer = () => {
               <Spacer size="xLarge" />
               <FlexStartDiv style={{ gap: `${theme.space[3]}px` }}>
                 <div>
-                  <Text
-                    variant="label"
-                    color={theme.colors.text.white}
-                    fontFamily={theme.fontFamily.ssp}
-                    style={{ cursor: "pointer" }}
-                  >
-                    Guides
-                  </Text>
+                  <Link to="/guides" style={{ textDecoration: "none" }}>
+                    <Text
+                      variant="label"
+                      color={theme.colors.text.white}
+                      fontFamily={theme.fontFamily.ssp}
+                    >
+                      Guides
+                    </Text>
+                  </Link>
                 </div>
                 <div>
                   <Text
                     variant="label"
                     color={theme.colors.text.white}
                     fontFamily={theme.fontFamily.ssp}
-                    style={{ cursor: "pointer" }}
                   >
                     Careers
                   </Text>
                 </div>
                 <div>
-                  <Text
-                    variant="label"
-                    color={theme.colors.text.white}
-                    fontFamily={theme.fontFamily.ssp}
-                    style={{ cursor: "pointer" }}
+                  <a
+                    href="https://opencollective.com/firo"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ textDecoration: "none" }}
                   >
-                    Open Collective
-                  </Text>
+                    <Text
+                      variant="label"
+                      color={theme.colors.text.white}
+                      fontFamily={theme.fontFamily.ssp}
+                    >
+                      Open Collective
+                    </Text>
+                  </a>
                 </div>
                 <div>
-                  <Text
-                    variant="label"
-                    color={theme.colors.text.white}
-                    fontFamily={theme.fontFamily.ssp}
-                    style={{ cursor: "pointer" }}
-                  >
-                    Private Policy
-                  </Text>
-                </div>
-                <div>
-                  <Text
-                    variant="label"
-                    color={theme.colors.text.white}
-                    fontFamily={theme.fontFamily.ssp}
-                    style={{ cursor: "pointer" }}
-                  >
-                    Terms of Service
-                  </Text>
+                  <Link to="/privacy-policy" style={{ textDecoration: "none" }}>
+                    <Text
+                      variant="label"
+                      color={theme.colors.text.white}
+                      fontFamily={theme.fontFamily.ssp}
+                    >
+                      Privacy Policy
+                    </Text>
+                  </Link>
                 </div>
               </FlexStartDiv>
             </FlexStartDiv>
@@ -415,32 +487,56 @@ const Footer = () => {
                   Socials
                 </Text>
                 <Spacer />
-                <FlexStartDiv dir="row">
-                  <img
-                    src={twitter}
-                    alt={twitter}
-                    style={{ cursor: "pointer" }}
-                  />
+                <FlexStartDiv dir="row" style={{ alignItems: "center" }}>
+                  <a
+                    href="https://discord.gg/TGZPRbRT3Y"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={discord} alt={discord} />
+                  </a>
                   <Spacer size="xLarge" position="right" />
-                  <img
-                    src={facebook}
-                    alt={facebook}
-                    style={{ cursor: "pointer" }}
-                  />
+                  <a
+                    href="https://t.me/firoorg"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={telegram} alt={telegram} />
+                  </a>
                   <Spacer size="xLarge" position="right" />
-                  <img
-                    src={instagram}
-                    alt={instagram}
-                    style={{ cursor: "pointer" }}
-                  />
+                  <a
+                    href="https://twitter.com/firoorg"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={twitter} alt={twitter} />
+                  </a>
                   <Spacer size="xLarge" position="right" />
-                  <img
-                    src={youtube}
-                    alt={youtube}
-                    style={{ cursor: "pointer" }}
-                  />
+
+                  <a
+                    href="https://www.facebook.com/firoorg/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={facebook} alt={facebook} />
+                  </a>
                   <Spacer size="xLarge" position="right" />
-                  <img src={weibo} alt={weibo} style={{ cursor: "pointer" }} />
+
+                  <a
+                    href="https://www.youtube.com/c/firoorg"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={youtube} alt={youtube} />
+                  </a>
+                  <Spacer size="xLarge" position="right" />
+                  <a
+                    href="https://www.reddit.com/r/FiroProject/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={reddit} alt={reddit} />
+                  </a>
                 </FlexStartDiv>
               </div>
             </FlexSpaceBetweenDiv>
