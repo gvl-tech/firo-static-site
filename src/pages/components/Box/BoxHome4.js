@@ -12,57 +12,55 @@ const BoxHome4 = ({ logo, thumbnail, title, date, author, more, url }) => {
   const isDesktop = useMediaQuery({ query: "(min-width: 768px)" })
 
   return (
-    <a
-      href={url}
-      target="_blank"
-      rel="noreferrer"
-      style={{ textDecoration: "none" }}
+    <BoxDiv
+      style={{ alignItems: "start", cursor: "pointer" }}
+      y="4"
+      x="4"
+      onClick={() => window.open(url)}
     >
-      <BoxDiv style={{ alignItems: "start" }} y="4" x="4">
-        <img src={logo} alt={logo} height="10%" />
-        <Spacer />
-        <div
-          style={{
-            borderRadius: `${theme.borderSizes[2]}px`,
-            alignSelf: "center",
-          }}
+      <img src={logo} alt={logo} height="10%" />
+      <Spacer />
+      <div
+        style={{
+          borderRadius: `${theme.borderSizes[2]}px`,
+          alignSelf: "center",
+        }}
+      >
+        <img
+          src={thumbnail}
+          alt="thumbnail"
+          width="100%"
+          style={{ minWidth: "150px" }}
+        />
+      </div>
+      <Spacer />
+      <FlexSpaceBetweenDiv dir="column" width="100" height="100">
+        <Text
+          variant="label"
+          bold="true"
+          style={{ width: isDesktop ? "70%" : "100%", lineHeight: "1.5" }}
         >
-          <img
-            src={thumbnail}
-            alt="thumbnail"
-            width="100%"
-            style={{ minWidth: "150px" }}
-          />
-        </div>
-        <Spacer />
-        <FlexSpaceBetweenDiv dir="column" width="100" height="100">
-          <Text
-            variant="label"
-            bold="true"
-            style={{ width: isDesktop ? "70%" : "100%", lineHeight: "1.5" }}
-          >
-            {title}
-          </Text>
-          <FlexSpaceBetweenDiv>
-            <div>
-              <Text variant="caption" color={theme.colors.text.secondary}>
-                {date}
-              </Text>
-              {author && (
-                <Text variant="caption" color={theme.colors.text.secondary}>
-                  {" "}
-                  by {author}
-                </Text>
-              )}
-            </div>
-
+          {title}
+        </Text>
+        <FlexSpaceBetweenDiv>
+          <div>
             <Text variant="caption" color={theme.colors.text.secondary}>
-              {more} More &gt;
+              {date}
             </Text>
-          </FlexSpaceBetweenDiv>
+            {author && (
+              <Text variant="caption" color={theme.colors.text.secondary}>
+                {" "}
+                by {author}
+              </Text>
+            )}
+          </div>
+
+          <Text variant="caption" color={theme.colors.text.secondary}>
+            {more} More &gt;
+          </Text>
         </FlexSpaceBetweenDiv>
-      </BoxDiv>
-    </a>
+      </FlexSpaceBetweenDiv>
+    </BoxDiv>
   )
 }
 
