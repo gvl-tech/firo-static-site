@@ -1,36 +1,36 @@
-import React from "react";
-import binance from "../../../assets/getfiro/binance.svg";
-import gate from "../../../assets/getfiro/gate.svg";
-import huobi from "../../../assets/getfiro/huobi.svg";
-import bittrex from "../../../assets/getfiro/bittrex.svg";
-import mexc from "../../../assets/getfiro/mexc.svg";
-import bitmart from "../../../assets/getfiro/bitmart.svg";
-import tokocrypto from "../../../assets/getfiro/tokocrpyto.svg";
-import tradeogre from "../../../assets/getfiro/tradeogre.svg";
-import wazirx from "../../../assets/getfiro/wazirx.svg";
-import bkex from "../../../assets/getfiro/bkex.svg";
-import indodax from "../../../assets/getfiro/indodax.svg";
-import coinex from "../../../assets/getfiro/coinex.svg";
-import hitbtc from "../../../assets/getfiro/hitbtc.svg";
-import earnFiro from "../../../assets/getfiro/earnFiro.svg";
-import storeFiro from "../../../assets/getfiro/storeFiro.svg";
+import React from "react"
+import binance from "../../../assets/getfiro/binance.svg"
+import bitmart from "../../../assets/getfiro/bitmart.svg"
+import bittrex from "../../../assets/getfiro/bittrex.svg"
+import bkex from "../../../assets/getfiro/bkex.svg"
+import coinex from "../../../assets/getfiro/coinex.svg"
+import earnFiro from "../../../assets/getfiro/earnFiro.svg"
+import gate from "../../../assets/getfiro/gate.svg"
+import hitbtc from "../../../assets/getfiro/hitbtc.svg"
+import huobi from "../../../assets/getfiro/huobi.svg"
+import indodax from "../../../assets/getfiro/indodax.svg"
+import mexc from "../../../assets/getfiro/mexc.svg"
+import storeFiro from "../../../assets/getfiro/storeFiro.svg"
+import tokocrypto from "../../../assets/getfiro/tokocrpyto.svg"
+import tradeogre from "../../../assets/getfiro/tradeogre.svg"
+import wazirx from "../../../assets/getfiro/wazirx.svg"
 
-import { useTheme } from "styled-components";
-import { useMediaQuery } from "react-responsive";
-import { Text } from "../../../components/utilities/text.component";
-import { PaddedDiv } from "../../../components/utilities/padded-div.component";
-import { Spacer } from "../../../components/utilities/spacer.component";
-import { FlexStartDiv } from "../../../components/utilities/flex-start-div.component";
-import { GridDiv } from "../../../components/utilities/grid-div.component";
-import { FlexCenterDiv } from "../../../components/utilities/flex-center-div.component";
-import { ScrollDiv } from "../../../components/utilities/scroll-hidden.component";
-import { BoxDiv } from "../../../components/utilities/box-container.component";
+import { useMediaQuery } from "react-responsive"
+import { useTheme } from "styled-components"
+import { BoxDiv } from "../../../components/utilities/box-container.component"
+import { FlexCenterDiv } from "../../../components/utilities/flex-center-div.component"
+import { FlexStartDiv } from "../../../components/utilities/flex-start-div.component"
+import { GridDiv } from "../../../components/utilities/grid-div.component"
+import { PaddedDiv } from "../../../components/utilities/padded-div.component"
+import { ScrollDiv } from "../../../components/utilities/scroll-hidden.component"
+import { Spacer } from "../../../components/utilities/spacer.component"
+import { Text } from "../../../components/utilities/text.component"
 
 const Available = () => {
-  const theme = useTheme();
-  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
-  const isMediumDesktop = useMediaQuery({ query: "(min-width: 1440px)" });
-  const isBigDesktop = useMediaQuery({ query: "(min-width: 1824px)" });
+  const theme = useTheme()
+  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" })
+  const isMediumDesktop = useMediaQuery({ query: "(min-width: 1440px)" })
+  const isBigDesktop = useMediaQuery({ query: "(min-width: 1824px)" })
   return (
     <div>
       <PaddedDiv y="5" x={isBigDesktop ? "6" : isMediumDesktop ? "5" : "3"}>
@@ -190,7 +190,15 @@ const Available = () => {
             }
             style={{ justifyContent: "space-between" }}
           >
-            <BoxDiv y="4" x="4" bg={theme.colors.text.white}>
+            <BoxDiv
+              y="4"
+              x="4"
+              bg={theme.colors.text.white}
+              style={{ cursor: "pointer" }}
+              onClick={() => {
+                window.open("/guides/how-to-mine-firo/")
+              }}
+            >
               <GridDiv y="0.4fr 1fr">
                 <PaddedDiv style={{ justifySelf: "center" }}>
                   <img src={earnFiro} alt={earnFiro} />
@@ -225,7 +233,15 @@ const Available = () => {
               </GridDiv>
             </BoxDiv>
 
-            <BoxDiv y="4" x="4" bg={theme.colors.text.white}>
+            <BoxDiv
+              y="4"
+              x="4"
+              bg={theme.colors.text.white}
+              style={{ cursor: "pointer" }}
+              onClick={() => {
+                window.open("/download/")
+              }}
+            >
               <GridDiv y="0.4fr 1fr">
                 <PaddedDiv style={{ justifySelf: "center" }}>
                   <img src={storeFiro} alt={storeFiro} />
@@ -261,7 +277,7 @@ const Available = () => {
         </PaddedDiv>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default Available;
+export default Available

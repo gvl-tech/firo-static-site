@@ -8,7 +8,7 @@ import { FlexDiv } from "../../../components/utilities/flex-div.component"
 import { Button } from "../../../components/buttons/cta-button.component"
 import { Spacer } from "../../../components/utilities/spacer.component"
 
-const BoxHome3 = ({ title, highlight, image, subtitle }) => {
+const BoxHome3 = ({ title, highlight, image, subtitle, url }) => {
   const theme = useTheme()
   const isDesktop = useMediaQuery({ query: "(min-width: 768px)" })
   const isTablet = useMediaQuery({ query: "(width: 768px)" })
@@ -32,6 +32,7 @@ const BoxHome3 = ({ title, highlight, image, subtitle }) => {
             position: "relative",
             bottom: `${theme.space[5]}px`,
           }}
+          onClick={() => url && window.open(url)}
         >
           More
         </Button>

@@ -279,6 +279,7 @@ const Home3 = () => {
           title="Get"
           highlight="Firo"
           subtitle="Make your first purchase of Firo and embark on your journey towards anonymous transactions today."
+          url="/get-firo/"
         />
 
         <BoxHome3
@@ -292,6 +293,7 @@ const Home3 = () => {
           title="Earn, Mine &"
           highlight="Stake"
           subtitle="Earn, stake, or contribute to the overall security of the Firo network today."
+          url="/guides/how-to-mine-firo/"
         />
       </GridDiv>
     </FlexDiv>

@@ -1,32 +1,32 @@
-import React from "react";
-import discord from "../../../assets/community/social/discord.svg";
-import forum from "../../../assets/community/social/forum.svg";
-import youtube from "../../../assets/community/social/youtube.svg";
-import telegram from "../../../assets/community/social/telegram.svg";
-import twitter from "../../../assets/community/social/twitter.svg";
-import facebook from "../../../assets/community/social/facebook.svg";
-import reddit from "../../../assets/community/social/reddit.svg";
-import bitcointalk from "../../../assets/community/social/bitcointalk.svg";
-import matrix from "../../../assets/community/social/matrix.svg";
-import wechat from "../../../assets/community/social/wechat.svg";
-import youku from "../../../assets/community/social/youku.svg";
-import qq from "../../../assets/community/social/qq.svg";
-import instagram from "../../../assets/community/social/instagram.svg";
-import weibo from "../../../assets/community/social/weibo.svg";
+import React from "react"
+import discord from "../../../assets/community/social/discord.svg"
+import forum from "../../../assets/community/social/forum.svg"
+import youtube from "../../../assets/community/social/youtube.svg"
+import telegram from "../../../assets/community/social/telegram.svg"
+import twitter from "../../../assets/community/social/twitter.svg"
+import facebook from "../../../assets/community/social/facebook.svg"
+import reddit from "../../../assets/community/social/reddit.svg"
+import bitcointalk from "../../../assets/community/social/bitcointalk.svg"
+import matrix from "../../../assets/community/social/matrix.svg"
+import wechat from "../../../assets/community/social/wechat.svg"
+import youku from "../../../assets/community/social/youku.svg"
+import qq from "../../../assets/community/social/qq.svg"
+import instagram from "../../../assets/community/social/instagram.svg"
+import weibo from "../../../assets/community/social/weibo.svg"
 
-import { useTheme } from "styled-components";
-import { useMediaQuery } from "react-responsive";
-import { Text } from "../../../components/utilities/text.component";
-import { PaddedDiv } from "../../../components/utilities/padded-div.component";
-import { Spacer } from "../../../components/utilities/spacer.component";
-import { FlexStartDiv } from "../../../components/utilities/flex-start-div.component";
-import { FlexCenterDiv } from "../../../components/utilities/flex-center-div.component";
-import { GridDiv } from "../../../components/utilities/grid-div.component";
-import BoxSocial from "../components/BoxSocial";
+import { useTheme } from "styled-components"
+import { useMediaQuery } from "react-responsive"
+import { Text } from "../../../components/utilities/text.component"
+import { PaddedDiv } from "../../../components/utilities/padded-div.component"
+import { Spacer } from "../../../components/utilities/spacer.component"
+import { FlexStartDiv } from "../../../components/utilities/flex-start-div.component"
+import { FlexCenterDiv } from "../../../components/utilities/flex-center-div.component"
+import { GridDiv } from "../../../components/utilities/grid-div.component"
+import BoxSocial from "../components/BoxSocial"
 
 const Social = () => {
-  const theme = useTheme();
-  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
+  const theme = useTheme()
+  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" })
 
   return (
     <div>
@@ -60,24 +60,76 @@ const Social = () => {
           gap="4"
           style={{ justifyContent: "space-between" }}
         >
-          <BoxSocial logo={discord} name="Discord" />
-          <BoxSocial logo={forum} name="Forum" />
-          <BoxSocial logo={youtube} name="Youtube" />
-          <BoxSocial logo={telegram} name="Telegram" />
-          <BoxSocial logo={twitter} name="Twitter" />
-          <BoxSocial logo={facebook} name="Facebook" />
-          <BoxSocial logo={reddit} name="Reddit" />
-          <BoxSocial logo={bitcointalk} name="Bitcointalk" />
-          <BoxSocial logo={matrix} name="Matrix (Element)" />
-          <BoxSocial logo={wechat} name="Wechat" />
-          <BoxSocial logo={youku} name="Youku" />
-          <BoxSocial logo={qq} name="QQ" />
-          <BoxSocial logo={instagram} name="Instagram" />
-          <BoxSocial logo={weibo} name="Weibo" />
+          <BoxSocial
+            logo={discord}
+            name="Discord"
+            url="https://discord.com/invite/TGZPRbRT3Y"
+          />
+          <BoxSocial logo={forum} name="Forum" url="https://forum.firo.org/" />
+          <BoxSocial
+            logo={youtube}
+            name="Youtube"
+            url="https://www.youtube.com/c/firoorg"
+          />
+          <BoxSocial
+            logo={telegram}
+            name="Telegram"
+            url="https://t.me/firoorg"
+          />
+          <BoxSocial
+            logo={twitter}
+            name="Twitter"
+            url="https://twitter.com/firoorg"
+          />
+          <BoxSocial
+            logo={facebook}
+            name="Facebook"
+            url="https://www.facebook.com/firoorg/"
+          />
+          <BoxSocial
+            logo={reddit}
+            name="Reddit"
+            url="https://www.reddit.com/r/FiroProject/"
+          />
+          <BoxSocial
+            logo={bitcointalk}
+            name="Bitcointalk"
+            url="https://bitcointalk.org/index.php?topic=1638450.0"
+          />
+          <BoxSocial
+            logo={matrix}
+            name="Matrix (Element)"
+            url="https://matrix.to/#/%23firo:matrix.org"
+          />
+          <BoxSocial
+            logo={wechat}
+            name="Wechat"
+            url="https://zcoin.io/wechat/"
+          />
+          <BoxSocial
+            logo={youku}
+            name="Youku"
+            url="http://i.youku.com/i/UNDY5NDAzMzgyMA=="
+          />
+          <BoxSocial
+            logo={qq}
+            name="QQ"
+            url="https://jq.qq.com/?_wv=1027&k=JzGzHApT"
+          />
+          <BoxSocial
+            logo={instagram}
+            name="Instagram"
+            url="https://www.instagram.com/firoorg/"
+          />
+          <BoxSocial
+            logo={weibo}
+            name="Weibo"
+            url="https://weibo.com/u/6140252510"
+          />
         </GridDiv>
       </PaddedDiv>
     </div>
-  );
-};
+  )
+}
 
-export default Social;
+export default Social

@@ -1,19 +1,28 @@
-import React from "react";
-import twitter from "../../../assets/team/twitter.svg";
-import linkedin from "../../../assets/team/linkedin.svg";
+import React from "react"
+import twitter from "../../../assets/team/twitter.svg"
+import linkedin from "../../../assets/team/linkedin.svg"
 
-import { useTheme } from "styled-components";
-import { useMediaQuery } from "react-responsive";
-import { FlexCenterDiv } from "../../../components/utilities/flex-center-div.component";
-import { FlexStartDiv } from "../../../components/utilities/flex-start-div.component";
-import { PaddedDiv } from "../../../components/utilities/padded-div.component";
-import { Spacer } from "../../../components/utilities/spacer.component";
-import { Text } from "../../../components/utilities/text.component";
+import { useTheme } from "styled-components"
+import { useMediaQuery } from "react-responsive"
+import { FlexCenterDiv } from "../../../components/utilities/flex-center-div.component"
+import { FlexStartDiv } from "../../../components/utilities/flex-start-div.component"
+import { PaddedDiv } from "../../../components/utilities/padded-div.component"
+import { Spacer } from "../../../components/utilities/spacer.component"
+import { Text } from "../../../components/utilities/text.component"
 
-const BoxTeam = ({ image, social, name, position, description, inverse }) => {
-  const theme = useTheme();
-  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
-  const isMediumDesktop = useMediaQuery({ query: "(min-width: 1025px)" });
+const BoxTeam = ({
+  image,
+  social,
+  name,
+  position,
+  description,
+  inverse,
+  twitterUrl,
+  linkedInUrl,
+}) => {
+  const theme = useTheme()
+  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" })
+  const isMediumDesktop = useMediaQuery({ query: "(min-width: 1025px)" })
 
   return (
     <PaddedDiv
@@ -75,17 +84,21 @@ const BoxTeam = ({ image, social, name, position, description, inverse }) => {
 
         {social && isDesktop && (
           <FlexStartDiv dir="row" style={{ justifyContent: "flex-end" }}>
-            <img
-              src={twitter}
-              alt={twitter}
-              width={isMediumDesktop ? "30px" : "25px"}
-            />
+            <a href={twitterUrl} target="_blank" rel="noreferrer">
+              <img
+                src={twitter}
+                alt={twitter}
+                width={isMediumDesktop ? "30px" : "25px"}
+              />
+            </a>
             <Spacer position="left" size="medium" />
-            <img
-              src={linkedin}
-              alt={linkedin}
-              width={isMediumDesktop ? "30px" : "25px"}
-            />
+            <a href={linkedInUrl} target="_blank" rel="noreferrer">
+              <img
+                src={linkedin}
+                alt={linkedin}
+                width={isMediumDesktop ? "30px" : "25px"}
+              />
+            </a>
           </FlexStartDiv>
         )}
       </FlexStartDiv>
@@ -102,9 +115,13 @@ const BoxTeam = ({ image, social, name, position, description, inverse }) => {
                 right: "-10px",
               }}
             >
-              <img src={twitter} alt={twitter} width="25px" />
+              <a href={twitterUrl} target="_blank" rel="noreferrer">
+                <img src={twitter} alt={twitter} width="25px" />
+              </a>
               <Spacer position="left" size="medium" />
-              <img src={linkedin} alt={linkedin} width="25px" />
+              <a href={linkedInUrl} target="_blank" rel="noreferrer">
+                <img src={linkedin} alt={linkedin} width="25px" />
+              </a>
             </FlexStartDiv>
           )}
           <Spacer size="xLarge" />
@@ -150,7 +167,7 @@ const BoxTeam = ({ image, social, name, position, description, inverse }) => {
         </Text>
       </FlexStartDiv>
     </PaddedDiv>
-  );
-};
+  )
+}
 
-export default BoxTeam;
+export default BoxTeam

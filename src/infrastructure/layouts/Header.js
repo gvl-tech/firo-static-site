@@ -128,10 +128,22 @@ export const Header = ({ inverse, mobileInverse }) => {
                     Official Firo Wallet
                   </Text>
                   <Spacer position="right" />
-                  <img src={android} alt={android} />
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.cypherstack.campfire"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={android} alt={android} />
+                  </a>
                   <Spacer position="right" />
 
-                  <img src={apple} alt={apple} />
+                  <a
+                    href="https://apps.apple.com/us/app/campfire-firo-wallet/id1613267898"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={apple} alt={apple} />
+                  </a>
                 </FlexDiv>
                 <Text fontFamily={theme.fontFamily.s}>Other Wallets</Text>
               </BoxDiv>
@@ -470,10 +482,21 @@ export const Header = ({ inverse, mobileInverse }) => {
                     Official Firo Wallet
                   </Text>
                   <Spacer position="right" />
-                  <img src={android} alt={android} />
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.cypherstack.campfire"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={android} alt={android} />
+                  </a>
                   <Spacer position="right" />
-
-                  <img src={apple} alt={apple} />
+                  <a
+                    href="https://apps.apple.com/us/app/campfire-firo-wallet/id1613267898"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={apple} alt={apple} />
+                  </a>
                 </FlexDiv>
                 <Text fontFamily={theme.fontFamily.s}>Other Wallets</Text>
               </BoxDiv>
