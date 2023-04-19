@@ -1,15 +1,15 @@
-import React from "react";
+import React from "react"
 
-import divider from "../../../assets/download/divider.svg";
-import androidWhite from "../../../assets/download/androidWhite.svg";
-import macWhite from "../../../assets/download/macWhite.svg";
-import pcWhite from "../../../assets/download/pcWhite.svg";
-import webWhite from "../../../assets/download/webWhite.svg";
+import divider from "../../../assets/download/divider.svg"
+import androidWhite from "../../../assets/download/androidWhite.svg"
+import macWhite from "../../../assets/download/macWhite.svg"
+import pcWhite from "../../../assets/download/pcWhite.svg"
+import webWhite from "../../../assets/download/webWhite.svg"
 
-import { FlexCenterDiv } from "../../../components/utilities/flex-center-div.component";
-import { useTheme } from "styled-components";
-import { Text } from "../../../components/utilities/text.component";
-import { Spacer } from "../../../components/utilities/spacer.component";
+import { FlexCenterDiv } from "../../../components/utilities/flex-center-div.component"
+import { useTheme } from "styled-components"
+import { Text } from "../../../components/utilities/text.component"
+import { Spacer } from "../../../components/utilities/spacer.component"
 
 const BoxThirdWallet = ({
   logo,
@@ -18,11 +18,15 @@ const BoxThirdWallet = ({
   divider2,
   divider3,
   isAndroid,
+  androidUrl,
   isMac,
+  macUrl,
   isPC,
+  PCUrl,
   isWeb,
+  WebUrl,
 }) => {
-  const theme = useTheme();
+  const theme = useTheme()
 
   return (
     <div>
@@ -36,7 +40,7 @@ const BoxThirdWallet = ({
           height: "50%",
         }}
       >
-        <img src={logo} alt={logo} />
+        <img src={logo} alt={logo} width={110} />
         <Spacer />
         <Text variant="h3" bold={true}>
           {title}
@@ -53,43 +57,51 @@ const BoxThirdWallet = ({
         }}
       >
         {isAndroid && (
-          <img
-            src={androidWhite}
-            alt={androidWhite}
-            width="40px"
-            style={{ cursor: "pointer" }}
-          />
+          <a
+            href={androidUrl}
+            target="_blank"
+            rel="noreferrer"
+            style={{ textDecoration: "none" }}
+          >
+            <img src={androidWhite} alt={androidWhite} width="40px" />
+          </a>
         )}
         {divider1 && <img src={divider} alt={divider} />}
         {isMac && (
-          <img
-            src={macWhite}
-            alt={macWhite}
-            width="40px"
-            style={{ cursor: "pointer" }}
-          />
+          <a
+            href={macUrl}
+            target="_blank"
+            rel="noreferrer"
+            style={{ textDecoration: "none" }}
+          >
+            <img src={macWhite} alt={macWhite} width="40px" />
+          </a>
         )}
         {divider2 && <img src={divider} alt={divider} />}
         {isPC && (
-          <img
-            src={pcWhite}
-            alt={pcWhite}
-            width="45px"
-            style={{ cursor: "pointer" }}
-          />
+          <a
+            href={PCUrl}
+            target="_blank"
+            rel="noreferrer"
+            style={{ textDecoration: "none" }}
+          >
+            <img src={pcWhite} alt={pcWhite} width="45px" />
+          </a>
         )}
         {divider3 && <img src={divider} alt={divider} />}
         {isWeb && (
-          <img
-            src={webWhite}
-            alt={webWhite}
-            width="40px"
-            style={{ cursor: "pointer" }}
-          />
+          <a
+            href={WebUrl}
+            target="_blank"
+            rel="noreferrer"
+            style={{ textDecoration: "none" }}
+          >
+            <img src={webWhite} alt={webWhite} width="40px" />
+          </a>
         )}
       </FlexCenterDiv>
     </div>
-  );
-};
+  )
+}
 
-export default BoxThirdWallet;
+export default BoxThirdWallet
