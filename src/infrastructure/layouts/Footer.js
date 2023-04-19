@@ -171,7 +171,7 @@ const Footer = () => {
               color={theme.colors.text.white}
               fontFamily={theme.fontFamily.s}
             >
-              News Letter
+              Newsletter
             </Text>
             <Spacer />
 
@@ -439,7 +439,7 @@ const Footer = () => {
                   color={theme.colors.text.white}
                   fontFamily={theme.fontFamily.s}
                 >
-                  News Letter
+                  Newsletter
                 </Text>
                 <Spacer />
 

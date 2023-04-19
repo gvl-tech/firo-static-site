@@ -1,26 +1,23 @@
-import React from "react";
-import zelcore from "../../../assets/download/zelcore.svg";
-import guarda from "../../../assets/download/guarda.svg";
-import trust from "../../../assets/download/trust.svg";
-import coinomi from "../../../assets/download/coinomi.svg";
-import edge from "../../../assets/download/edge.svg";
-import midas from "../../../assets/download/midas.svg";
-import cobo from "../../../assets/download/cobo.svg";
-import paytomat from "../../../assets/download/paytomat.svg";
-import ownbit from "../../../assets/download/ownbit.svg";
-import magnum from "../../../assets/download/magnum.svg";
-import dove from "../../../assets/download/dove.svg";
+import React from "react"
+import cobo from "../../../assets/download/cobo.svg"
+import coinomi from "../../../assets/download/coinomi.svg"
+import edge from "../../../assets/download/edge.svg"
+import guarda from "../../../assets/download/guarda.svg"
+import now from "../../../assets/download/now.webp"
+import ownbit from "../../../assets/download/ownbit.svg"
+import trust from "../../../assets/download/trust.svg"
+import zelcore from "../../../assets/download/zelcore.svg"
 
-import { useMediaQuery } from "react-responsive";
-import { Text } from "../../../components/utilities/text.component";
-import { PaddedDiv } from "../../../components/utilities/padded-div.component";
-import { Spacer } from "../../../components/utilities/spacer.component";
-import { FlexStartDiv } from "../../../components/utilities/flex-start-div.component";
-import { GridDiv } from "../../../components/utilities/grid-div.component";
-import BoxThirdWallet from "../components/BoxThirdWallet";
+import { useMediaQuery } from "react-responsive"
+import { FlexStartDiv } from "../../../components/utilities/flex-start-div.component"
+import { GridDiv } from "../../../components/utilities/grid-div.component"
+import { PaddedDiv } from "../../../components/utilities/padded-div.component"
+import { Spacer } from "../../../components/utilities/spacer.component"
+import { Text } from "../../../components/utilities/text.component"
+import BoxThirdWallet from "../components/BoxThirdWallet"
 const ThirdWallet = () => {
-  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
-  const isTablet = useMediaQuery({ query: "(width: 768px)" });
+  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" })
+  const isTablet = useMediaQuery({ query: "(width: 768px)" })
 
   return (
     <div>
@@ -43,11 +40,23 @@ const ThirdWallet = () => {
           style={{ justifyContent: isDesktop ? "space-between" : "center" }}
         >
           <BoxThirdWallet
+            logo={now}
+            title="NOW Wallet"
+            isAndroid={true}
+            androidUrl="https://play.google.com/store/apps/details?id=com.nowwallet"
+            isMac={true}
+            macUrl="https://apps.apple.com/app/now-wallet-bitcoin-crypto/id1591216386"
+            divider1={true}
+          />
+          <BoxThirdWallet
             logo={zelcore}
             title="ZelCore Wallet"
             isAndroid={true}
+            androidUrl="https://play.google.com/store/apps/details?id=com.zelcash.zelcore"
             isMac={true}
+            macUrl="https://itunes.apple.com/us/app/zelcore/id1436296839?mt=8"
             isPC={true}
+            PCUrl="https://zel.network/zelcore"
             divider1={true}
             divider2={true}
           />
@@ -55,9 +64,13 @@ const ThirdWallet = () => {
             logo={guarda}
             title="Guarda Wallet"
             isAndroid={true}
+            androidUrl="https://play.google.com/store/apps/details?id=com.crypto.multiwallet&hl=ru&ah=lGdAjI0WLmNFP29e2FB3-G6hW6I"
             isMac={true}
+            macUrl="https://itunes.apple.com/app/apple-store/id1442083982?pt=118900606&ct=frommainpage&mt=8"
             isPC={true}
+            PCUrl="https://guarda.com/desktop"
             isWeb={true}
+            WebUrl="https://guarda.com/web-wallet"
             divider1={true}
             divider2={true}
             divider3={true}
@@ -66,15 +79,20 @@ const ThirdWallet = () => {
             logo={trust}
             title="Trust Wallet"
             isAndroid={true}
+            androidUrl="https://play.google.com/store/apps/details?id=com.wallet.crypto.trustapp&hl=en"
             isMac={true}
+            macUrl="https://itunes.apple.com/us/app/trust-ethereum-wallet/id1288339409"
             divider1={true}
           />
           <BoxThirdWallet
             logo={coinomi}
             title="Coinomi Wallet"
             isAndroid={true}
+            androidUrl="https://play.google.com/store/apps/details?id=com.coinomi.wallet"
             isMac={true}
+            macUrl="https://itunes.apple.com/us/app/coinomi-wallet/id1333588809"
             isPC={true}
+            PCUrl="https://www.coinomi.com/en/downloads/"
             divider1={true}
             divider2={true}
           />
@@ -82,44 +100,34 @@ const ThirdWallet = () => {
             logo={edge}
             title="Edge Wallet"
             isAndroid={true}
+            androidUrl="https://play.google.com/store/apps/details?id=co.edgesecure.app"
             isMac={true}
-            divider1={true}
-          />
-          <BoxThirdWallet
-            logo={midas}
-            title="Midas Protocol Wallet"
-            isAndroid={true}
-            isMac={true}
+            macUrl="https://itunes.apple.com/us/app/edge-bitcoin-wallet/id1344400091?mt=8"
             divider1={true}
           />
           <BoxThirdWallet
             logo={cobo}
             title="Cobo Wallet"
             isAndroid={true}
+            androidUrl="https://play.google.com/store/apps/details?id=cobo.wallet"
             isMac={true}
-            divider1={true}
-          />
-          <BoxThirdWallet
-            logo={paytomat}
-            title="Paytomat Wallet"
-            isAndroid={true}
-            isMac={true}
+            macUrl="https://apps.apple.com/us/app/cobo-crypto-portfolio-wallet/id1406282615"
             divider1={true}
           />
           <BoxThirdWallet
             logo={ownbit}
             title="Ownbit Wallet"
             isAndroid={true}
+            androidUrl="https://play.google.com/store/apps/details?id=com.bitbill.www&hl=en"
             isMac={true}
+            macUrl="https://itunes.apple.com/us/app/bitbill-blockchain-wallet/id1321798216?mt=8"
             divider1={true}
           />
-          <BoxThirdWallet logo={magnum} title="Magnum Wallet" isWeb={true} />
-          <BoxThirdWallet logo={dove} title="Dove Wallet" isWeb={true} />
         </GridDiv>
       </PaddedDiv>
       <Spacer size="xxLarge" />
     </div>
-  );
-};
+  )
+}
 
-export default ThirdWallet;
+export default ThirdWallet
