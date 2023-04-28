@@ -176,6 +176,9 @@ const Products = () => {
                   fontFamily: theme.fontFamily.ssc,
                   padding: `${theme.space[2]}px ${theme.space[5]}px`,
                 }}
+                onClick={() =>
+                  window.open("/blog/2022-10-10-elysium-release-candidate/")
+                }
               >
                 Find Out More
               </Button>
@@ -348,6 +351,7 @@ const Products = () => {
                   fontFamily: theme.fontFamily.ssc,
                   padding: `${theme.space[2]}px ${theme.space[5]}px`,
                 }}
+                onClick={() => window.open("https://eprint.iacr.org/2022/543")}
               >
                 Find Out More
               </Button>

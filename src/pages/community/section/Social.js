@@ -1,27 +1,26 @@
 import React from "react"
+import bitcointalk from "../../../assets/community/social/bitcointalk.svg"
 import discord from "../../../assets/community/social/discord.svg"
+import facebook from "../../../assets/community/social/facebook.svg"
 import forum from "../../../assets/community/social/forum.svg"
-import youtube from "../../../assets/community/social/youtube.svg"
+import instagram from "../../../assets/community/social/instagram.svg"
+import matrix from "../../../assets/community/social/matrix.svg"
+import qq from "../../../assets/community/social/qq.svg"
+import reddit from "../../../assets/community/social/reddit.svg"
 import telegram from "../../../assets/community/social/telegram.svg"
 import twitter from "../../../assets/community/social/twitter.svg"
-import facebook from "../../../assets/community/social/facebook.svg"
-import reddit from "../../../assets/community/social/reddit.svg"
-import bitcointalk from "../../../assets/community/social/bitcointalk.svg"
-import matrix from "../../../assets/community/social/matrix.svg"
-import wechat from "../../../assets/community/social/wechat.svg"
-import youku from "../../../assets/community/social/youku.svg"
-import qq from "../../../assets/community/social/qq.svg"
-import instagram from "../../../assets/community/social/instagram.svg"
 import weibo from "../../../assets/community/social/weibo.svg"
+import youku from "../../../assets/community/social/youku.svg"
+import youtube from "../../../assets/community/social/youtube.svg"
 
-import { useTheme } from "styled-components"
 import { useMediaQuery } from "react-responsive"
-import { Text } from "../../../components/utilities/text.component"
+import { useTheme } from "styled-components"
+import { FlexCenterDiv } from "../../../components/utilities/flex-center-div.component"
+import { FlexStartDiv } from "../../../components/utilities/flex-start-div.component"
+import { GridDiv } from "../../../components/utilities/grid-div.component"
 import { PaddedDiv } from "../../../components/utilities/padded-div.component"
 import { Spacer } from "../../../components/utilities/spacer.component"
-import { FlexStartDiv } from "../../../components/utilities/flex-start-div.component"
-import { FlexCenterDiv } from "../../../components/utilities/flex-center-div.component"
-import { GridDiv } from "../../../components/utilities/grid-div.component"
+import { Text } from "../../../components/utilities/text.component"
 import BoxSocial from "../components/BoxSocial"
 
 const Social = () => {
@@ -100,11 +99,6 @@ const Social = () => {
             logo={matrix}
             name="Matrix (Element)"
             url="https://matrix.to/#/%23firo:matrix.org"
-          />
-          <BoxSocial
-            logo={wechat}
-            name="Wechat"
-            url="https://zcoin.io/wechat/"
           />
           <BoxSocial
             logo={youku}

@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useState } from "react"
+import emailjs from "emailjs-com"
 import { useMediaQuery } from "react-responsive"
 import { useTheme } from "styled-components"
 import community from "../../assets/home3/community.svg"
@@ -17,6 +18,7 @@ import { GridDiv } from "../../components/utilities/grid-div.component"
 import { Spacer } from "../../components/utilities/spacer.component"
 import { Text } from "../../components/utilities/text.component"
 import BoxHome3 from "../components/Box/BoxHome3"
+import Modal from "../components/Modal/email-modal"
 
 const Home3 = () => {
   const theme = useTheme()
@@ -26,6 +28,32 @@ const Home3 = () => {
     query: "(min-width: 768px) and (max-width: 1024px)",
   })
   const isBigDesktop = useMediaQuery({ query: "(min-width: 1100px)" })
+  const [isOpen, setIsOpen] = useState(false)
+
+  const sendEmail = e => {
+    e.preventDefault()
+
+    emailjs
+      .sendForm(
+        "service_xk63avw",
+        "template_2r37bkl",
+        e.target,
+        "RT_hHw7OKSf89C0g5"
+      )
+      .then(
+        result => {
+          console.log(result.text)
+        },
+        error => {
+          console.log(error.text)
+        }
+      )
+    e.target.reset()
+  }
+
+  const handleClose = () => {
+    setIsOpen(false)
+  }
 
   return (
     <FlexDiv bg={theme.colors.bg.grey} style={{ padding: "5%" }}>
@@ -287,7 +315,9 @@ const Home3 = () => {
           title="Become a "
           highlight="Merchant"
           subtitle="Keep your business ledgers private and anonymous by allowing payments with Firo."
+          setIsOpen={setIsOpen}
         />
+
         <BoxHome3
           image={stake}
           title="Earn, Mine &"
@@ -296,6 +326,88 @@ const Home3 = () => {
           url="/guides/how-to-mine-firo/"
         />
       </GridDiv>
+
+      <Modal isOpen={isOpen} onClose={handleClose}>
+        <form
+          onSubmit={sendEmail}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            maxWidth: "500px",
+            margin: " auto",
+            width: "70%",
+          }}
+        >
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            style={{
+              padding: "10px",
+              border: "1px solid #ccc",
+              borderRadius: "5px",
+              marginBottom: "20px",
+              fontSize: "16px",
+              color: "#333",
+            }}
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            style={{
+              padding: "10px",
+              border: "1px solid #ccc",
+              borderRadius: "5px",
+              marginBottom: "20px",
+              fontSize: "16px",
+              color: "#333",
+            }}
+          />
+          <input
+            type="text"
+            name="subject"
+            placeholder="Subject"
+            style={{
+              padding: "10px",
+              border: "1px solid #ccc",
+              borderRadius: "5px",
+              marginBottom: "20px",
+              fontSize: "16px",
+              color: "#333",
+            }}
+          />
+          <textarea
+            cols="30"
+            rows="8"
+            placeholder="Your message"
+            name="message"
+            style={{
+              padding: "10px",
+              border: "1px solid #ccc",
+              borderRadius: "5px",
+              marginBottom: "20px",
+              fontSize: "16px",
+              color: "#333",
+              resize: "none",
+            }}
+          />
+          <input
+            type="submit"
+            value="Send Message"
+            style={{
+              backgroundColor: "#9b1c2e",
+              color: "#fff",
+              padding: "10px",
+              border: "none",
+              borderRadius: "5px",
+              cursor: "pointer",
+              fontSize: "16px",
+            }}
+          ></input>
+        </form>
+      </Modal>
     </FlexDiv>
   )
 }

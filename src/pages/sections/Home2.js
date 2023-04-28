@@ -127,13 +127,7 @@ const Home2 = () => {
               image={build}
               title="Build"
               subtitle="Leverage on Firo's privacy features with Elysium, a fully decentralised and modular infrastructure that allows for easy bridging of tokens."
-            />
-            <Spacer position="bottom" size="xLarge" />
-
-            <BoxHome2
-              image={poll}
-              title="Poll"
-              subtitle="Experience anonymous, transparent and tamper-free polls with Firo's blockchain polling infrastructure."
+              url="/blog/2022-10-10-elysium-release-candidate/"
             />
             <Spacer position="bottom" size="xLarge" />
 
@@ -141,6 +135,7 @@ const Home2 = () => {
               image={spend}
               title="Spend"
               subtitle="Enjoy spending without worrying about prying eyes, whether its cup of coffee, or shopping for your next outfit."
+              url="/community"
             />
             <Spacer position="bottom" size="xLarge" />
           </FlexDiv>
