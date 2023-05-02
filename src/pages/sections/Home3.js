@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import emailjs from "emailjs-com"
 import { useMediaQuery } from "react-responsive"
 import { useTheme } from "styled-components"
@@ -19,6 +19,7 @@ import { Spacer } from "../../components/utilities/spacer.component"
 import { Text } from "../../components/utilities/text.component"
 import BoxHome3 from "../components/Box/BoxHome3"
 import Modal from "../components/Modal/email-modal"
+import Snackbar from "../components/Snackbar/snackbar"
 
 const Home3 = () => {
   const theme = useTheme()
@@ -29,31 +30,69 @@ const Home3 = () => {
   })
   const isBigDesktop = useMediaQuery({ query: "(min-width: 1100px)" })
   const [isOpen, setIsOpen] = useState(false)
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  })
+  const [isFormValid, setIsFormValid] = useState(false)
+  const [snackbarMessage, setSnackbarMessage] = useState("")
 
   const sendEmail = e => {
     e.preventDefault()
 
     emailjs
       .sendForm(
-        "service_xk63avw",
-        "template_2r37bkl",
+        process.env.SERVICE_ID,
+        process.env.TEMPLATE_ID,
         e.target,
-        "RT_hHw7OKSf89C0g5"
+        process.env.PUBLIC_KEY
       )
       .then(
         result => {
-          console.log(result.text)
+          setSnackbarMessage("Successfully sent email.")
+          setIsOpen(false)
         },
         error => {
-          console.log(error.text)
+          setSnackbarMessage("Failed to send email.")
+          setIsOpen(false)
         }
       )
     e.target.reset()
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    })
   }
 
   const handleClose = () => {
     setIsOpen(false)
   }
+
+  const handleInputChange = event => {
+    setFormData({ ...formData, [event.target.name]: event.target.value })
+  }
+
+  const validateForm = () => {
+    if (
+      formData.name &&
+      formData.email &&
+      formData.subject &&
+      formData.message
+    ) {
+      setIsFormValid(true)
+    } else {
+      setIsFormValid(false)
+    }
+  }
+
+  // Call validateForm whenever the form state changes
+  useEffect(() => {
+    validateForm()
+  }, [formData, validateForm])
 
   return (
     <FlexDiv bg={theme.colors.bg.grey} style={{ padding: "5%" }}>
@@ -342,6 +381,8 @@ const Home3 = () => {
           <input
             type="text"
             name="name"
+            value={formData.name}
+            onChange={handleInputChange}
             placeholder="Name"
             style={{
               padding: "10px",
@@ -355,6 +396,8 @@ const Home3 = () => {
           <input
             type="email"
             name="email"
+            value={formData.email}
+            onChange={handleInputChange}
             placeholder="Email Address"
             style={{
               padding: "10px",
@@ -368,6 +411,8 @@ const Home3 = () => {
           <input
             type="text"
             name="subject"
+            value={formData.subject}
+            onChange={handleInputChange}
             placeholder="Subject"
             style={{
               padding: "10px",
@@ -383,6 +428,8 @@ const Home3 = () => {
             rows="8"
             placeholder="Your message"
             name="message"
+            value={formData.message}
+            onChange={handleInputChange}
             style={{
               padding: "10px",
               border: "1px solid #ccc",
@@ -396,18 +443,21 @@ const Home3 = () => {
           <input
             type="submit"
             value="Send Message"
+            disabled={!isFormValid}
             style={{
               backgroundColor: "#9b1c2e",
               color: "#fff",
               padding: "10px",
               border: "none",
               borderRadius: "5px",
-              cursor: "pointer",
+              cursor: isFormValid ? "pointer" : null,
               fontSize: "16px",
+              opacity: isFormValid ? "1" : "0.3",
             }}
           ></input>
         </form>
       </Modal>
+      <Snackbar message={snackbarMessage} />
     </FlexDiv>
   )
 }
