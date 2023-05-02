@@ -39,6 +39,7 @@ const Home3 = () => {
   const [isFormValid, setIsFormValid] = useState(false)
   const [snackbarMessage, setSnackbarMessage] = useState("")
 
+  emailjs.init(process.env.GATSBY_PUBLIC_KEY)
   const sendEmail = e => {
     e.preventDefault()
 
