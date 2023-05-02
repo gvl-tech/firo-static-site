@@ -1,53 +1,53 @@
-import React from "react";
-import arrow from "../../../assets/community/merchants/arrow.svg";
-import arrowup from "../../../assets/community/merchants/arrowup.svg";
+import React from "react"
+import arrow from "../../../assets/community/merchants/arrow.svg"
+import arrowup from "../../../assets/community/merchants/arrowup.svg"
 
-import { FlexCenterDiv } from "../../../components/utilities/flex-center-div.component";
-import { Text } from "../../../components/utilities/text.component";
-import { useTheme } from "styled-components";
-import { useMediaQuery } from "react-responsive";
-import { BoxDiv } from "../../../components/utilities/box-container.component";
-import { Spacer } from "../../../components/utilities/spacer.component";
-import { FlexStartDiv } from "../../../components/utilities/flex-start-div.component";
+import { FlexCenterDiv } from "../../../components/utilities/flex-center-div.component"
+import { Text } from "../../../components/utilities/text.component"
+import { useTheme } from "styled-components"
+import { useMediaQuery } from "react-responsive"
+import { BoxDiv } from "../../../components/utilities/box-container.component"
+import { Spacer } from "../../../components/utilities/spacer.component"
+import { FlexStartDiv } from "../../../components/utilities/flex-start-div.component"
 
 const BoxMerchants = ({ logo, title, companies, id, show, onShow }) => {
-  const theme = useTheme();
-  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
-  const isMediumDesktop = useMediaQuery({ query: "(min-width: 1440px)" });
-  const isBigDesktop = useMediaQuery({ query: "(min-width: 2000px)" });
+  const theme = useTheme()
+  const isDesktop = useMediaQuery({ query: "(min-width: 768px)" })
+  const isMediumDesktop = useMediaQuery({ query: "(min-width: 1440px)" })
+  const isBigDesktop = useMediaQuery({ query: "(min-width: 2000px)" })
   const isTablet = useMediaQuery({
     query: "(min-width: 768px) and (max-width: 1023px)",
-  });
+  })
 
   const handleShow = () => {
-    onShow && onShow(id);
-  };
+    onShow && onShow(id)
+  }
 
-  const calcMarginLeft = (value) => {
+  const calcMarginLeft = value => {
     if (isDesktop) {
       if (isBigDesktop) {
         if (value === 2 || value === 8 || value === 14) {
-          return "-110.8%";
+          return "-110.8%"
         } else if (value === 3 || value === 9) {
-          return "-221.3%";
+          return "-221.3%"
         } else if (value === 4 || value === 10) {
-          return "-332%";
+          return "-332%"
         } else if (value === 5 || value === 11) {
-          return "-442.8%";
+          return "-442.8%"
         } else if (value === 6 || value === 12) {
-          return "-553.5%";
+          return "-553.5%"
         } else {
-          return "0%";
+          return "0%"
         }
       } else if (isMediumDesktop) {
         if (value === 2 || value === 6 || value === 10 || value === 14) {
-          return "-110.8%";
+          return "-110.8%"
         } else if (value === 3 || value === 7 || value === 11) {
-          return "-221.3%";
+          return "-221.3%"
         } else if (value === 4 || value === 8 || value === 12) {
-          return "-332%";
+          return "-332%"
         } else {
-          return "0%";
+          return "0%"
         }
       } else if (isTablet) {
         if (
@@ -59,7 +59,7 @@ const BoxMerchants = ({ logo, title, companies, id, show, onShow }) => {
           value === 12 ||
           value === 14
         ) {
-          return "-110.8%";
+          return "-110.8%"
         }
       } else {
         if (
@@ -69,17 +69,17 @@ const BoxMerchants = ({ logo, title, companies, id, show, onShow }) => {
           value === 11 ||
           value === 14
         ) {
-          return "-110.8%";
+          return "-110.8%"
         } else if (value === 3 || value === 6 || value === 9 || value === 12) {
-          return "-221.3%";
+          return "-221.3%"
         } else {
-          return "0%";
+          return "0%"
         }
       }
     } else {
-      return "0%";
+      return "0%"
     }
-  };
+  }
 
   return (
     <div>
@@ -141,18 +141,26 @@ const BoxMerchants = ({ logo, title, companies, id, show, onShow }) => {
               gap: theme.space[5],
               alignItems: "center",
               flexWrap: "wrap",
+              zIndex: "0",
             }}
           >
             {companies
-              ? companies.map((company) => (
-                  <img src={company} alt={company} key={company} />
+              ? companies.map(company => (
+                  <img
+                    src={company.img}
+                    alt={company.img}
+                    key={company.img}
+                    width="270"
+                    style={{ cursor: "pointer" }}
+                    onClick={() => window.open(company.url)}
+                  />
                 ))
               : null}
           </FlexStartDiv>
         </BoxDiv>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default BoxMerchants;
+export default BoxMerchants

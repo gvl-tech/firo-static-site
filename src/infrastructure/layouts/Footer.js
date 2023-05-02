@@ -130,13 +130,7 @@ const Footer = () => {
               </Text>
             </Link>
             <Spacer />
-            <Text
-              color={theme.colors.text.white}
-              fontFamily={theme.fontFamily.ssp}
-            >
-              Careers
-            </Text>
-            <Spacer />
+
             <a
               href="https://opencollective.com/firo"
               target="_blank"
@@ -390,15 +384,7 @@ const Footer = () => {
                     </Text>
                   </Link>
                 </div>
-                <div>
-                  <Text
-                    variant="label"
-                    color={theme.colors.text.white}
-                    fontFamily={theme.fontFamily.ssp}
-                  >
-                    Careers
-                  </Text>
-                </div>
+
                 <div>
                   <a
                     href="https://opencollective.com/firo"

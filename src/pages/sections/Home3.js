@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
+import emailjs from "emailjs-com"
 import { useMediaQuery } from "react-responsive"
 import { useTheme } from "styled-components"
 import community from "../../assets/home3/community.svg"
@@ -17,6 +18,8 @@ import { GridDiv } from "../../components/utilities/grid-div.component"
 import { Spacer } from "../../components/utilities/spacer.component"
 import { Text } from "../../components/utilities/text.component"
 import BoxHome3 from "../components/Box/BoxHome3"
+import Modal from "../components/Modal/email-modal"
+import Snackbar from "../components/Snackbar/snackbar"
 
 const Home3 = () => {
   const theme = useTheme()
@@ -26,6 +29,71 @@ const Home3 = () => {
     query: "(min-width: 768px) and (max-width: 1024px)",
   })
   const isBigDesktop = useMediaQuery({ query: "(min-width: 1100px)" })
+  const [isOpen, setIsOpen] = useState(false)
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  })
+  const [isFormValid, setIsFormValid] = useState(false)
+  const [snackbarMessage, setSnackbarMessage] = useState("")
+
+  emailjs.init(process.env.GATSBY_PUBLIC_KEY)
+  const sendEmail = e => {
+    e.preventDefault()
+
+    emailjs
+      .sendForm(
+        process.env.GATSBY_SERVICE_ID,
+        process.env.GATSBY_TEMPLATE_ID,
+        e.target,
+        process.env.GATSBY_PUBLIC_KEY
+      )
+      .then(
+        result => {
+          setSnackbarMessage("Successfully sent email.")
+          setIsOpen(false)
+        },
+        error => {
+          setSnackbarMessage("Failed to send email.")
+          setIsOpen(false)
+        }
+      )
+    e.target.reset()
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    })
+  }
+
+  const handleClose = () => {
+    setIsOpen(false)
+  }
+
+  const handleInputChange = event => {
+    setFormData({ ...formData, [event.target.name]: event.target.value })
+  }
+
+  const validateForm = () => {
+    if (
+      formData.name &&
+      formData.email &&
+      formData.subject &&
+      formData.message
+    ) {
+      setIsFormValid(true)
+    } else {
+      setIsFormValid(false)
+    }
+  }
+
+  // Call validateForm whenever the form state changes
+  useEffect(() => {
+    validateForm()
+  }, [formData, validateForm])
 
   return (
     <FlexDiv bg={theme.colors.bg.grey} style={{ padding: "5%" }}>
@@ -287,7 +355,9 @@ const Home3 = () => {
           title="Become a "
           highlight="Merchant"
           subtitle="Keep your business ledgers private and anonymous by allowing payments with Firo."
+          setIsOpen={setIsOpen}
         />
+
         <BoxHome3
           image={stake}
           title="Earn, Mine &"
@@ -296,6 +366,99 @@ const Home3 = () => {
           url="/guides/how-to-mine-firo/"
         />
       </GridDiv>
+
+      <Modal isOpen={isOpen} onClose={handleClose}>
+        <form
+          onSubmit={sendEmail}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            maxWidth: "500px",
+            margin: " auto",
+            width: "70%",
+          }}
+        >
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleInputChange}
+            placeholder="Name"
+            style={{
+              padding: "10px",
+              border: "1px solid #ccc",
+              borderRadius: "5px",
+              marginBottom: "20px",
+              fontSize: "16px",
+              color: "#333",
+            }}
+          />
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            placeholder="Email Address"
+            style={{
+              padding: "10px",
+              border: "1px solid #ccc",
+              borderRadius: "5px",
+              marginBottom: "20px",
+              fontSize: "16px",
+              color: "#333",
+            }}
+          />
+          <input
+            type="text"
+            name="subject"
+            value={formData.subject}
+            onChange={handleInputChange}
+            placeholder="Subject"
+            style={{
+              padding: "10px",
+              border: "1px solid #ccc",
+              borderRadius: "5px",
+              marginBottom: "20px",
+              fontSize: "16px",
+              color: "#333",
+            }}
+          />
+          <textarea
+            cols="30"
+            rows="8"
+            placeholder="Your message"
+            name="message"
+            value={formData.message}
+            onChange={handleInputChange}
+            style={{
+              padding: "10px",
+              border: "1px solid #ccc",
+              borderRadius: "5px",
+              marginBottom: "20px",
+              fontSize: "16px",
+              color: "#333",
+              resize: "none",
+            }}
+          />
+          <input
+            type="submit"
+            value="Send Message"
+            disabled={!isFormValid}
+            style={{
+              backgroundColor: "#9b1c2e",
+              color: "#fff",
+              padding: "10px",
+              border: "none",
+              borderRadius: "5px",
+              cursor: isFormValid ? "pointer" : null,
+              fontSize: "16px",
+              opacity: isFormValid ? "1" : "0.3",
+            }}
+          ></input>
+        </form>
+      </Modal>
+      <Snackbar message={snackbarMessage} />
     </FlexDiv>
   )
 }
