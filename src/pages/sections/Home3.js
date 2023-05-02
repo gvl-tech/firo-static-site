@@ -44,10 +44,10 @@ const Home3 = () => {
 
     emailjs
       .sendForm(
-        process.env.SERVICE_ID,
-        process.env.TEMPLATE_ID,
+        process.env.GATSBY_SERVICE_ID,
+        process.env.GATSBY_TEMPLATE_ID,
         e.target,
-        process.env.PUBLIC_KEY
+        process.env.GATSBY_PUBLIC_KEY
       )
       .then(
         result => {
